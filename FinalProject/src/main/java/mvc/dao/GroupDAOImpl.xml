@@ -10,7 +10,6 @@
 	<select id="getGroupInfo"
 			parameterType="mvc.dto.Groups"
 			resultType="mvc.dto.Groups">
-			SELECT * FROM groups WHERE group_no = #{group_no}
+			SELECT * FROM groups WHERE group_no=#{group_no}
 	</select>
-
 </mapper>
