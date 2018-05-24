@@ -3,14 +3,15 @@ package mvc.service;
 import java.util.List;
 
 import mvc.dto.Board;
+import mvc.dto.Groups;
 import mvc.dto.Photo;
 
 
 public interface BoardService {
 	
-	public List getBoardList();
+	public List getBoardList(Groups group);
 	
-	public Board getBoardView();
+	public Board getBoardView(Board board);
 	
 	public void boardWrite();
 	

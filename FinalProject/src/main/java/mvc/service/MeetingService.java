@@ -4,14 +4,15 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import mvc.dto.Groups;
 import mvc.dto.Meeting_reservation;
 
 
 public interface MeetingService {
 
-	public List getMeetingList();
+	public List getMeetingList(Groups group);
 	
-	public Meeting_reservation getMeetingInfo();
+	public Meeting_reservation getMeetingInfo(Meeting_reservation meeting);
 	
 	public void insertMeeting();
 	

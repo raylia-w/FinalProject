@@ -10,8 +10,8 @@ public interface MemberDAO {
 	
 	public Member getMemberInfo();
 	
-	public void joinMember();
+	public void memberRegistration();
 	
-	public void secessionMember();
+	public void memberSecession();
 	
 }

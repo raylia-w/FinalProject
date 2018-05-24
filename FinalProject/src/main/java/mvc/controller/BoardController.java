@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import mvc.dto.Board;
+import mvc.dto.Groups;
 import mvc.service.BoardService;
 
 @Controller
@@ -12,13 +14,13 @@ public class BoardController {
 	@Autowired BoardService service;
 	
 	@RequestMapping(value="/group/board.do")
-	public void groupBoard() {
-		service.getBoardList();
+	public void groupBoard(Groups group) {
+		service.getBoardList(group);
 	}
 	
 	@RequestMapping(value="/group/board/detail.do")
-	public void groupBoardDetail() {
-		service.getBoardView();
+	public void groupBoardDetail(Board board) {
+		service.getBoardView(board);
 	}
 	
 	@RequestMapping(value="/group/board/write.do")

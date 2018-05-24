@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import mvc.dao.BoardDAO;
 import mvc.dto.Board;
+import mvc.dto.Groups;
 import mvc.dto.Photo;
 
 @Service
@@ -15,13 +16,13 @@ public class BoardServiceImpl implements BoardService{
 	@Autowired BoardDAO dao;
 
 	@Override
-	public List getBoardList() {
-		return dao.getBoardList();
+	public List getBoardList(Groups group) {
+		return dao.getBoardList(group);
 	}
 
 	@Override
-	public Board getBoardView() {
-		return dao.getBoardView();
+	public Board getBoardView(Board board) {
+		return dao.getBoardView(board);
 	}
 
 	@Override

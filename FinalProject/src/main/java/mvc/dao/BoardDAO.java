@@ -5,14 +5,15 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 import mvc.dto.Board;
+import mvc.dto.Groups;
 import mvc.dto.Photo;
 
 @Repository
 public interface BoardDAO {
 	
-	public List getBoardList();
+	public List getBoardList(Groups group);
 	
-	public Board getBoardView();
+	public Board getBoardView(Board board);
 	
 	public void boardWrite();
 	

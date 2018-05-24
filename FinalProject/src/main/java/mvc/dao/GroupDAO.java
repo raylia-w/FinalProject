@@ -8,7 +8,7 @@ public interface GroupDAO {
 		
 	public List getGroupList();
 	
-	public Groups getGroupInfo();
+	public Groups getGroupInfo(Groups group);
 
 	public void createGroup();
 	

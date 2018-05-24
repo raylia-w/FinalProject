@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import mvc.dto.Groups;
+import mvc.dto.Meeting_reservation;
 import mvc.service.MeetingService;
 
 @Controller
@@ -12,13 +14,13 @@ public class MeetingController {
 	@Autowired MeetingService service;
 	
 	@RequestMapping(value="/meeting/detail")
-	public void meetingInfo() {
-		service.getMeetingInfo();
+	public void meetingInfo(Meeting_reservation meeting) {
+		service.getMeetingInfo(meeting);
 	}
 	
 	@RequestMapping(value="/meeting/list")
-	public void meetingList() {
-		service.getMeetingList();
+	public void meetingList(Groups group) {
+		service.getMeetingList(group);
 	}
 	
 	@RequestMapping(value="/meeting/locList")

@@ -6,12 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import mvc.dao.GroupDAO;
+import mvc.dao.MemberDAO;
 import mvc.dto.Groups;
 
 @Service
 public class GroupServiceImpl implements GroupService{
 
 	@Autowired GroupDAO groupDao;
+	@Autowired MemberDAO memberDao;
 	
 
 	@Override
@@ -20,18 +22,18 @@ public class GroupServiceImpl implements GroupService{
 	}
 	
 	@Override
-	public Groups getGroupInfo() {
-		return groupDao.getGroupInfo();
-	}
-
-	@Override
-	public void memberRegistration() {
-		groupDao.memberRegistration();
+	public Groups getGroupInfo(Groups group) {
+		return groupDao.getGroupInfo(group);
 	}
 
 	@Override
 	public void memberSecession() {
-		groupDao.memberSecession();
+		memberDao.memberSecession();
+	}
+	
+	@Override
+	public void memberRegistration() {
+		memberDao.memberRegistration();
 	}
 
 	@Override

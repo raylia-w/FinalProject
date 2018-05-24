@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import mvc.dto.Groups;
 import mvc.service.BoardService;
 import mvc.service.GroupService;
 import mvc.service.MeetingService;
@@ -25,10 +26,10 @@ public class GroupController {
 	}
 	
 	@RequestMapping(value="/group/main.do", method=RequestMethod.GET)
-	public String groupMain() {
-//		groupService.getGroupInfo();
-//		meetingService.getMeetingList();
-//		boardService.getBoardList();
+	public String groupMain(Groups group) {
+		groupService.getGroupInfo(group);
+		meetingService.getMeetingList(group);
+		boardService.getBoardList(group);
 		return "group/main";
 	}
 	
