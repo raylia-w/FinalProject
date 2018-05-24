@@ -3,5 +3,22 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mvc.dao.MemberDAO">
-	
+	<select id="getMemberList"
+			parameterType="mvc.dto.Groups"
+			resultType="mvc.dto.Member">
+			SELECT * FROM member WHERE group_no = #{group_no}
+	</select>
+	<select id="getMemberInfo"
+			parameterType="mvc.dto.Member"
+			resultType="mvc.dto.Member">
+			SELECT * FROM member WHERE group_no = #{group_no} AND u_no = #{u_no}
+	</select>
+	<insert id="memberRegistration"
+			parameterType="mvc.dto.Member">
+			INSERT INTO member(group_no, u_no) VALUES(#{group_no}, #{u_no})
+	</insert>
+	<delete id="memberSecession"
+			parameterType="mvc.dto.Member">
+			DELETE FROM member WHERE group_no = #{group_no} AND u_no = #{u_no}
+	</delete>
 </mapper>

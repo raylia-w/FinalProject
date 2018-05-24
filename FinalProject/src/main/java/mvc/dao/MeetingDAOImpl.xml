@@ -3,4 +3,26 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mvc.dao.MeetingDAO">
+	<select id="getMeetingList"
+			parameterType="mvc.dto.Groups"
+			resultType="mvc.dto.Meeting_reservation">
+			SELECT * FROM meeting_reservation WHERE group_no = #{group_no} ORDER BY meeting_no
+	</select>
+	<select id="getMeetingInfo"
+			parameterType="mvc.dto.Meeting_reservation"
+			resultType="mvc.dto.Meeting_reservation">
+			SELECT * FROM meeting_reservation WHERE meeting_no = #{meeting_no}
+	</select>
+	<insert id="insertMeeting"
+			parameterType="mvc.dto.Meeting_reservation">
+			INSERT INTO meeting_reservation(meeting_no, date_start, date_end, reservation_location, personnel, group_no, status) VALUES(meeting_no_seq.nextval, #{date_start}, #{date_end}, #{reservation_location}, #{personnel}, #{group_no}, #{status})
+	</insert>
+	<update id="updateMeeting"
+			parameterType="mvc.dto.Meeting_reservation">
+			
+	</update>
+	<delete id="deleteMeeting"
+			parameterType="mvc.dto.Meeting_reservation">
+			DELETE FROM meeting_reservation WHERE meeting_no = #{meeting_no}
+	</delete>
 </mapper>

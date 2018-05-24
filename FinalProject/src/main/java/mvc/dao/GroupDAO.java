@@ -14,8 +14,4 @@ public interface GroupDAO {
 	
 	public void deleteGroup();
 	
-	public void memberRegistration();
-	
-	public void memberSecession(); 
-	
 }
