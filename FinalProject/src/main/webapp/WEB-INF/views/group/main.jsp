@@ -145,6 +145,7 @@
 					</a>
 				</div>
 			</div>
+			<!-- 공지글로 변경할 것 -->
 			<div class="plain-invitation-block-wrapper">
 				<div class="content-block-title invitation-block-title">공지</div>
 				<div class="content-block plain-invitation-block">
@@ -189,82 +190,158 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>예시 제목1</td>
-										<td>예시 글쓴이1</td>
-										<td>예시 작성일1</td>
+										<td>예시 제목2</td>
+										<td>예시 글쓴이2</td>
+										<td>예시 작성일2</td>
+									</tr>
+									<tr>
+										<td>예시 제목3</td>
+										<td>예시 글쓴이3</td>
+										<td>예시 작성일3</td>
+									</tr>
+									<tr>
+										<td>예시 제목4</td>
+										<td>예시 글쓴이4</td>
+										<td>예시 작성일4</td>
+									</tr>
+									<tr>
+										<td>예시 제목5</td>
+										<td>예시 글쓴이5</td>
+										<td>예시 작성일5</td>
 									</tr>
 								</tbody>
 							</table>
 						</div>
 					</div>
 				</div>
-				<div class="content-block text-block">게시판 이동</div></a></div>
+				<a href=""><div class="content-block text-block">게시판 이동</div></a>
 			</div>
-			<!-- 공지글로 변경할 것 -->
 		</div>
 		<div class="review-block-wrapper">
-    <div class="content-block-title review-block-title">
-      사진
-    </div>
-
-    <div class="content-block review-block">
-      <div class="content-block-inner">
-        <a class="read-more-review" href="/p/57b177c8e76f681b4a000003/reviews">
-          <div class="review-list">
-            <div class="card review-card review_591f9674532c28793338d0b3">
-  <div class="card-header">
-
-  <div class="card-content">
-
-    <div class="row no-gutter photos">
-          <div class="photo col-25">
-            <img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/34/11/591f9698532c28793338d0b4/small_20170519_193602_HDR.jpg" alt="Small 20170519 193602 hdr">
-          </div>
-          <div class="photo col-25">
-            <img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/c1/ac/591f96a0532c28328c383a27/small_20170519_194822.jpg" alt="Small 20170519 194822">
-          </div>
-          <div class="photo col-25">
-            <img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/6d/f0/591f96b2532c28328c383a28/small_20170519_194826.jpg" alt="Small 20170519 194826">
-          </div>
-          <div class="photo col-25">
-            <img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/5b/c9/591f96b4532c28793338d0b7/small_20170519_195955.jpg" alt="Small 20170519 195955">
-          </div>
-          <div class="photo col-25">
-            <img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/46/7a/591f96d9532c28793338d0b8/small_20170519_195832.jpg" alt="Small 20170519 195832">
-          </div>
-          <div class="photo col-25">
-            <img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/95/5d/591f96d9532c28328c383a29/small_20170519_195905.jpg" alt="Small 20170519 195905">
-          </div>
-          <div class="photo col-25">
-            <img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/0a/9c/591f96ea532c28793338d0c5/small_20170519_230129.jpg" alt="Small 20170519 230129">
-          </div>
-
-        <div class="photo col-25 dummy">
-        </div>
-        <div class="photo col-25 dummy">
-        </div>
-    </div>
-  </div>
-</div>
-          </div>
-
-          <div class="content-block text-block">
-            사진 더 보기
-          </div>
-</a>      </div>
-    </div>
-  </div>
-		<!-- 여기부터 정모 -->
-		<div class="extra-block-wrapper">
-			<div class="content-block extra-block">
+			<div class="content-block-title review-block-title">사진</div>
+			<div class="content-block review-block">
+				<div class="content-block-inner">
+					<a class="read-more-review" href="/p/57b177c8e76f681b4a000003/reviews">
+						<div class="review-list">
+							<div class="card review-card review_591f9674532c28793338d0b3">
+								<div class="card-header">
+									<div class="card-content">
+										<div class="row no-gutter photos">
+											<div class="photo col-25"><img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/34/11/591f9698532c28793338d0b4/small_20170519_193602_HDR.jpg" alt="Small 20170519 193602 hdr"></div>
+          									<div class="photo col-25"><img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/c1/ac/591f96a0532c28328c383a27/small_20170519_194822.jpg" alt="Small 20170519 194822"></div>
+          									<div class="photo col-25"><img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/6d/f0/591f96b2532c28328c383a28/small_20170519_194826.jpg" alt="Small 20170519 194826"></div>
+          									<div class="photo col-25"><img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/5b/c9/591f96b4532c28793338d0b7/small_20170519_195955.jpg" alt="Small 20170519 195955"></div>
+          									<div class="photo col-25"><img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/46/7a/591f96d9532c28793338d0b8/small_20170519_195832.jpg" alt="Small 20170519 195832"></div><div class="photo col-25"><img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/95/5d/591f96d9532c28328c383a29/small_20170519_195905.jpg" alt="Small 20170519 195905"></div>
+          									<div class="photo col-25"><img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/0a/9c/591f96ea532c28793338d0c5/small_20170519_230129.jpg" alt="Small 20170519 230129"></div>
+          									<div class="photo col-25 dummy"></div>
+          									<div class="photo col-25 dummy"></div>
+          								</div>
+          							</div>
+          						</div>
+          					</div>
+          					<div class="content-block text-block">사진 더 보기</div>
+          				</a>      
+          			</div>
+          		</div>
+          	</div>
+			<!-- 여기부터 정모 -->
+			<div class="extra-block-wrapper">
+				<div class="content-block extra-block">
+					<div class="list-block media-list">
+						<ul>
+							<li>
+								<div class="item-content">
+									<div class="item-inner">
+										<div class="item-title-row">
+											<div class="item-title">정모 참가비</div>
+											<div class="item-after">차아아암가아아아비ㅣ잉이</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="item-content">
+									<div class="item-inner">
+										<div class="item-title-row">
+											<div class="item-title">최대 참여 인원수</div>
+											<div class="item-after">7명</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="item-content">
+									<div class="item-inner">
+										<div class="item-title-row">
+											<div class="item-title">최소 참여 인원수</div>
+											<div class="item-after">2명</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<a class="item-link item-content" href="/p/55e77efee76f6870ab005461/comments">
+									<div class="item-inner">
+										<div class="item-title-row">
+											<div class="item-title">문의하기</div>
+											<div class="item-after">문의 및 댓글</div>
+										</div>
+									</div>
+								</a>        
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="menu-block-wrapper">
+				<div class="content-block-title">포함내용</div>
+					<div class="content-block menu-block">
+						<div class="content-block-inner">
+							<p>정모 참여 비용에는 간단한 먹거리와 사이트 수수료가 포함되어 있습니다.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 정모 목록 -->
+			<div class="tablet-40">
+				<div class="variant-block-wrapper">
+					<div class="content-block-title variant-block-title">날짜</div>
+					<div class="content-block">
+						<div class="list-block media-list variant-block">
+							<ul>
+								<li class="variant-item">
+									<div class="item-link item-content">
+										<div class="item-inner">
+											<div class="item-text">현재 참여 가능한 일정이 없습니다.</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<!-- 모임별 정모 관련 안내, 모임마다 내용 다르지만 첫번째 내용은 동일할 것 -->
+						<div class="list-block-label">
+							하나. 신청은 당일 2시간 전까지 가능합니다.<br>
+							둘. 집밥지기의 연락처는 모임 하루 전 오후 7시에 문자와 이메일, 앱에서 공유됩니다.<br>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="location-block-wrapper">
+		<div class="content-block-title">장소</div>
+			<div class="content-block location-block">
+				<div class="content-block-inner">
+					<div class="address">서울 중구 신당동</div>
+				</div>
+				<div id="product-map" class="map" style="position: relative; overflow: hidden; background: url(&quot;https://ssl.pstatic.net/static/maps/mantle/1x/pattern_1.png&quot;) 0px 0px repeat transparent;"><div style="position: absolute; display: block; margin: 0px; padding: 0px; border: 0px none; top: 0px; left: 0px; overflow: visible; width: 100%; height: 100%; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); z-index: 0; cursor: url(&quot;https://ssl.pstatic.net/static/maps/mantle/1x/openhand.cur&quot;), default;"><div style="position: absolute; display: block; margin: 0px; padding: 0px; border: 0px none; top: 0px; left: 0px; overflow: visible; width: 100%; height: 100%; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); z-index: 0;"><div style="overflow: visible; width: 100%; height: 0px; position: absolute; display: block; margin: 0px; padding: 0px; border: 0px none; top: 0px; left: 0px; z-index: 1;"><div style="overflow: visible; width: 100%; height: 0px; position: absolute; display: none; margin: 0px; padding: 0px; border: 0px none; top: 0px; left: 0px; z-index: 0; user-select: none;"></div><div style="overflow: visible; width: 100%; height: 0px; position: absolute; display: block; margin: 0px; padding: 0px; border: 0px none; top: 0px; left: 0px; z-index: 1; user-select: none;"><div style="position: absolute; top: 0px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 0px; height: 0px; overflow: visible; box-sizing: content-box !important;"><div style="position: absolute; top: -366px; left: 462px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1692/1482/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 658px; left: 206px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1691/1478/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: -110px; left: 462px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1692/1481/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 402px; left: 206px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1691/1479/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 146px; left: 462px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1692/1480/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 146px; left: 206px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1691/1480/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 402px; left: 462px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1692/1479/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: -110px; left: 206px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1691/1481/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 658px; left: 462px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1692/1478/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: -366px; left: 206px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1691/1482/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: -366px; left: 718px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1693/1482/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 658px; left: -50px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1690/1478/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: -110px; left: 718px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1693/1481/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 402px; left: -50px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1690/1479/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 146px; left: 718px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1693/1480/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 146px; left: -50px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1690/1480/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 402px; left: 718px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1693/1479/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: -110px; left: -50px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1690/1481/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 658px; left: 718px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1693/1478/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: -366px; left: -50px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1690/1482/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: -366px; left: 974px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1694/1482/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 658px; left: -306px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1689/1478/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: -110px; left: 974px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1694/1481/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 402px; left: -306px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1689/1479/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 146px; left: 974px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1694/1480/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 146px; left: -306px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1689/1480/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 402px; left: 974px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1694/1479/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: -110px; left: -306px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1689/1481/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 658px; left: 974px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1694/1478/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: -366px; left: -306px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1689/1482/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div></div></div><div style="overflow: visible; width: 100%; height: 0px; position: absolute; display: block; margin: 0px; padding: 0px; border: 0px none; top: 0px; left: 0px; z-index: 100;"><div style="overflow: visible; width: 100%; height: 0px; position: absolute; display: block; margin: 0px; padding: 0px; border: 0px none; top: 0px; left: 0px; z-index: 101;"><svg:svg version="1.1" width="152px" height="152px" viewBox="418 249 152 152" overflow="visible" xmlns:xlink="http://www.w3.org/1999/xlink" style="position: absolute; overflow: visible; margin: 0px; padding: 0px; border: 0px; width: 152px; height: 152px; pointer-events: none; z-index: 0; left: 418px; top: 249px;"><path fill-rule="evenodd" d="M 419 325 A 75 75 0 1 0 419 324 Z" style="stroke:#007EEA;stroke-width:1px;stroke-opacity:1;fill:#2196f3;fill-opacity:0.3;pointer-events:visiblePainted;"></path></svg:svg></div><div style="overflow: visible; width: 100%; height: 0px; position: absolute; display: block; margin: 0px; padding: 0px; border: 0px none; top: 0px; left: 0px; z-index: 103;"></div><div style="overflow: visible; width: 100%; height: 0px; position: absolute; display: block; margin: 0px; padding: 0px; border: 0px none; top: 0px; left: 0px; z-index: 106;"></div></div></div><div style="position: absolute; display: none; margin: 0px; padding: 0px; border: 0px none; top: 0px; left: 0px; overflow: visible; width: 100%; height: 100%; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); background-color: rgb(255, 255, 255); z-index: 10000; opacity: 0.5;"></div></div></div><div style="position: absolute; z-index: 100; margin: 0px; padding: 0px; pointer-events: none; bottom: 0px; right: 0px;"><div style="border: 0px none; margin: -4px 0px 0px; padding: 0px; pointer-events: none; float: right; height: 21px;"><div style="position: relative; width: 52px; height: 14px; margin: 0px 12px 7px 2px; overflow: hidden; pointer-events: auto;"><span style="display:block;margin:0;padding:0 4px;text-align:center;font-size:10px;line-height:11px;font-family:Helvetica,AppleSDGothicNeo-Light,nanumgothic,NanumGothic,&quot;나눔고딕&quot;,Dotum,&quot;돋움&quot;,sans-serif;font-weight:bold;color:#000;text-shadow:-1px 0 rgba(255, 255, 255, 0.3), 0 1px rgba(255, 255, 255, 0.3), 1px 0 rgba(255, 255, 255, 0.3), 0 -1px rgba(255, 255, 255, 0.3);">100m</span><img src="https://ssl.pstatic.net/static/maps/mantle/1x/scale-normal-b.png" width="44" height="4" alt="" style="position:absolute;left:4px;;bottom:0;z-index:2;display:block;width:44px;height:4px;overflow:hidden;margin:0;padding:0;border:0 none;max-width:none !important;max-height:none !important;min-width:0 !important;min-height:0 !important;"><img src="https://ssl.pstatic.net/static/maps/mantle/1x/scale-normal-l.png" width="4" height="10" alt="" style="position:absolute;left:0;bottom:0;z-index:2;display:block;width:4px;height:10px;overflow:hidden;margin:0;padding:0;border:0 none;max-width:none !important;max-height:none !important;min-width:0 !important;min-height:0 !important;"><img src="https://ssl.pstatic.net/static/maps/mantle/1x/scale-normal-r.png" width="4" height="10" alt="" style="position:absolute;right:0;bottom:0;z-index:2;display:block;width:4px;height:10px;overflow:hidden;margin:0;padding:0;border:0 none;max-width:none !important;max-height:none !important;min-width:0 !important;min-height:0 !important;"></div></div><div style="border: 0px none; margin: 0px; padding: 0px; pointer-events: none; float: right;"><a href="http://map.naver.com" target="_blank" style="display: block; width: 43px; height: 10px; overflow: hidden; margin: 0px 5px 7px 0px; pointer-events: auto;"><img src="https://ssl.pstatic.net/static/maps/mantle/1x/naver-normal.png" width="43" height="10" alt="NAVER" style="display:block;width:43px;height:10px;overflow:hidden;border:0 none;margin:0;padding:0;max-width:none !important;max-height:none !important;min-width:0 !important;min-height:0 !important;"></a></div></div><div style="position: absolute; z-index: 100; margin: 0px; padding: 0px; pointer-events: none; bottom: 0px; left: 0px;"><div style="border: 0px none; margin: 0px; padding: 0px; pointer-events: none; float: left; height: 19px;"><div class="map_copyright" style="margin: 0px; padding: 0px 0px 2px 10px; height: 19px; line-height: 19px; color: rgb(68, 68, 68); font-family: Helvetica, AppleSDGothicNeo-Light, nanumgothic, NanumGothic, 나눔고딕, Dotum, 돋움, sans-serif; font-size: 11px; clear: both; white-space: nowrap; pointer-events: none;"><div style="float: left;"><span style="white-space: pre; color: rgb(68, 68, 68);">© NAVER Corp.</span></div><a href="#" style="font-family: Helvetica, AppleSDGothicNeo-Light, nanumgothic, NanumGothic, 나눔고딕, Dotum, 돋움, sans-serif; font-size: 11px; line-height: 19px; margin: 0px 0px 0px 5px; padding: 0px; color: rgb(68, 68, 68); float: left; pointer-events: auto; text-decoration: underline; display: none;">더보기</a><div style="float: left;"><a target="_blank" href="http://www.openstreetmap.org/copyright" style="pointer-events: auto; white-space: pre; display: none; color: rgb(68, 68, 68);"> /OpenStreetMap</a></div></div></div></div><div style="border: 1px solid rgb(41, 41, 48); background: rgb(255, 255, 255); padding: 15px; color: rgb(51, 51, 51); position: absolute; font-size: 11px; line-height: 1.5; clear: both; display: none; max-width: 350px !important; max-height: 300px !important;"><h5 style="font-size: 12px; margin-top: 0px; margin-bottom: 10px;">지도 데이터</h5><a href="#" style="position: absolute; top: 8px; right: 8px; width: 14px; height: 14px; font-size: 14px; line-height: 14px; display: block; overflow: hidden; color: rgb(68, 68, 68); text-decoration: none; font-weight: bold; text-align: center;">╳</a><div><span style="white-space: pre; color: rgb(68, 68, 68); float: left;">© NAVER Corp.</span><a target="_blank" href="http://www.openstreetmap.org/copyright" style="pointer-events: auto; white-space: pre; color: rgb(68, 68, 68); float: left; display: none;"> /OpenStreetMap</a></div></div><div style="position: absolute; z-index: 100; margin: 0px; padding: 0px; pointer-events: none; top: 0px; right: 0px;"><div style="border: 0px none; margin: 0px; padding: 0px; pointer-events: none; float: right;"><div style="position: relative; z-index: 4; pointer-events: auto;"><div style="position: relative; z-index: 0; width: 28px; margin: 10px; border: 1px solid rgb(68, 68, 68); box-sizing: content-box !important; user-select: none;"><a href="#" style="position: relative; z-index: 2; width: 28px; height: 22px; cursor: pointer; display: block; overflow: hidden; border-bottom: 1px solid rgb(202, 205, 209); box-sizing: content-box !important;"><img src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-in-large-normal.png" width="28" height="22" alt="지도 확대" style="margin:0;padding:0;border:solid 0 transparent;display:block;box-sizing:content-box !important;max-width:none !important;max-height:none !important;min-width:0 !important;min-height:0 !important;width:28px;height:22px;"></a><div style="position: relative; width: 28px; height: 96px; overflow: hidden; margin: 0px; padding: 7px 0px; background-color: rgb(255, 255, 255); cursor: pointer; box-sizing: content-box !important; display: block;"><div style="position: absolute; top: 7px; bottom: 7px; left: 12px; width: 4px; height: 96px; display: block; background-color: rgb(47, 135, 236);"></div><div style="position: absolute; top: 7px; bottom: 7px; left: 12px; width: 4px; height: 34px; display: block; background-color: rgb(202, 205, 209);"></div><a href="#" style="position: absolute; left: 4px; width: 18px; height: 10px; top: 34px; border: 1px solid rgb(68, 68, 68); cursor: move; display: block; overflow: hidden; box-sizing: content-box !important;"><img src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-handle.png" width="18" height="10" alt="지도 확대/축소 슬라이더" style="margin:0;padding:0;border:solid 0 transparent;display:block;box-sizing:content-box !important;max-width:none !important;max-height:none !important;min-width:0 !important;min-height:0 !important;width:18px;height:10px;"></a></div><a href="#" style="position: relative; z-index: 2; width: 28px; height: 22px; cursor: pointer; display: block; overflow: hidden; border-top: 1px solid rgb(202, 205, 209); box-sizing: content-box !important;"><img src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-out-large-normal.png" width="28" height="22" alt="지도 축소" style="margin:0;padding:0;border:solid 0 transparent;display:block;box-sizing:content-box !important;max-width:none !important;max-height:none !important;min-width:0 !important;min-height:0 !important;width:28px;height:22px;"></a><div style="position: absolute; top: 22px; width: 44px; height: 0px; overflow: visible; display: none; left: -51px;"><div style="display: block; margin: 0px; padding: 0px;"><h4 style="visibility:hidden;width:0;height:0;overflow:hidden;margin:0;padding:0;">지도 컨트롤러 범례</h4><div style="position: absolute; top: 13px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; overflow: hidden; box-sizing: content-box !important; visibility: visible;"><img src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-legend-left-on.png" alt="" style="position: absolute; top: 0px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important;"><span style="margin: 0px; border: 0px solid transparent; display: block; font-family: Helvetica, AppleSDGothicNeo-Light, nanumgothic, NanumGothic, 나눔고딕, Dotum, 돋움, sans-serif; position: relative; z-index: 2; line-height: 17px; color: rgb(255, 255, 255); font-size: 11px; padding: 0px 4px 0px 0px; text-align: center; letter-spacing: -1px; box-sizing: content-box !important;">부동산</span></div><div style="position: absolute; top: 33px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; overflow: hidden; box-sizing: content-box !important; visibility: visible;"><img src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-legend-left-normal.png" alt="" style="position: absolute; top: 0px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important;"><span style="margin: 0px; border: 0px solid transparent; display: block; font-family: Helvetica, AppleSDGothicNeo-Light, nanumgothic, NanumGothic, 나눔고딕, Dotum, 돋움, sans-serif; position: relative; z-index: 2; line-height: 17px; color: rgb(255, 255, 255); font-size: 11px; padding: 0px 4px 0px 0px; text-align: center; letter-spacing: -1px; box-sizing: content-box !important;">거리</span></div><div style="position: absolute; top: 53px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; overflow: hidden; box-sizing: content-box !important; visibility: visible;"><img src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-legend-left-normal.png" alt="" style="position: absolute; top: 0px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important;"><span style="margin: 0px; border: 0px solid transparent; display: block; font-family: Helvetica, AppleSDGothicNeo-Light, nanumgothic, NanumGothic, 나눔고딕, Dotum, 돋움, sans-serif; position: relative; z-index: 2; line-height: 17px; color: rgb(255, 255, 255); font-size: 11px; padding: 0px 4px 0px 0px; text-align: center; letter-spacing: -1px; box-sizing: content-box !important;">읍,면,동</span></div><div style="position: absolute; top: 83px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; overflow: hidden; box-sizing: content-box !important; visibility: visible;"><img src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-legend-left-normal.png" alt="" style="position: absolute; top: 0px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important;"><span style="margin: 0px; border: 0px solid transparent; display: block; font-family: Helvetica, AppleSDGothicNeo-Light, nanumgothic, NanumGothic, 나눔고딕, Dotum, 돋움, sans-serif; position: relative; z-index: 2; line-height: 17px; color: rgb(255, 255, 255); font-size: 11px; padding: 0px 4px 0px 0px; text-align: center; letter-spacing: -1px; box-sizing: content-box !important;">시,군,구</span></div><div style="position: absolute; top: 113px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; overflow: hidden; box-sizing: content-box !important; visibility: hidden;"><img src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-legend-left-normal.png" alt="" style="position: absolute; top: 0px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important;"><span style="margin: 0px; border: 0px solid transparent; display: block; font-family: Helvetica, AppleSDGothicNeo-Light, nanumgothic, NanumGothic, 나눔고딕, Dotum, 돋움, sans-serif; position: relative; z-index: 2; line-height: 17px; color: rgb(255, 255, 255); font-size: 11px; padding: 0px 4px 0px 0px; text-align: center; letter-spacing: -1px; box-sizing: content-box !important;">시,도</span></div><div style="position: absolute; top: 133px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; overflow: hidden; box-sizing: content-box !important; visibility: hidden;"><img src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-legend-left-normal.png" alt="" style="position: absolute; top: 0px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important;"><span style="margin: 0px; border: 0px solid transparent; display: block; font-family: Helvetica, AppleSDGothicNeo-Light, nanumgothic, NanumGothic, 나눔고딕, Dotum, 돋움, sans-serif; position: relative; z-index: 2; line-height: 17px; color: rgb(255, 255, 255); font-size: 11px; padding: 0px 4px 0px 0px; text-align: center; letter-spacing: -1px; box-sizing: content-box !important;">국가</span></div></div></div></div></div></div></div></div>
 				<div class="list-block media-list">
 					<ul>
 						<li>
 							<div class="item-content">
 								<div class="item-inner">
 									<div class="item-title-row">
-										<div class="item-title">정모 참가비</div>
-										<div class="item-after">차아아암가아아아비ㅣ잉이</div>
+										<div class="item-title">지역</div>
+										<div class="item-after">서울, 중구<br></div>
 									</div>
 								</div>
 							</div>
@@ -273,132 +350,25 @@
 							<div class="item-content">
 								<div class="item-inner">
 									<div class="item-title-row">
-										<div class="item-title">최대 참여 인원수</div>
-										<div class="item-after">7명</div>
+										<div class="item-title">장소명</div>
+										<div class="item-after">심리상담연구소 "비온 뒤 숲속"</div>
 									</div>
 								</div>
 							</div>
-						</li>
-						<li>
-							<div class="item-content">
-								<div class="item-inner">
-									<div class="item-title-row">
-										<div class="item-title">최소 참여 인원수</div>
-										<div class="item-after">2명</div>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<a class="item-link item-content" href="/p/55e77efee76f6870ab005461/comments">
-								<div class="item-inner">
-									<div class="item-title-row">
-										<div class="item-title">문의하기</div>
-										<div class="item-after">문의 및 댓글</div>
-									</div>
-								</div>
-							</a>        
 						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
-		<div class="menu-block-wrapper">
-			<div class="content-block-title">포함내용</div>
-				<div class="content-block menu-block">
-					<div class="content-block-inner">
-						<p>정모 참여 비용에는 간단한 먹거리와 사이트 수수료가 포함되어 있습니다.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- 정모 목록 -->
-		<div class="tablet-40">
-			<div class="variant-block-wrapper">
-				<div class="content-block-title variant-block-title">날짜</div>
-				<div class="content-block">
-					<div class="list-block media-list variant-block">
-						<ul>
-							<li class="variant-item">
-								<div class="item-link item-content">
-									<div class="item-inner">
-										<div class="item-text">현재 참여 가능한 일정이 없습니다.</div>
-									</div>
-								</div>
-							</li>
-						</ul>
-						<!-- 모임별 정모 관련 안내, 모임마다 내용 다르지만 첫번째 내용은 동일할 것 -->
-					<div class="list-block-label">
-						하나. 신청은 당일 2시간 전까지 가능합니다.<br>
-						둘. 집밥지기의 연락처는 모임 하루 전 오후 7시에 문자와 이메일, 앱에서 공유됩니다.<br>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="location-block-wrapper">
-	<div class="content-block-title">장소</div>
-		<div class="content-block location-block">
-			<div class="content-block-inner">
-				<div class="address">서울 중구 신당동</div>
-			</div>
-			<div id="product-map" class="map" style="position: relative; overflow: hidden; background: url(&quot;https://ssl.pstatic.net/static/maps/mantle/1x/pattern_1.png&quot;) 0px 0px repeat transparent;"><div style="position: absolute; display: block; margin: 0px; padding: 0px; border: 0px none; top: 0px; left: 0px; overflow: visible; width: 100%; height: 100%; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); z-index: 0; cursor: url(&quot;https://ssl.pstatic.net/static/maps/mantle/1x/openhand.cur&quot;), default;"><div style="position: absolute; display: block; margin: 0px; padding: 0px; border: 0px none; top: 0px; left: 0px; overflow: visible; width: 100%; height: 100%; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); z-index: 0;"><div style="overflow: visible; width: 100%; height: 0px; position: absolute; display: block; margin: 0px; padding: 0px; border: 0px none; top: 0px; left: 0px; z-index: 1;"><div style="overflow: visible; width: 100%; height: 0px; position: absolute; display: none; margin: 0px; padding: 0px; border: 0px none; top: 0px; left: 0px; z-index: 0; user-select: none;"></div><div style="overflow: visible; width: 100%; height: 0px; position: absolute; display: block; margin: 0px; padding: 0px; border: 0px none; top: 0px; left: 0px; z-index: 1; user-select: none;"><div style="position: absolute; top: 0px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 0px; height: 0px; overflow: visible; box-sizing: content-box !important;"><div style="position: absolute; top: -366px; left: 462px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1692/1482/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 658px; left: 206px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1691/1478/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: -110px; left: 462px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1692/1481/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 402px; left: 206px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1691/1479/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 146px; left: 462px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1692/1480/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 146px; left: 206px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1691/1480/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 402px; left: 462px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1692/1479/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: -110px; left: 206px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1691/1481/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 658px; left: 462px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1692/1478/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: -366px; left: 206px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1691/1482/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: -366px; left: 718px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1693/1482/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 658px; left: -50px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1690/1478/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: -110px; left: 718px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1693/1481/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 402px; left: -50px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1690/1479/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 146px; left: 718px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1693/1480/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 146px; left: -50px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1690/1480/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 402px; left: 718px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1693/1479/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: -110px; left: -50px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1690/1481/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 658px; left: 718px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1693/1478/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: -366px; left: -50px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1690/1482/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: -366px; left: 974px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1694/1482/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 658px; left: -306px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1689/1478/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: -110px; left: 974px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1694/1481/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 402px; left: -306px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1689/1479/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 146px; left: 974px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1694/1480/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 146px; left: -306px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1689/1480/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 402px; left: 974px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1694/1479/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: -110px; left: -306px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1689/1481/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: 658px; left: 974px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1694/1478/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div><div style="position: absolute; top: -366px; left: -306px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; box-sizing: content-box !important; opacity: 1; width: 256px; height: 256px;"><img alt="" width="256" height="256" src="https://simg.pstatic.net/onetile/get/193/0/0/11/1689/1482/bl_vc_bg/ol_vc_an" style="margin: 0px; padding: 0px; border: 0px solid transparent; display: block; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important; user-select: none; opacity: 1; position: absolute; left: 0px; top: 0px; z-index: 0; width: 256px; height: 256px;"></div></div></div><div style="overflow: visible; width: 100%; height: 0px; position: absolute; display: block; margin: 0px; padding: 0px; border: 0px none; top: 0px; left: 0px; z-index: 100;"><div style="overflow: visible; width: 100%; height: 0px; position: absolute; display: block; margin: 0px; padding: 0px; border: 0px none; top: 0px; left: 0px; z-index: 101;"><svg:svg version="1.1" width="152px" height="152px" viewBox="418 249 152 152" overflow="visible" xmlns:xlink="http://www.w3.org/1999/xlink" style="position: absolute; overflow: visible; margin: 0px; padding: 0px; border: 0px; width: 152px; height: 152px; pointer-events: none; z-index: 0; left: 418px; top: 249px;"><path fill-rule="evenodd" d="M 419 325 A 75 75 0 1 0 419 324 Z" style="stroke:#007EEA;stroke-width:1px;stroke-opacity:1;fill:#2196f3;fill-opacity:0.3;pointer-events:visiblePainted;"></path></svg:svg></div><div style="overflow: visible; width: 100%; height: 0px; position: absolute; display: block; margin: 0px; padding: 0px; border: 0px none; top: 0px; left: 0px; z-index: 103;"></div><div style="overflow: visible; width: 100%; height: 0px; position: absolute; display: block; margin: 0px; padding: 0px; border: 0px none; top: 0px; left: 0px; z-index: 106;"></div></div></div><div style="position: absolute; display: none; margin: 0px; padding: 0px; border: 0px none; top: 0px; left: 0px; overflow: visible; width: 100%; height: 100%; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); background-color: rgb(255, 255, 255); z-index: 10000; opacity: 0.5;"></div></div></div><div style="position: absolute; z-index: 100; margin: 0px; padding: 0px; pointer-events: none; bottom: 0px; right: 0px;"><div style="border: 0px none; margin: -4px 0px 0px; padding: 0px; pointer-events: none; float: right; height: 21px;"><div style="position: relative; width: 52px; height: 14px; margin: 0px 12px 7px 2px; overflow: hidden; pointer-events: auto;"><span style="display:block;margin:0;padding:0 4px;text-align:center;font-size:10px;line-height:11px;font-family:Helvetica,AppleSDGothicNeo-Light,nanumgothic,NanumGothic,&quot;나눔고딕&quot;,Dotum,&quot;돋움&quot;,sans-serif;font-weight:bold;color:#000;text-shadow:-1px 0 rgba(255, 255, 255, 0.3), 0 1px rgba(255, 255, 255, 0.3), 1px 0 rgba(255, 255, 255, 0.3), 0 -1px rgba(255, 255, 255, 0.3);">100m</span><img src="https://ssl.pstatic.net/static/maps/mantle/1x/scale-normal-b.png" width="44" height="4" alt="" style="position:absolute;left:4px;;bottom:0;z-index:2;display:block;width:44px;height:4px;overflow:hidden;margin:0;padding:0;border:0 none;max-width:none !important;max-height:none !important;min-width:0 !important;min-height:0 !important;"><img src="https://ssl.pstatic.net/static/maps/mantle/1x/scale-normal-l.png" width="4" height="10" alt="" style="position:absolute;left:0;bottom:0;z-index:2;display:block;width:4px;height:10px;overflow:hidden;margin:0;padding:0;border:0 none;max-width:none !important;max-height:none !important;min-width:0 !important;min-height:0 !important;"><img src="https://ssl.pstatic.net/static/maps/mantle/1x/scale-normal-r.png" width="4" height="10" alt="" style="position:absolute;right:0;bottom:0;z-index:2;display:block;width:4px;height:10px;overflow:hidden;margin:0;padding:0;border:0 none;max-width:none !important;max-height:none !important;min-width:0 !important;min-height:0 !important;"></div></div><div style="border: 0px none; margin: 0px; padding: 0px; pointer-events: none; float: right;"><a href="http://map.naver.com" target="_blank" style="display: block; width: 43px; height: 10px; overflow: hidden; margin: 0px 5px 7px 0px; pointer-events: auto;"><img src="https://ssl.pstatic.net/static/maps/mantle/1x/naver-normal.png" width="43" height="10" alt="NAVER" style="display:block;width:43px;height:10px;overflow:hidden;border:0 none;margin:0;padding:0;max-width:none !important;max-height:none !important;min-width:0 !important;min-height:0 !important;"></a></div></div><div style="position: absolute; z-index: 100; margin: 0px; padding: 0px; pointer-events: none; bottom: 0px; left: 0px;"><div style="border: 0px none; margin: 0px; padding: 0px; pointer-events: none; float: left; height: 19px;"><div class="map_copyright" style="margin: 0px; padding: 0px 0px 2px 10px; height: 19px; line-height: 19px; color: rgb(68, 68, 68); font-family: Helvetica, AppleSDGothicNeo-Light, nanumgothic, NanumGothic, 나눔고딕, Dotum, 돋움, sans-serif; font-size: 11px; clear: both; white-space: nowrap; pointer-events: none;"><div style="float: left;"><span style="white-space: pre; color: rgb(68, 68, 68);">© NAVER Corp.</span></div><a href="#" style="font-family: Helvetica, AppleSDGothicNeo-Light, nanumgothic, NanumGothic, 나눔고딕, Dotum, 돋움, sans-serif; font-size: 11px; line-height: 19px; margin: 0px 0px 0px 5px; padding: 0px; color: rgb(68, 68, 68); float: left; pointer-events: auto; text-decoration: underline; display: none;">더보기</a><div style="float: left;"><a target="_blank" href="http://www.openstreetmap.org/copyright" style="pointer-events: auto; white-space: pre; display: none; color: rgb(68, 68, 68);"> /OpenStreetMap</a></div></div></div></div><div style="border: 1px solid rgb(41, 41, 48); background: rgb(255, 255, 255); padding: 15px; color: rgb(51, 51, 51); position: absolute; font-size: 11px; line-height: 1.5; clear: both; display: none; max-width: 350px !important; max-height: 300px !important;"><h5 style="font-size: 12px; margin-top: 0px; margin-bottom: 10px;">지도 데이터</h5><a href="#" style="position: absolute; top: 8px; right: 8px; width: 14px; height: 14px; font-size: 14px; line-height: 14px; display: block; overflow: hidden; color: rgb(68, 68, 68); text-decoration: none; font-weight: bold; text-align: center;">╳</a><div><span style="white-space: pre; color: rgb(68, 68, 68); float: left;">© NAVER Corp.</span><a target="_blank" href="http://www.openstreetmap.org/copyright" style="pointer-events: auto; white-space: pre; color: rgb(68, 68, 68); float: left; display: none;"> /OpenStreetMap</a></div></div><div style="position: absolute; z-index: 100; margin: 0px; padding: 0px; pointer-events: none; top: 0px; right: 0px;"><div style="border: 0px none; margin: 0px; padding: 0px; pointer-events: none; float: right;"><div style="position: relative; z-index: 4; pointer-events: auto;"><div style="position: relative; z-index: 0; width: 28px; margin: 10px; border: 1px solid rgb(68, 68, 68); box-sizing: content-box !important; user-select: none;"><a href="#" style="position: relative; z-index: 2; width: 28px; height: 22px; cursor: pointer; display: block; overflow: hidden; border-bottom: 1px solid rgb(202, 205, 209); box-sizing: content-box !important;"><img src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-in-large-normal.png" width="28" height="22" alt="지도 확대" style="margin:0;padding:0;border:solid 0 transparent;display:block;box-sizing:content-box !important;max-width:none !important;max-height:none !important;min-width:0 !important;min-height:0 !important;width:28px;height:22px;"></a><div style="position: relative; width: 28px; height: 96px; overflow: hidden; margin: 0px; padding: 7px 0px; background-color: rgb(255, 255, 255); cursor: pointer; box-sizing: content-box !important; display: block;"><div style="position: absolute; top: 7px; bottom: 7px; left: 12px; width: 4px; height: 96px; display: block; background-color: rgb(47, 135, 236);"></div><div style="position: absolute; top: 7px; bottom: 7px; left: 12px; width: 4px; height: 34px; display: block; background-color: rgb(202, 205, 209);"></div><a href="#" style="position: absolute; left: 4px; width: 18px; height: 10px; top: 34px; border: 1px solid rgb(68, 68, 68); cursor: move; display: block; overflow: hidden; box-sizing: content-box !important;"><img src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-handle.png" width="18" height="10" alt="지도 확대/축소 슬라이더" style="margin:0;padding:0;border:solid 0 transparent;display:block;box-sizing:content-box !important;max-width:none !important;max-height:none !important;min-width:0 !important;min-height:0 !important;width:18px;height:10px;"></a></div><a href="#" style="position: relative; z-index: 2; width: 28px; height: 22px; cursor: pointer; display: block; overflow: hidden; border-top: 1px solid rgb(202, 205, 209); box-sizing: content-box !important;"><img src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-out-large-normal.png" width="28" height="22" alt="지도 축소" style="margin:0;padding:0;border:solid 0 transparent;display:block;box-sizing:content-box !important;max-width:none !important;max-height:none !important;min-width:0 !important;min-height:0 !important;width:28px;height:22px;"></a><div style="position: absolute; top: 22px; width: 44px; height: 0px; overflow: visible; display: none; left: -51px;"><div style="display: block; margin: 0px; padding: 0px;"><h4 style="visibility:hidden;width:0;height:0;overflow:hidden;margin:0;padding:0;">지도 컨트롤러 범례</h4><div style="position: absolute; top: 13px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; overflow: hidden; box-sizing: content-box !important; visibility: visible;"><img src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-legend-left-on.png" alt="" style="position: absolute; top: 0px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important;"><span style="margin: 0px; border: 0px solid transparent; display: block; font-family: Helvetica, AppleSDGothicNeo-Light, nanumgothic, NanumGothic, 나눔고딕, Dotum, 돋움, sans-serif; position: relative; z-index: 2; line-height: 17px; color: rgb(255, 255, 255); font-size: 11px; padding: 0px 4px 0px 0px; text-align: center; letter-spacing: -1px; box-sizing: content-box !important;">부동산</span></div><div style="position: absolute; top: 33px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; overflow: hidden; box-sizing: content-box !important; visibility: visible;"><img src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-legend-left-normal.png" alt="" style="position: absolute; top: 0px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important;"><span style="margin: 0px; border: 0px solid transparent; display: block; font-family: Helvetica, AppleSDGothicNeo-Light, nanumgothic, NanumGothic, 나눔고딕, Dotum, 돋움, sans-serif; position: relative; z-index: 2; line-height: 17px; color: rgb(255, 255, 255); font-size: 11px; padding: 0px 4px 0px 0px; text-align: center; letter-spacing: -1px; box-sizing: content-box !important;">거리</span></div><div style="position: absolute; top: 53px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; overflow: hidden; box-sizing: content-box !important; visibility: visible;"><img src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-legend-left-normal.png" alt="" style="position: absolute; top: 0px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important;"><span style="margin: 0px; border: 0px solid transparent; display: block; font-family: Helvetica, AppleSDGothicNeo-Light, nanumgothic, NanumGothic, 나눔고딕, Dotum, 돋움, sans-serif; position: relative; z-index: 2; line-height: 17px; color: rgb(255, 255, 255); font-size: 11px; padding: 0px 4px 0px 0px; text-align: center; letter-spacing: -1px; box-sizing: content-box !important;">읍,면,동</span></div><div style="position: absolute; top: 83px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; overflow: hidden; box-sizing: content-box !important; visibility: visible;"><img src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-legend-left-normal.png" alt="" style="position: absolute; top: 0px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important;"><span style="margin: 0px; border: 0px solid transparent; display: block; font-family: Helvetica, AppleSDGothicNeo-Light, nanumgothic, NanumGothic, 나눔고딕, Dotum, 돋움, sans-serif; position: relative; z-index: 2; line-height: 17px; color: rgb(255, 255, 255); font-size: 11px; padding: 0px 4px 0px 0px; text-align: center; letter-spacing: -1px; box-sizing: content-box !important;">시,군,구</span></div><div style="position: absolute; top: 113px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; overflow: hidden; box-sizing: content-box !important; visibility: hidden;"><img src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-legend-left-normal.png" alt="" style="position: absolute; top: 0px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important;"><span style="margin: 0px; border: 0px solid transparent; display: block; font-family: Helvetica, AppleSDGothicNeo-Light, nanumgothic, NanumGothic, 나눔고딕, Dotum, 돋움, sans-serif; position: relative; z-index: 2; line-height: 17px; color: rgb(255, 255, 255); font-size: 11px; padding: 0px 4px 0px 0px; text-align: center; letter-spacing: -1px; box-sizing: content-box !important;">시,도</span></div><div style="position: absolute; top: 133px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; overflow: hidden; box-sizing: content-box !important; visibility: hidden;"><img src="https://ssl.pstatic.net/static/maps/mantle/1x/zoom-legend-left-normal.png" alt="" style="position: absolute; top: 0px; left: 0px; z-index: 0; margin: 0px; padding: 0px; border: 0px solid transparent; display: block; width: 44px; height: 17px; box-sizing: content-box !important; max-width: none !important; max-height: none !important; min-width: 0px !important; min-height: 0px !important;"><span style="margin: 0px; border: 0px solid transparent; display: block; font-family: Helvetica, AppleSDGothicNeo-Light, nanumgothic, NanumGothic, 나눔고딕, Dotum, 돋움, sans-serif; position: relative; z-index: 2; line-height: 17px; color: rgb(255, 255, 255); font-size: 11px; padding: 0px 4px 0px 0px; text-align: center; letter-spacing: -1px; box-sizing: content-box !important;">국가</span></div></div></div></div></div></div></div></div>
+		<div class="featured-products-wrapper">
+	  		<div class="swiper-container featured-swiper swiper-container-horizontal">
+	  			<div class="swiper-wrapper"></div>
+	  			<div class="swiper-button-prev swiper-button-disabled"></div>
+	  			<div class="swiper-button-next swiper-button-disabled"></div>
+	  		</div>
+	  	</div>
 
-      <div class="list-block media-list">
-        <ul>
-          <li>
-            <div class="item-content">
-              <div class="item-inner">
-                <div class="item-title-row">
-                  <div class="item-title">
-                    지역
-                  </div>
-
-                  <div class="item-after">
-                    서울, 중구<br>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-
-            <li>
-              <div class="item-content">
-                <div class="item-inner">
-                  <div class="item-title-row">
-                    <div class="item-title">
-                      장소명
-                    </div>
-
-                    <div class="item-after">
-                      심리상담연구소 "비온 뒤 숲속"
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-        <div class="featured-products-wrapper">
-
-    <div class="swiper-container featured-swiper swiper-container-horizontal">
-      <div class="swiper-wrapper">
-        
-      </div>
-
-      <div class="swiper-button-prev swiper-button-disabled"></div>
-      <div class="swiper-button-next swiper-button-disabled"></div>
-    </div>
-  </div>
-
-    </div>
-  </div>
-
-  <script>
+<script>
   fbq('track', 'ViewContent', {
     content_name: '마음이 지치고 힘드신 분,  &quot;비온 뒤 숲속&quot;으로 오세요~',
     content_category: '대화/일상',
@@ -502,527 +472,5 @@
   }
 </script>
 
-</div>
-        </div>
-      </div>
-    </div>
 
-    <footer id="footer" class="desktop-footer">
-  <div class="footer-block-wrapper">
-    <div class="footer-inner">
-      <div class="row">
-        <div class="col-33">
-          <div class="main">
-            <div class="heading">
-              집밥
-            </div>
-
-            <ul>
-              <li>
-                <a href="/about/about_us">소개</a>
-              </li>
-
-              <li>
-                <a href="/press/news">미디어</a>
-              </li>
-
-              <li>
-                <a target="_blank" href="http://help.zipbob.net">도움말</a>
-              </li>
-
-              <li>
-                <strong><a href="/terms/privacy">개인정보 처리방침</a></strong>
-              </li>
-
-              <li>
-                <a href="/terms">이용약관</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-33">
-          <div class="main">
-            <div class="heading">
-              둘러보기
-            </div>
-
-            <ul>
-              <li>
-                <a href="/reviews">후기</a>
-              </li>
-
-              <li>
-                <a href="/interviews">수다</a>
-              </li>
-
-              <li>
-                <a href="/stories">스토리</a>
-              </li>
-
-              <li>
-                <a href="/zigi?ref=footer">모임 만들기</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-33">
-          <div class="main">
-            <div class="heading">
-              우수지기
-            </div>
-
-            <ul class="list">
-              <li>
-                <a href="/badges/best_host_2016">2016</a>
-              </li>
-
-              <li>
-                <a href="/badges/best_host_2015">2015</a>
-              </li>
-
-              <li>
-                <a href="/badges/best_host_2014">2014</a>
-              </li>
-
-              <li>
-                <a href="/badges/best_host_2013">2013</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-divider">
-    </div>
-
-    <div class="footer-bottom">
-      <div class="zipbob-brand">
-        <div class="logo">
-          <img src="https://dppgjjx7k7m5m.cloudfront.net/assets/2_icon-ios-d6135680f443bb2bf68e844e94d41a4a993dbb95473a336211613b3dba02f163.png" alt="2 icon ios">
-        </div>
-
-        <div class="sns">
-          <a href="http://www.facebook.com/zipbobnet" class="facebook" target="_blank">
-            페이스북
-          </a>
-          <span>·</span>
-
-          <a href="https://instagram.com/zipbobnet/" class="instagram" target="_blank">
-            인스타그램
-          </a>
-          <span>·</span>
-
-          <a href="http://zipbob-blog.net/" class="naver" target="_blank">
-            블로그
-          </a>
-          <span>·</span>
-
-          <a href="https://story.kakao.com/ch/zipbobnet" class="kakaostory" target="_blank">
-            카카오스토리
-          </a>
-        </div>
-      </div>
-
-      <div class="copyright">
-        <span class="text">
-          상호명: (주)집밥 | 대표: 박설미 | 개인정보관리책임자 : 박설미
-        </span>
-
-        <span class="text">
-          사업자 등록번호: 215-87-73877 | 통신판매업신고: 제 2013-서울송파-0228호
-        </span>
-
-        <span class="text">
-          서울특별시 성동구 왕십리로 88 노벨빌딩 4층 | <a href="mailto:help@zipbob.net">help@zipbob.net</a>
-        </span>
-      </div>
-
-      <div class="copyright">
-        <span class="text">
-          ©2012-2017. ZIPBOB. ALL RIGHTS RESERVED.
-        </span>
-      </div>
-    </div>
-  </div>
-</footer>
-
-
-    
-      <script src="https://spi.maps.daum.net/imap/map_js_init/postcode.v2.js"></script><script charset="UTF-8" type="text/javascript" src="https://t1.daumcdn.net/cssjs/postcode/1522037570977/180326.js"></script>
-
-<script>
-  $(function() {
-    $(document).on('click', '#product_master_variant_attributes_location_attributes_address', function (e) {
-      App.f7.popup('.postcode-popup');
-
-      var element_layer = document.getElementById('postcode-wraper');
-      new daum.Postcode({
-        // theme: themeObj,
-        width: '100%',
-        height: '100%',
-        oncomplete: function(data) {
-          // 각 주소의 노출 규칙에 따라 주소를 조합한다.
-          // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
-          var fullAddr = ''; // 최종 주소 변수
-          var extraAddr = ''; // 조합형 주소 변수
-
-          // 사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
-          if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
-            fullAddr = data.roadAddress;
-          } else { // 사용자가 지번 주소를 선택했을 경우(J)
-            fullAddr = data.jibunAddress;
-          }
-
-          // 사용자가 선택한 주소가 도로명 타입일때 조합한다.
-          if (data.userSelectedType === 'R') {
-            // 건물명이 있을 경우 추가한다.
-            if (data.buildingName !== '') {
-              extraAddr = data.buildingName;
-            }
-          }
-
-          // 우편번호와 주소 정보를 해당 필드에 넣는다.
-          document.getElementById('product_master_variant_attributes_location_attributes_zipcode').value = data.zonecode; //5자리 새우편번호 사용
-          document.getElementById('product_master_variant_attributes_location_attributes_address').value = fullAddr;
-          document.getElementById('product_master_variant_attributes_location_attributes_address2').value = extraAddr;
-          document.getElementById('product_master_variant_attributes_location_attributes_city').value = data.sido;
-          document.getElementById('product_master_variant_attributes_location_attributes_region').value = data.sigungu;
-          document.getElementById('product_master_variant_attributes_location_attributes_sido').value = data.sido;
-          document.getElementById('product_master_variant_attributes_location_attributes_sigugun').value = data.sigungu;
-          document.getElementById('product_master_variant_attributes_location_attributes_dongmyun').value = data.bname;
-
-          document.getElementById('product_master_variant_attributes_location_attributes_address2').focus();
-          App.f7.closeModal('.postcode-popup')
-        },
-      }).embed(element_layer, {
-        autoClose: false
-      });
-    });
-
-    $(document).on('click', '#variant_location_attributes_address', function (e) {
-      App.f7.popup('.postcode-popup');
-
-      var element_layer = document.getElementById('postcode-wraper');
-      new daum.Postcode({
-        // theme: themeObj,
-        width: '100%',
-        height: '100%',
-        oncomplete: function(data) {
-          // 각 주소의 노출 규칙에 따라 주소를 조합한다.
-          // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
-          var fullAddr = ''; // 최종 주소 변수
-          var extraAddr = ''; // 조합형 주소 변수
-
-          // 사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
-          if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
-            fullAddr = data.roadAddress;
-          } else { // 사용자가 지번 주소를 선택했을 경우(J)
-            fullAddr = data.jibunAddress;
-          }
-
-          // 사용자가 선택한 주소가 도로명 타입일때 조합한다.
-          if (data.userSelectedType === 'R') {
-            // 건물명이 있을 경우 추가한다.
-            if (data.buildingName !== '') {
-              extraAddr = data.buildingName;
-            }
-          }
-
-          // 우편번호와 주소 정보를 해당 필드에 넣는다.
-          document.getElementById('variant_location_attributes_zipcode').value = data.zonecode; //5자리 새우편번호 사용
-          document.getElementById('variant_location_attributes_address').value = fullAddr;
-          document.getElementById('variant_location_attributes_address2').value = extraAddr;
-          document.getElementById('variant_location_attributes_city').value = data.sido;
-          document.getElementById('variant_location_attributes_region').value = data.sigungu;
-          document.getElementById('variant_location_attributes_sido').value = data.sido;
-          document.getElementById('variant_location_attributes_sigugun').value = data.sigungu;
-          document.getElementById('variant_location_attributes_dongmyun').value = data.bname;
-
-          document.getElementById('variant_location_attributes_address2').focus();
-          App.f7.closeModal('.postcode-popup')
-        },
-      }).embed(element_layer, {
-        autoClose: false
-      });
-    });
-  });
-</script>
-
-<div class="popup postcode-popup">
-  <div class="navbar">
-    <div class="navbar-inner">
-      <div class="center sliding">주소 찾기</div>
-
-      <div class="right">
-        <a href="#" class="link icon-only close-popup">
-          <i class="material-icons clear"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div id="postcode-wraper" class="page-content">
-  </div>
-</div>
-
-    <div class="popup search-filter-popup">
-  <div class="navbar">
-    <div class="navbar-inner">
-      <div class="center sliding">필터</div>
-
-      <div class="right">
-        <a href="#" class="link icon-only close-popup">
-          <i class="material-icons clear"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <form class="product-search-form" action="/s" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
-    <div class="search-form-block-wrapper">
-      <div class="content-block">
-        <div class="list-block no-hairline inputs-list main-filter-block">
-          <ul>
-            <li class="category-block-wrapper">
-              <div class="item-content">
-                <div class="item-inner">
-                  <div class="item-title label">카테고리</div>
-                  <div class="item-input item-input-field">
-
-
-                    <select name="category" class="product-category">
-                      <option value="">모든 주제</option>
-<option value="talk">대화/일상</option>
-<option value="food">요리/음식</option>
-<option value="culture">문화/예술</option>
-<option value="activity">활동/놀이</option>
-<option value="diy">공예/DIY</option>
-<option value="learning">지식/배움</option>
-<option value="meet">만남/연애</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li class="sort-block-wrapper">
-              <div class="item-content">
-                <div class="item-inner">
-                  <div class="item-title label">정렬</div>
-                  <div class="item-input item-input-field">
-
-                    <select name="sort" class="product-sort">
-                      <option value="meeted">날짜순</option>
-<option value="created">개설순</option>
-<option value="reviews">후기순</option>
-<option value="orders">참가자순</option>
-<option value="encores">앵콜순</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li class="date-block-wrapper">
-              <div class="item-content">
-                <div class="item-inner">
-                  <div class="item-title label">날짜</div>
-                  <div class="item-input item-input-field">
-                    <input name="meet_at" value="" type="text" placeholder="언제 시간되세요?" class="open-search-calendar" readonly="">
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-
-          <div class="content-block date-button-block">
-            <div class="buttons-row">
-              <a class="button button-raised righ-now" data-date-range="2018-05-23 - 2018-05-27" href="#">이번 주</a>
-              <a class="button button-raised weekend" data-date-range="2018-05-25 - 2018-05-27" href="#">주말</a>
-              <a class="button button-raised next-week" data-date-range="2018-05-28 - 2018-06-03" href="#">다음 주</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="zigi-filter-wrapper">
-          <div class="content-block-title">
-            지기
-          </div>
-
-          <div class="content-block">
-            <div class="list-block media-list">
-              <ul>
-                <li>
-                  <label class="label-checkbox item-content">
-                    <input type="checkbox" name="best_host" id="best_host" value="best_host">
-                    <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title">우수지기</div>
-                      </div>
-
-                      <div class="item-text">
-                        오랫동안 믿음직한 활동을 보여준 지기를 만나 보세요.
-                      </div>
-                    </div>
-                  </label>
-                </li>
-
-                <li>
-                  <label class="label-checkbox item-content">
-                    <input type="checkbox" name="culture_21st" id="culture_21st" value="culture_21st">
-                    <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title">문예지기</div>
-                      </div>
-
-                      <div class="item-text">
-                        매달 마지막 주는 21세기 문예지기와 함께 문화·예술 활동을 즐기세요!
-                      </div>
-                    </div>
-                  </label>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="submit-block-wrapper">
-          <div class="content-block">
-            <input type="submit" name="commit" value="검색하기" data-disable-with="검색중..." class="button button-big button-fill">
-          </div>
-        </div>
-
-        <a class="button external" data-behavior="tracking" data-tracking-category="ux" data-tracking-action="click" data-tracking-label="search-filter-reset-button" href="/s">필터 삭제</a>
-      </div>
-    </div>
-</form></div>
-
-<script>
-  $(document).on('click', '.open-search-filter-popup', function (e) {
-    e.preventDefault();
-    App.f7.popup('.search-filter-popup');
-    ga('send', 'event', 'ux', 'click', 'search-filter-popup');
-  });
-
-  $(document).on('click', '.search-filter-popup .buttons-row .button', function (e) {
-    e.preventDefault();
-    var dateRange = Dom7(this).data('date-range');
-    console.log(dateRange);
-    Dom7('.search-filter-popup .open-search-calendar').val(dateRange);
-  });
-
-  var startDate = new Date();
-  var minDate = startDate.setHours(0, 0, 0, 0);
-  var maxDate = new Date(startDate.getFullYear(), startDate.getMonth() + 1, startDate.getDate() + 3);
-  var calendarDefault = App.f7.calendar({
-    input: '.open-search-calendar',
-    monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월' , '9월' , '10월', '11월', '12월'],
-    dayNames: ['일', '월', '화', '수', '목', '금', '토'],
-    dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
-    // value: App.selectedMeetAt,
-    minDate: minDate,
-    maxDate: maxDate,
-    yearPicker: false,
-    rangePicker: true,
-    headerPlaceholder: '언제 시간되세요?',
-    toolbarCloseText: '닫기',
-  });
-</script>
-
-    <div class="popup map-popup">
-  <div class="navbar">
-    <div class="navbar-inner">
-      <div class="center sliding">위치</div>
-
-      <div class="right">
-        <a href="#" class="link icon-only close-popup">
-          <i class="material-icons clear"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div id="full-page-map" class="map" style="height: 100vh;"></div>
-</div>
-
-
-        <script type="text/javascript" src="https://stdpay.inicis.com/stdjs/INIStdPay.js"></script>
-
-  <script>
-    $(function() {
-      $(document).on('click', '.inipay-desktop-btn', function (e) {
-        e.preventDefault();
-
-        INIStdPay.pay('inipay-desktop-payment-form');
-      });
-    });
-  </script>
-
-<script src="https://mup.mobilians.co.kr/js/ext/ext_inc_comm.js"></script>
-
-<script>
-  $(function() {
-    $(document).on('click', '.mcash-btn', function (e) {
-      e.preventDefault();
-
-
-      if (App.util.isCordova()) {
-        if (device.platform === 'iOS') {
-          var options = "location=no,closebuttoncaption=닫기";
-        } else {
-          var options = "location=yes";
-        }
-
-        var inAppBrowserRef = window.open(App.mcash_order_url, '_blank', options);
-
-        inAppBrowserRef.addEventListener('loadstart', function(event) {
-          console.log('loadstart', event);
-
-          // handling cancel
-          if (event.url.match('/steps/payment')) {
-            inAppBrowserRef.close();
-          }
-
-          if (event.url.match('/payment/fail')) {
-            inAppBrowserRef.close();
-            window.location = event.url
-          }
-
-          if (event.url.match('/steps/complete')) {
-            inAppBrowserRef.close();
-            window.location = event.url
-          }
-        });
-
-        inAppBrowserRef.addEventListener('loadstop', function(event) {
-          console.log('loadstop', event);
-        });
-
-        inAppBrowserRef.addEventListener('loaderror', function(event) {
-          console.log('loaderror', event);
-        });
-
-        inAppBrowserRef.addEventListener('exit', function(event) {
-          console.log('exit', event);
-        });
-      } else {
-        var form = document.getElementById('mcash-payment-form');
-        MCASH_PAYMENT(form);
-      }
-    });
-  });
-</script>
-
-    <script>
-</script>
-
-    
-  
-
-<div class="offline-ui offline-ui-up"><div class="offline-ui-content"></div><a href="" class="offline-ui-retry"></a></div><script src="//browser-update.org/update.min.js"></script><div id="hs-beacon"><div data-reactroot=""><iframe style="border: none; bottom: 0px; height: 0px; position: fixed; right: 0px; top: 0px; width: 0px; z-index: 11111; left: 0px; background: rgba(0, 0, 0, 0.5);"></iframe></div></div><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="https://staticxx.facebook.com/connect/xd_arbiter/r/RQ7NiRXMcYA.js?version=42#channel=f4679ec3e57f34&amp;origin=https%3A%2F%2Fwww.zipbob.net" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div></body>
 </html>
