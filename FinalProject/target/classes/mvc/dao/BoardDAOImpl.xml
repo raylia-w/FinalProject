@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mvc.dao.BoardDAO">
+	<select id="getBoardList"
+			parameterType="mvc.dto.Groups"
+			resultType="mvc.dto.Board">
+			SELECT * FROM board WHERE group_no = #{groups_no}
+	</select>
+	<select id="getBoardView"
+			parameterType="mvc.dto.Board"
+			resultType="mvc.dto.Board">
+			SELECT * FROM board WHERE board_no = #{board_no}
+	</select>
+	<insert id="boardWrite"
+			parameterType="mvc.dto.Board">
+			INSERT INTO board(board_no, title, content, user_nick, written_date, hit, recommend, group_no) VALUES(board_no_seq.nextval, #{title}, #{content}, #{user_nick}, sysdate, 0, 0, #{group_no})	
+	</insert>
+	<update id="boardMod"
+			parameterType="mvc.dto.Board">
+			UPDATE board SET content = #{content} WHERE board_no = #{board_no}
+	</update>
+	<delete id="boardDelete"
+			parameterType="mvc.dto.Board">
+			DELETE FROM board WHERE board_no = #{board_no}
+	</delete>
+	<select id="getNoticeList"
+			parameterType="mvc.dto.Groups"
+			resultType="mvc.dto.Board">
+			SELECT * FROM board WHERE group_no = #{groups_no}
+	</select>
+	<select id="getNoticeView"
+			parameterType="mvc.dto.Board"
+			resultType="mvc.dto.Board">
+			SELECT * FROM board WHERE board_no = #{board_no}
+	</select>
+	<insert id="noticeWrite"
+			parameterType="mvc.dto.Board">
+			INSERT INTO board(board_no, title, content, user_nick, written_date, hit, recommend, group_no) VALUES(board_no_seq.nextval, #{title}, #{content}, #{user_nick}, sysdate, 0, 0, #{group_no})	
+	</insert>
+	<update id="noticeMod"
+			parameterType="mvc.dto.Board">
+			UPDATE board SET content = #{content} WHERE board_no = #{board_no}
+	</update>
+	<delete id="noticeDelete"
+			parameterType="mvc.dto.Board">
+			DELETE FROM board WHERE board_no = #{board_no}
+	</delete>
+	<select id="getPhotoList"
+			parameterType="mvc.dto.Groups"
+			resultType="mvc.dto.Photo">
+			SELECT * FROM photo WHERE group_no = #{groups_no}
+	</select>
+	<select id="getPhotoView"
+			parameterType="mvc.dto.Photo"
+			resultType="mvc.dto.Photo">
+			SELECT * FROM photo WHERE photo_no = #{photo_no}
+	</select>
+	<insert id="photoUpload"
+			parameterType="mvc.dto.Photo">
+			INSERT INTO photo(photo_no, stored_name, original_name, file_size, update_date, user_nick, group_no) VALUES(photo_no_seq.nextval, #{stored_name}, #{original_name}, #{file_size}, #{upload_date}, #{user_nick}, #{group_no})
+	</insert>
+	<delete id="photoDelete"
+			parameterType="mvc.dto.Photo">
+			DELETE FROM photo WHERE photo_no = #{photo_no}
+	</delete>
+	<update id="updateRecommend"
+			parameterType="mvc.dto.Board">
+			UPDATE board SET recommend = recommend+1 WHERE board_no = #{board_no}
+	</update>
+	<update id="updateHit"
+			parameterType="mvc.dto.Board">
+			UPDATE board SET hit = hit+1 WHERE board_no = #{board_no}
+	</update>
+	<select id="getComments"
+			parameterType="mvc.dto.Board"
+			resultType="mvc.dto.Comments">
+			SELECT * FROM comments WHERE board_no = #{board_no}
+	</select>
+	<insert id="commentsWrite"
+			parameterType="mvc.dto.Comments">
+			INSERT INTO comments(user_nick, comments, board_no) VALUES (#{user_nick}, #{comments}, #{board_no})
+	</insert>
+	<update id="commentsMod"
+			parameterType="mvc.dto.Comments">
+			UPDATE board SET comments = #{comments} WHERE comments_no = #{comments_no}
+	</update>
+	<delete id="commentsDelete"
+			parameterType="mvc.dto.Comments">
+			DELETE FROM comments WHERE comments_no = #{comments_no}
+	</delete>
+</mapper>
