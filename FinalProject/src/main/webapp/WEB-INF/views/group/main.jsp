@@ -1,22 +1,10 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/linkid.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/ec.js"></script><script id="facebook-jssdk" src="//connect.facebook.net/ko_KR/sdk.js"></script><script type="text/javascript" async="" src="https://djtflbt20bdde.cloudfront.net/"></script><script src="https://connect.facebook.net/signals/plugins/identity.js?v=2.8.14" async=""></script><script src="https://connect.facebook.net/signals/config/669950873158083?v=2.8.14&amp;r=stable" async=""></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script src="https://developers.kakao.com/sdk/js/kakao.min.js" async=""></script><script type="text/javascript">var _rollbarConfig = {"accessToken":"deb700ed4e6645b7807b88cabfd545de","ignoredMessages":["Can't find Clippy.bmp. The end is nigh."],"captureUncaught":true,"captureUnhandledRejections":false,"payload":{"environment":"production"}};</script>
-<script type="text/javascript">!function(r){function e(t){if(o[t])return o[t].exports;var n=o[t]={exports:{},id:t,loaded:!1};return r[t].call(n.exports,n,n.exports,e),n.loaded=!0,n.exports}var o={};return e.m=r,e.c=o,e.p="",e(0)}([function(r,e,o){"use strict";var t=o(1).Rollbar,n=o(2);_rollbarConfig.rollbarJsUrl=_rollbarConfig.rollbarJsUrl||"https://d37gvrvc0wt4s1.cloudfront.net/js/v1.9/rollbar.min.js";var a=t.init(window,_rollbarConfig),i=n(a,_rollbarConfig);a.loadFull(window,document,!_rollbarConfig.async,_rollbarConfig,i)},function(r,e){"use strict";function o(r){return function(){try{return r.apply(this,arguments)}catch(e){try{console.error("[Rollbar]: Internal error",e)}catch(o){}}}}function t(r,e,o){window._rollbarWrappedError&&(o[4]||(o[4]=window._rollbarWrappedError),o[5]||(o[5]=window._rollbarWrappedError._rollbarContext),window._rollbarWrappedError=null),r.uncaughtError.apply(r,o),e&&e.apply(window,o)}function n(r){var e=function(){var e=Array.prototype.slice.call(arguments,0);t(r,r._rollbarOldOnError,e)};return e.belongsToShim=!0,e}function a(r){this.shimId=++c,this.notifier=null,this.parentShim=r,this._rollbarOldOnError=null}function i(r){var e=a;return o(function(){if(this.notifier)return this.notifier[r].apply(this.notifier,arguments);var o=this,t="scope"===r;t&&(o=new e(this));var n=Array.prototype.slice.call(arguments,0),a={shim:o,method:r,args:n,ts:new Date};return window._rollbarShimQueue.push(a),t?o:void 0})}function l(r,e){if(e.hasOwnProperty&&e.hasOwnProperty("addEventListener")){var o=e.addEventListener;e.addEventListener=function(e,t,n){o.call(this,e,r.wrap(t),n)};var t=e.removeEventListener;e.removeEventListener=function(r,e,o){t.call(this,r,e&&e._wrapped?e._wrapped:e,o)}}}var c=0;a.init=function(r,e){var t=e.globalAlias||"Rollbar";if("object"==typeof r[t])return r[t];r._rollbarShimQueue=[],r._rollbarWrappedError=null,e=e||{};var i=new a;return o(function(){if(i.configure(e),e.captureUncaught){i._rollbarOldOnError=r.onerror,r.onerror=n(i);var o,a,c="EventTarget,Window,Node,ApplicationCache,AudioTrackList,ChannelMergerNode,CryptoOperation,EventSource,FileReader,HTMLUnknownElement,IDBDatabase,IDBRequest,IDBTransaction,KeyOperation,MediaController,MessagePort,ModalWindow,Notification,SVGElementInstance,Screen,TextTrack,TextTrackCue,TextTrackList,WebSocket,WebSocketWorker,Worker,XMLHttpRequest,XMLHttpRequestEventTarget,XMLHttpRequestUpload".split(",");for(o=0;o<c.length;++o)a=c[o],r[a]&&r[a].prototype&&l(i,r[a].prototype)}return e.captureUnhandledRejections&&(i._unhandledRejectionHandler=function(r){var e=r.reason,o=r.promise,t=r.detail;!e&&t&&(e=t.reason,o=t.promise),i.unhandledRejection(e,o)},r.addEventListener("unhandledrejection",i._unhandledRejectionHandler)),r[t]=i,i})()},a.prototype.loadFull=function(r,e,t,n,a){var i=function(){var e;if(void 0===r._rollbarPayloadQueue){var o,t,n,i;for(e=new Error("rollbar.js did not load");o=r._rollbarShimQueue.shift();)for(n=o.args,i=0;i<n.length;++i)if(t=n[i],"function"==typeof t){t(e);break}}"function"==typeof a&&a(e)},l=!1,c=e.createElement("script"),d=e.getElementsByTagName("script")[0],p=d.parentNode;c.crossOrigin="",c.src=n.rollbarJsUrl,c.async=!t,c.onload=c.onreadystatechange=o(function(){if(!(l||this.readyState&&"loaded"!==this.readyState&&"complete"!==this.readyState)){c.onload=c.onreadystatechange=null;try{p.removeChild(c)}catch(r){}l=!0,i()}}),p.insertBefore(c,d)},a.prototype.wrap=function(r,e){try{var o;if(o="function"==typeof e?e:function(){return e||{}},"function"!=typeof r)return r;if(r._isWrap)return r;if(!r._wrapped){r._wrapped=function(){try{return r.apply(this,arguments)}catch(e){throw e._rollbarContext=o()||{},e._rollbarContext._wrappedSource=r.toString(),window._rollbarWrappedError=e,e}},r._wrapped._isWrap=!0;for(var t in r)r.hasOwnProperty(t)&&(r._wrapped[t]=r[t])}return r._wrapped}catch(n){return r}};for(var d="log,debug,info,warn,warning,error,critical,global,configure,scope,uncaughtError,unhandledRejection".split(","),p=0;p<d.length;++p)a.prototype[d[p]]=i(d[p]);r.exports={Rollbar:a,_rollbarWindowOnError:t}},function(r,e){"use strict";r.exports=function(r,e){return function(o){if(!o&&!window._rollbarInitialized){var t=window.RollbarNotifier,n=e||{},a=n.globalAlias||"Rollbar",i=window.Rollbar.init(n,r);i._processShimQueue(window._rollbarShimQueue||[]),window[a]=i,window._rollbarInitialized=!0,t.processPayloads()}}}}]);</script>
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, shrink-to-fit=no">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>마음이 지치고 힘드신 분,  "비온 뒤 숲속"으로 오세요~ - 소셜다이닝 집밥</title>
-
-<meta property="fb:app_id" content="498270173519404">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="소셜다이닝 집밥">
-<meta property="og:title" content="마음이 지치고 힘드신 분,  &quot;비온 뒤 숲속&quot;으로 오세요~">
-<meta property="og:url" content="https://www.zipbob.net/p/55e77efee76f6870ab005461">
-
+	
 <meta name="theme-color" content="#ff3b30">
 <link rel="manifest" href="/manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
@@ -36,52 +24,11 @@
 <script src="https://dppgjjx7k7m5m.cloudfront.net/assets/main-76d3720d8b56eadcc8cf64fb74197c46099fde4352a18a5f25edc0c806c1a237.js" crossorigin="anonymous"></script>
 <script src="https://dppgjjx7k7m5m.cloudfront.net/assets/web-9b4e26f38626985de32bb998ccfaca8e754a6117f6ec13079cd174715392de22.js" crossorigin="anonymous"></script>
 
-<script>
-	var loc = window.location;
-	if (loc.hash) {
-		var path = loc.hash.substring(1);
-		var search = loc.search;
-	if ((path.indexOf('/p/') !== -1) || (path.indexOf('/picks/') !== -1) || (path.indexOf('/settings/account') !== -1)) {
-		window.location = path + search;
-	} else if ((path.indexOf('/searchs') !== -1)) {
-		window.location = '/s' + search;
-	}
-}
-</script>
-<script>
-	var $buoop = {
-			vs: { i: 10, f: 30, o: 25, s: 7 },
-			c: 2,
-			reminder: 0,
-			onshow: function(infos) {
-				ga('send', 'event', 'ux', 'browser-update-show', navigator.userAgent, { nonInteraction: true });
-			}, onclick: function(infos) {
-				ga('send', 'event', 'ux', 'browser-update-close', navigator.userAgent, { nonInteraction: true });
-			}
-		}
-	function $buo_f(){
-		var e = document.createElement("script");
-		e.src = "//browser-update.org/update.min.js";
-		document.body.appendChild(e);
-	};
-	try {document.addEventListener("DOMContentLoaded", $buo_f, false)}
-	catch(e){window.attachEvent("onload", $buo_f)}
-</script>
-
 <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=VFVi3YlO7oS6xNkx1n1R"></script>
-
-<noscript>
-  <img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=669950873158083&ev=PageView&noscript=1"/>
-</noscript>
-<!-- End Facebook Pixel Code -->
 
 <script>!function(e,o,n){window.HSCW=o,window.HS=n,n.beacon=n.beacon||{};var t=n.beacon;t.userConfig={},t.readyQueue=[],t.config=function(e){this.userConfig=e},t.ready=function(e){this.readyQueue.push(e)},o.config={docs:{enabled:!0,baseUrl:"//zipbob.helpscoutdocs.com/"},contact:{enabled:!0,formId:"d9595e48-dbf6-11e6-8789-0a5fecc78a4d"}};var r=e.getElementsByTagName("script")[0],c=e.createElement("script");c.type="text/javascript",c.async=!0,c.src="https://djtflbt20bdde.cloudfront.net/",r.parentNode.insertBefore(c,r)}(document,window.HSCW||{},window.HS||{});</script>
 
-<style type="text/css"> .readmore-plain-invitation-detail + [data-readmore-toggle], .readmore-plain-invitation-detail[data-readmore]{display: block; width: 100%;}.readmore-plain-invitation-detail[data-readmore]{transition: height 100ms;overflow: hidden;}</style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
-.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
-.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
-.fb_customer_chat_bounce_in{animation-duration:250ms;animation-name:fb_bounce_in}.fb_customer_chat_bounce_out{animation-duration:250ms;animation-name:fb_fade_out}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}.fb_mobile_overlay_active{background-color:#fff;height:100%;overflow:hidden;position:fixed;visibility:hidden;width:100%}@keyframes fb_fade_out{from{opacity:1}to{opacity:0}}@keyframes fb_bounce_in{0%{opacity:0;transform:scale(.8, .8);transform-origin:100% 100%}10%{opacity:.1}20%{opacity:.2}30%{opacity:.3}40%{opacity:.4}50%{opacity:.5}60%{opacity:.6}70%{opacity:.7}80%{opacity:.8;transform:scale(1.03, 1.03)}90{opacity:.9}100%{opacity:1;transform:scale(1, 1)}}</style></head>
+</head>
 <body class="theme-red ">
 
 <div class="panel-overlay"></div>
@@ -91,7 +38,6 @@
 			<div class="photo">
 				<div id="open-photo-browser" class="cover-image open-photo-browser" style="background-image: url(https://dppgjjx7k7m5m.cloudfront.net/uploads/product/photo/image/90/27/59a5667b532c283a92f27251/p1.jpg)"></div>
 			</div>
-			<a href="#" id="open-photo-browser" class="open-photo-browser button button-fill">사진보기</a>
 		</div>
 		<div class="page-content-inner">
 			<div class="row">
@@ -100,10 +46,10 @@
 						<div class="content-block-inner">
 							<div class="description-block">
 								<div class="title">
-								소개글 타이틀(Groups의 intro에서 첫문장)
+								${group.intro }
       							</div>
       						<div class="description">
-								소개글 본문(Groups의 intro에서 첫문장을 제외한 내용)
+								${group.intro }
 							</div>
 						</div>
 					</div>
@@ -114,16 +60,16 @@
 							<div class="row">
 								<div class="col-25">
 									<i class="material-icons filter_list"></i><br><!-- 모임 카테고리 아이콘 이미지 http://bootstrapk.com/components/ 참조해서 카테고리 별로 적당하게 삽입할 것-->
-          							<span>모임 카테고리 정보</span>
+          							<span>${group.theme }</span>
         						</div>
         						<div class="col-25">
         							<i class="material-icons face"></i><br><!-- 변경 필요 없음 -->
-        							<span>참가자 193 / 정원 200</span>
+        							<span>참가자 19 / 정원 ${group.personnel }</span>
         						</div>
         						
 	        					<div class="col-25">
 	        						<i class="material-icons border_color"></i><br>
-	          						<span>게시글 17</span>개
+	          						<span>게시글 ${count }</span>개
 	        					</div>
         					</div>       					
         				</div>
@@ -137,11 +83,11 @@
         	</div>
         	<div class="interview-block-wrapper">
         		<div class="content-block-title interview-block-title">수다</div>
-				<div class="content-block inset interview-block" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://dppgjjx7k7m5m.cloudfront.net/uploads/interview/desktop_cover_image/5a/be/58356c59532c283947a40874/medium_Cover-1200x800.jpg)">
-      				<a href="/interviews/58356c59532c283947a40874">
+        		<a href="/interviews/58356c59532c283947a40874">
+					<div class="content-block inset interview-block" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://dppgjjx7k7m5m.cloudfront.net/uploads/interview/desktop_cover_image/5a/be/58356c59532c283947a40874/medium_Cover-1200x800.jpg)">	
       					<div class="title">“외로울 줄 아는 것도 능력이다.”</div><!-- 채팅방 타이틀 필요없을듯 -->
 						<div class="summary">상대방과 진심을 나누는 다락방 집밥지기</div><!-- 채팅방 소개도 필요없을듯 -->
-						<div class="button button-flat color-white">채팅 이동</div>
+						<div class="button button-flat color-white">${group.chat_id }</div>
 					</a>
 				</div>
 			</div>
@@ -184,37 +130,24 @@
 							<table class="table table-striped table-hover">
 								<thead>
 									<tr>
-										<th>title</th>
-										<th>writer</th>
-										<th>written-date</th>
+										<th>제목</th>
+										<th>작성자</th>
+										<th>작성일</th>
 								</thead>
 								<tbody>
+									<c:forEach items="${board}" var="board">
 									<tr>
-										<td>예시 제목2</td>
-										<td>예시 글쓴이2</td>
-										<td>예시 작성일2</td>
+										<td>${board.title }</td>
+										<td>${board.user_nick }</td>
+										<td>${board.written_date }</td>
 									</tr>
-									<tr>
-										<td>예시 제목3</td>
-										<td>예시 글쓴이3</td>
-										<td>예시 작성일3</td>
-									</tr>
-									<tr>
-										<td>예시 제목4</td>
-										<td>예시 글쓴이4</td>
-										<td>예시 작성일4</td>
-									</tr>
-									<tr>
-										<td>예시 제목5</td>
-										<td>예시 글쓴이5</td>
-										<td>예시 작성일5</td>
-									</tr>
+									</c:forEach>
 								</tbody>
 							</table>
 						</div>
 					</div>
 				</div>
-				<a href=""><div class="content-block text-block">게시판 이동</div></a>
+				<a href="/group/board.do?group_no=${group.group_no }"><div class="content-block text-block">게시판 이동</div></a>
 			</div>
 		</div>
 		<div class="review-block-wrapper">
@@ -360,54 +293,10 @@
 				</div>
 			</div>
 		</div>
-		<div class="featured-products-wrapper">
-	  		<div class="swiper-container featured-swiper swiper-container-horizontal">
-	  			<div class="swiper-wrapper"></div>
-	  			<div class="swiper-button-prev swiper-button-disabled"></div>
-	  			<div class="swiper-button-next swiper-button-disabled"></div>
-	  		</div>
-	  	</div>
 
 <script>
-  fbq('track', 'ViewContent', {
-    content_name: '마음이 지치고 힘드신 분,  &quot;비온 뒤 숲속&quot;으로 오세요~',
-    content_category: '대화/일상',
-    content_type: 'product',
-    content_ids: ['55e77efee76f6870ab005461'],
-    value: 25000,
-    currency: 'KRW'
-  });
-
-  // photo browser
-  App.productPhotos = JSON.parse('["https://dppgjjx7k7m5m.cloudfront.net/uploads/product/photo/image/90/27/59a5667b532c283a92f27251/p1.jpg", "https://dppgjjx7k7m5m.cloudfront.net/uploads/product/photo/image/18/61/59509a38532c284e7b347fd8/20170516_185356.jpg", "https://dppgjjx7k7m5m.cloudfront.net/uploads/product/photo/image/6c/00/59509a39532c284e78347d1e/20170602_135131.jpg", "https://dppgjjx7k7m5m.cloudfront.net/uploads/product/photo/image/e1/1b/59509a47532c284e78347d1f/20170602_135831.jpg", "https://dppgjjx7k7m5m.cloudfront.net/uploads/product/photo/image/2c/1e/59509a48532c284e7b347fd9/20170602_135810.jpg", "https://dppgjjx7k7m5m.cloudfront.net/uploads/product/photo/image/39/1f/59509a51532c284e78347d2c/20170602_140038.jpg", "https://dppgjjx7k7m5m.cloudfront.net/uploads/product/photo/image/b3/ff/59509a53532c284e7b347fda/20170602_135851.jpg", "https://dppgjjx7k7m5m.cloudfront.net/uploads/product/photo/image/08/23/59509a5c532c284e7b347fe8/20170602_140359.jpg", "https://dppgjjx7k7m5m.cloudfront.net/uploads/product/photo/image/87/82/59509a5d532c284e78347d30/20170602_140251.jpg", "https://dppgjjx7k7m5m.cloudfront.net/uploads/product/photo/image/e2/c7/59509a69532c284e7b347feb/20170602_141034.jpg", "https://dppgjjx7k7m5m.cloudfront.net/uploads/product/photo/image/50/75/59509a2c532c284e78347d11/0-1.jpg", "https://dppgjjx7k7m5m.cloudfront.net/uploads/product/photo/image/e8/2a/59509a2e532c284e7b347fd7/0-2.jpg"]');
-  $(document).on('click', '.product_55e77efee76f6870ab005461 .open-photo-browser', function (e) {
-    e.preventDefault();
-
-    App.productPhotoBrowser = App.f7.photoBrowser({
-      // zoom: 400,
-      type: 'popup',
-      theme: 'dark',
-      lazyLoading: true,
-      photos: App.productPhotos,
-      onClose: function (photobrowser) {
-        // console.log('close');
-      }
-    });
-
-    App.productPhotoBrowser.open();
-
-    ga('send', 'event', 'ux', 'click', 'product-photo-browser');
-  });
-
-  $('.readmore-plain-invitation-detail').readmore({
-    collapsedHeight: 400,
-    speed: 100,
-    moreLink: '<a href="#">더 읽어보기</a>',
-    lessLink: '',
-  });
-
-  // map
-    var coordinate = JSON.parse('{"lat":37.555605,"lng":127.0072893}');
+	// map
+	var coordinate = JSON.parse('{"lat":37.555605,"lng":127.0072893}');
     var oPoint = new naver.maps.LatLng(coordinate.lat, coordinate.lng);
 
     var map = new naver.maps.Map($('.product_55e77efee76f6870ab005461 #product-map')[0], {
@@ -420,9 +309,8 @@
       zoomControl: true,
       zoomControlOptions: {
         position: naver.maps.Position.TOP_RIGHT
-      }
+        }
     });
-
     var circle = new naver.maps.Circle({
       map: map,
       center: oPoint,
@@ -430,46 +318,6 @@
       fillColor: '#2196f3',
       fillOpacity: 0.3,
     });
-
-  // swiper
-  var productSwiperOption = {
-    slidesPerView: 3,
-    spaceBetween: 16,
-    lazyLoading: true,
-    lazyLoadingInPrevNext: true,
-    // pagination: '.swiper-pagination',
-    // paginationClickable: true,
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
-
-    // Responsive breakpoints. when window width is <= ?px
-    breakpoints: {
-      320: {
-        width: screen.width - 100,
-        slidesPerView: 1,
-      },
-      480: {
-        width: screen.width - 100,
-        slidesPerView: 1,
-      },
-      640: {
-        width: screen.width - 100,
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 3,
-      },
-    },
-  };
-
-  var featuredSwiper = App.f7.swiper('.featured-products-wrapper .featured-swiper', productSwiperOption);
-  try {
-    featuredSwiper.on('slideChangeEnd', function (swiper, event) {
-      ga('send', 'event', 'swiper', 'slide', 'product-detail-featured-' + swiper.activeIndex);
-    });
-  } catch (e) {
-    console.log(e);
-  }
 </script>
 
 

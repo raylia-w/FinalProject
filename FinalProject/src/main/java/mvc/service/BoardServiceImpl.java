@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import mvc.dao.BoardDAO;
 import mvc.dto.Board;
+import mvc.dto.Comments;
 import mvc.dto.Groups;
 import mvc.dto.Photo;
 
@@ -14,6 +15,11 @@ import mvc.dto.Photo;
 public class BoardServiceImpl implements BoardService{
 	
 	@Autowired BoardDAO dao;
+	
+	@Override
+	public int getBoardCount(Groups group) {
+		return dao.getBoardCount(group);
+	}
 
 	@Override
 	public List getBoardList(Groups group) {
@@ -26,8 +32,8 @@ public class BoardServiceImpl implements BoardService{
 	}
 
 	@Override
-	public void boardWrite() {
-		dao.boardWrite();
+	public void boardWrite(Board board) {
+		dao.boardWrite(board);
 	}
 
 	@Override
@@ -93,26 +99,6 @@ public class BoardServiceImpl implements BoardService{
 	@Override
 	public void updateHit() {
 		dao.updateHit();
-	}
-
-	@Override
-	public List getComments() {
-		return dao.getComments();
-	}
-
-	@Override
-	public void commentsWrite() {
-		dao.commentsWrite();
-	}
-
-	@Override
-	public void commentsMod() {
-		dao.commentsMod();
-	}
-
-	@Override
-	public void commentsDelete() {
-		dao.commentsDelete();
 	}
 
 

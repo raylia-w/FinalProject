@@ -22,4 +22,6 @@ public class Groups {
 	
 	private String chat_id;
 	
+	private String intro;
+	
 }

@@ -3,6 +3,11 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mvc.dao.BoardDAO">
+	<select id="getBoardCount"
+			parameterType="mvc.dto.Groups"
+			resultType="int">
+			SELECT COUNT(*) FROM board WHERE group_no = #{group_no}
+	</select>
 	<select id="getBoardList"
 			parameterType="mvc.dto.Groups"
 			resultType="mvc.dto.Board">
@@ -73,19 +78,17 @@
 			parameterType="mvc.dto.Board">
 			UPDATE board SET hit = hit+1 WHERE board_no = #{board_no}
 	</update>
-	<select id="getComments"
-			parameterType="mvc.dto.Board"
+	<select id="commentList"
 			resultType="mvc.dto.Comments">
-			SELECT * FROM comments WHERE board_no = #{board_no}
+			SELECT * FROM comments
 	</select>
 	<insert id="commentsWrite"
 			parameterType="mvc.dto.Comments">
-			INSERT INTO comments(user_nick, comments, board_no) VALUES (#{user_nick}, #{comments}, #{board_no})
+			INSERT INTO comments(user_nick, comments, board_no, comments_no) VALUES (#{user_nick}, #{comments}, #{board_no}, comments_no_seq.nextval)
+			<selectKey keyProperty="comments_no" resultType="int">
+				SELECT comments_no_seq.CURRVAL FROM DUAL
+			</selectKey>
 	</insert>
-	<update id="commentsMod"
-			parameterType="mvc.dto.Comments">
-			UPDATE board SET comments = #{comments} WHERE comments_no = #{comments_no}
-	</update>
 	<delete id="commentsDelete"
 			parameterType="mvc.dto.Comments">
 			DELETE FROM comments WHERE comments_no = #{comments_no}

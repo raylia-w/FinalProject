@@ -5,17 +5,20 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 import mvc.dto.Board;
+import mvc.dto.Comments;
 import mvc.dto.Groups;
 import mvc.dto.Photo;
 
 @Repository
 public interface BoardDAO {
 	
+	public int getBoardCount(Groups group);
+	
 	public List getBoardList(Groups group);
 	
 	public Board getBoardView(Board board);
 	
-	public void boardWrite();
+	public void boardWrite(Board board);
 	
 	public void boardMod();
 	
@@ -43,12 +46,10 @@ public interface BoardDAO {
 	
 	public void updateHit();
 	
-	public List getComments();
+	public List commentList();
 	
-	public void commentsWrite();
-	
-	public void commentsMod();
-	
-	public void commentsDelete();
+	public int commentsWrite(Comments comments);
+		
+	public void commentsDelete(Comments comments);
 	
 }

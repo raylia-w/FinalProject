@@ -3,17 +3,20 @@ package mvc.service;
 import java.util.List;
 
 import mvc.dto.Board;
+import mvc.dto.Comments;
 import mvc.dto.Groups;
 import mvc.dto.Photo;
 
 
 public interface BoardService {
 	
+	public int getBoardCount(Groups group);
+	
 	public List getBoardList(Groups group);
 	
 	public Board getBoardView(Board board);
 	
-	public void boardWrite();
+	public void boardWrite(Board board);
 	
 	public void boardMod();
 	
@@ -40,13 +43,6 @@ public interface BoardService {
 	public void updateRecommend();
 	
 	public void updateHit();
-	
-	public List getComments();
-	
-	public void commentsWrite();
-	
-	public void commentsMod();
-	
-	public void commentsDelete();
+		
 	
 }

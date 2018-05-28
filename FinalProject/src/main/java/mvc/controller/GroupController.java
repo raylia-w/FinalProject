@@ -1,11 +1,14 @@
 package mvc.controller;
 
 import javax.servlet.ServletContext;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import mvc.dto.Groups;
 import mvc.service.BoardService;
@@ -26,10 +29,12 @@ public class GroupController {
 	}
 	
 	@RequestMapping(value="/group/main.do", method=RequestMethod.GET)
-	public String groupMain(Groups group) {
-		groupService.getGroupInfo(group);
-		meetingService.getMeetingList(group);
-		boardService.getBoardList(group);
+	public String groupMain(Groups group, Model model) {
+		
+		model.addAttribute("group", groupService.getGroupInfo(group));
+		model.addAttribute("meeting", meetingService.getMeetingList(group));
+		model.addAttribute("board", boardService.getBoardList(group));
+		model.addAttribute("count", boardService.getBoardCount(group));
 		return "group/main";
 	}
 	

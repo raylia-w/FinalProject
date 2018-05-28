@@ -2,9 +2,12 @@ package mvc.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import mvc.dto.Board;
+import mvc.dto.Comments;
 import mvc.dto.Groups;
 import mvc.service.BoardService;
 
@@ -14,8 +17,13 @@ public class BoardController {
 	@Autowired BoardService service;
 	
 	@RequestMapping(value="/group/board.do")
-	public void groupBoard(Groups group) {
-		service.getBoardList(group);
+	public String groupBoard(Groups group, Board board, Model model) {
+		
+		model.addAttribute("nick", "닉네이이임");
+		model.addAttribute("list", service.getBoardList(group));
+		model.addAttribute("count", service.getBoardCount(group));
+		
+		return "group/board/board";
 	}
 	
 	@RequestMapping(value="/group/board/detail.do")
@@ -23,9 +31,17 @@ public class BoardController {
 		service.getBoardView(board);
 	}
 	
-	@RequestMapping(value="/group/board/write.do")
-	public void groupBoardWrite() {
-		service.boardWrite();
+	@RequestMapping(value="/group/board/write.do", method=RequestMethod.GET)
+	public String groupBoardWrite(Model model) {
+		model.addAttribute("group", 3);
+		model.addAttribute("nick", "니익네에임");
+		return "group/board/write";
+	}
+	
+	@RequestMapping(value="/group/board/write.do", method=RequestMethod.POST)
+	public String groupBoardWriteProc(Board board) {
+		service.boardWrite(board);
+		return "redirect:/group/board.do?group_no="+board.getGroup_no();
 	}
 	
 	@RequestMapping(value="/group/board/mod.do")
@@ -82,5 +98,5 @@ public class BoardController {
 	public void groupPhotoDelete() {
 		service.photoDelete();
 	}
-	
+
 }
