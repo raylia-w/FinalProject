@@ -79,8 +79,8 @@ public class BoardController {
 		service.noticeDelete();
 	}
 	
-	@RequestMapping(value="/group/photo.do")
-	public void groupPhoto() {
+	@RequestMapping(value="/group/photo.do", method=RequestMethod.GET)
+	public void groupPhoto(Groups group) {
 		service.getPhotoList();
 	}
 	

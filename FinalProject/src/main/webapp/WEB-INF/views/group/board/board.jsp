@@ -11,19 +11,11 @@
 
 <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=VFVi3YlO7oS6xNkx1n1R"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<script type="text/javascript">
-// $(document).ready(function(){
-	
-//     commentList(); //페이지 로딩시 댓글 목록 출력 
-    
-	 
-// });
-</script>
+
 </head>
 <body class="theme-red ">
 <div data-page="comments-index" class="page product_57b177c8e76f681b4a000003 comments index">
-  <div class="navbar">
-  </div>
+
   <div class="page-content">
   	<div class="page-content-inner">
   		<div class="content-block product-block">

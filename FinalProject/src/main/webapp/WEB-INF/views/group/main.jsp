@@ -154,29 +154,27 @@
 			<div class="content-block-title review-block-title">사진</div>
 			<div class="content-block review-block">
 				<div class="content-block-inner">
-					<a class="read-more-review" href="/p/57b177c8e76f681b4a000003/reviews">
-						<div class="review-list">
-							<div class="card review-card review_591f9674532c28793338d0b3">
-								<div class="card-header">
-									<div class="card-content">
-										<div class="row no-gutter photos">
-											<div class="photo col-25"><img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/34/11/591f9698532c28793338d0b4/small_20170519_193602_HDR.jpg" alt="Small 20170519 193602 hdr"></div>
-          									<div class="photo col-25"><img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/c1/ac/591f96a0532c28328c383a27/small_20170519_194822.jpg" alt="Small 20170519 194822"></div>
-          									<div class="photo col-25"><img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/6d/f0/591f96b2532c28328c383a28/small_20170519_194826.jpg" alt="Small 20170519 194826"></div>
-          									<div class="photo col-25"><img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/5b/c9/591f96b4532c28793338d0b7/small_20170519_195955.jpg" alt="Small 20170519 195955"></div>
-          									<div class="photo col-25"><img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/46/7a/591f96d9532c28793338d0b8/small_20170519_195832.jpg" alt="Small 20170519 195832"></div><div class="photo col-25"><img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/95/5d/591f96d9532c28328c383a29/small_20170519_195905.jpg" alt="Small 20170519 195905"></div>
-          									<div class="photo col-25"><img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/0a/9c/591f96ea532c28793338d0c5/small_20170519_230129.jpg" alt="Small 20170519 230129"></div>
-          									<div class="photo col-25 dummy"></div>
-          									<div class="photo col-25 dummy"></div>
-          								</div>
-          							</div>
+					<a class="read-more-review" href="/group/photo.do?group_no=${group.group_no }">
+						<div class="card review-card review_591f9674532c28793338d0b3">
+							<div class="card-content">
+								<div class="card-content-inner"></div>
+								<div class="row no-gutter photos">
+									<div class="photo col-25"><img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/34/11/591f9698532c28793338d0b4/small_20170519_193602_HDR.jpg" alt="Small 20170519 193602 hdr"></div>
+          							<div class="photo col-25"><img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/c1/ac/591f96a0532c28328c383a27/small_20170519_194822.jpg" alt="Small 20170519 194822"></div>
+          							<div class="photo col-25"><img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/6d/f0/591f96b2532c28328c383a28/small_20170519_194826.jpg" alt="Small 20170519 194826"></div>
+          							<div class="photo col-25"><img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/5b/c9/591f96b4532c28793338d0b7/small_20170519_195955.jpg" alt="Small 20170519 195955"></div>
+          							<div class="photo col-25"><img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/46/7a/591f96d9532c28793338d0b8/small_20170519_195832.jpg" alt="Small 20170519 195832"></div><div class="photo col-25"><img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/95/5d/591f96d9532c28328c383a29/small_20170519_195905.jpg" alt="Small 20170519 195905"></div>
+          							<div class="photo col-25"><img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/0a/9c/591f96ea532c28793338d0c5/small_20170519_230129.jpg" alt="Small 20170519 230129"></div>
+          							<div class="photo col-25 dummy"></div>
+          							<div class="photo col-25 dummy"></div>
           						</div>
           					</div>
           					<div class="content-block text-block">사진 더 보기</div>
-          				</a>      
+          				</a>	      
           			</div>
           		</div>
           	</div>
+          	
 			<!-- 여기부터 정모 -->
 			<div class="extra-block-wrapper">
 				<div class="content-block extra-block">
@@ -211,16 +209,6 @@
 										</div>
 									</div>
 								</div>
-							</li>
-							<li>
-								<a class="item-link item-content" href="/p/55e77efee76f6870ab005461/comments">
-									<div class="item-inner">
-										<div class="item-title-row">
-											<div class="item-title">문의하기</div>
-											<div class="item-after">문의 및 댓글</div>
-										</div>
-									</div>
-								</a>        
 							</li>
 						</ul>
 					</div>

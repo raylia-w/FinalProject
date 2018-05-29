@@ -55,7 +55,7 @@
 	<select id="getPhotoList"
 			parameterType="mvc.dto.Groups"
 			resultType="mvc.dto.Photo">
-			SELECT * FROM photo WHERE group_no = #{groups_no}
+			SELECT * FROM photo
 	</select>
 	<select id="getPhotoView"
 			parameterType="mvc.dto.Photo"
