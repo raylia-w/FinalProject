@@ -80,7 +80,7 @@
 	</update>
 	<select id="commentList"
 			resultType="mvc.dto.Comments">
-			SELECT * FROM comments
+			SELECT * FROM comments ORDER BY comments_no
 	</select>
 	<insert id="commentsWrite"
 			parameterType="mvc.dto.Comments">

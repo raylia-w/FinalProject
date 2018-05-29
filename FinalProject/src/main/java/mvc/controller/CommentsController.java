@@ -28,10 +28,6 @@ public class CommentsController {
 		return service.getCommentList();
 	}
 	
-	@RequestMapping(value="/comment/write.do", method=RequestMethod.GET)
-	private void commentUpdate() {
-		
-	}
 	
 	@RequestMapping(value="/comment/write.do", method=RequestMethod.POST)
 	@ResponseBody
