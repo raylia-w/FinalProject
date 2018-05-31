@@ -43,7 +43,7 @@ public interface BoardService {
 	
 	public void photoUpload(MultipartFile file, String user_nick, int group_no, HttpServletRequest request);
 	
-	public void photoDelete();
+	public void photoDelete(Photo photo, HttpServletRequest request);
 	
 	public void updateRecommend();
 	

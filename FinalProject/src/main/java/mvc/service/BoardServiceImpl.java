@@ -127,8 +127,17 @@ public class BoardServiceImpl implements BoardService{
 	}
 
 	@Override
-	public void photoDelete() {
-		dao.photoDelete();
+	public void photoDelete(Photo photo, HttpServletRequest request) {
+		String realpath = request.getSession().getServletContext().getRealPath("upload");
+		
+		String root_path = request.getSession().getServletContext().getRealPath("/");
+		String attach_path = "resources/upload/";
+		
+		File file = new File(root_path+attach_path+photo.getOriginal_name());
+		if(file.exists()) {
+			file.delete();
+		}
+		dao.photoDelete(photo);
 	}
 
 	@Override

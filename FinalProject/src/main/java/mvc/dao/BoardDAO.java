@@ -41,7 +41,7 @@ public interface BoardDAO {
 	
 	public void photoUpload(Photo photo);
 	
-	public void photoDelete();
+	public void photoDelete(Photo photo);
 	
 	public void updateRecommend();
 	

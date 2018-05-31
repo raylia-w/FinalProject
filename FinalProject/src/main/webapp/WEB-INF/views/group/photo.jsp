@@ -10,6 +10,7 @@
 <link rel="stylesheet" media="all" href="https://dppgjjx7k7m5m.cloudfront.net/assets/desktop-d760397406f1545e4592b2ea79bac5508fda97a4bd63562b92061d02bd0f6711.css">
 <script type="text/javascript" src="/resources/bootstrap/js/bootstrap.js"></script>
 
+<link rel="stylesheet" href="/resources/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="/resources/css/jquery-ui.css" />
 <script type="text/javascript" src="/resources/js/jquery-ui.js"></script>
 
@@ -39,10 +40,11 @@ $(document).ready(function(){
 	});
 	
 	$("#popbutton").click(function(e){
-// 		wrapWindowByMask();
+		wrapWindowByMask();
 		$('#layerpop').dialog('open');
 		e.preventDefault();
 	});
+	$("#imgBtn").button();
 });
 
 function wrapWindowByMask(){
@@ -51,8 +53,93 @@ function wrapWindowByMask(){
 	
 	$("#mask").css({"width":maskWidth, "height":maskWidth});
 	
-	$("#mask").fadeIn(1000);
 	$("#mask").fadeTo("slow", 0.8);
+}
+function resizeImg(osrc)
+
+{
+
+    var bdiv =document.createElement('DIV');
+
+    document.body.appendChild(bdiv);
+
+    bdiv.setAttribute("id", "bdiv");
+
+    bdiv.style.position = 'absolute';
+
+    bdiv.style.top = 0;
+
+    bdiv.style.left = 0;
+
+    bdiv.style.zIndex = 0;
+
+    bdiv.style.width = document.body.scrollWidth;
+
+    bdiv.style.height = document.body.scrollHeight;
+
+    bdiv.style.background = 'gray';
+
+    //bdiv.style.filter = "alpha(opacity=75)";
+
+    bdiv.style.opacity = '0.5';
+
+    //bdiv.style.mozOpacity = '0.5';
+
+    var odiv = document.createElement('DIV');
+
+    document.body.appendChild(odiv);
+
+    odiv.style.zIndex = 1;
+
+    odiv.setAttribute("id", "odiv");
+
+    odiv.innerHTML = "<a href='javascript:void(closeImg())'><img id='oimg' src='"+osrc+"' border='0' /></a>";
+
+    var img = document.all['oimg'];
+
+    var owidth = (document.body.clientWidth)/2 - (img.width)/2;
+
+    var oheight = (document.body.clientHeight)/2 - (img.height)/2;
+
+    odiv.style.position = 'absolute';
+
+    odiv.style.top = oheight + document.body.scrollTop;
+
+    odiv.style.left = owidth;
+
+    scrollImg();
+
+}
+function scrollImg()
+
+{
+
+    var odiv = document.all['odiv'];
+
+    var img = document.all['oimg'];
+
+    var oheight = (document.body.clientHeight)/2 - (img.height)/2 + document.body.scrollTop;
+
+    odiv.style.top = oheight;
+
+    settime = setTimeout(scrollImg, 100);
+
+}
+
+function closeImg()
+
+{
+
+    document.body.removeChild(odiv);
+
+    document.body.removeChild(bdiv);
+
+    clearTimeout(settime);
+
+}
+
+function deletePhoto(pno, oname, gno){
+	location.href="/group/photo/delete.do?photo_no="+pno+"&original_name="+oname+"&group_no="+gno;
 }
 </script>
 <style>
@@ -60,7 +147,7 @@ function wrapWindowByMask(){
 	position:absolute;
 	left:0;
 	top:0;
-	z-index:9000;
+	z-index:1;
 	background-color:#000;
 	display:none;
 }
@@ -80,11 +167,17 @@ function wrapWindowByMask(){
 			<div class="content-block-title text-title">사진 ${count }개</div>
 			<div class="review-block">
 				<c:if test="${count ne 0}">
-					<c:forEach items="${list }" var="photo">
+					<c:forEach items="${list }" var="photo" varStatus="cnt">
 					<div class="card review-card review_591f9674532c28793338d0b3">
-						<div class="card-content">
-							<div class="card-content-inner"></div>
-							<div class="photo col-25"><img src="/resources/upload/${photo.original_name }"></div>
+						<div class="card-content"> 
+							<div class="card-content-inner"></div>	
+							<figure>
+							<div class="photo col-25">
+								<img src="/resources/upload/${photo.original_name }" alt="${photo.original_name }" onclick="resizeImg(this.src)">
+							</div>
+							<figcaption>${photo.user_nick } / ${photo.upload_date }</figcaption>
+							<button class="btn btn-xs" onclick="deletePhoto('${photo.photo_no}', '${photo.original_name }', '${photo.group_no }')">삭제</button>
+							</figure>
 						</div>
 					</div>
 					</c:forEach>
@@ -93,6 +186,7 @@ function wrapWindowByMask(){
 		</div>
 	</div>
 </div>
+<div id="mask"></div>
 <div id="layerpop" title="사진 등록">
 	<form action="/group/photo/upload.do" id="photoUpload" enctype="multipart/form-data" method="post">
 		<label for="사진 선택"><input type="file" id="file" name="file" value="사진"/></label>
@@ -100,5 +194,5 @@ function wrapWindowByMask(){
 		<input type="hidden" id="user_nick" name="user_nick" value=${user_nick }>
 	</form>
 </div>
-<div id="mask"></div>
+
 </body>

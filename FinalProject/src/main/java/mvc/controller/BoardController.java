@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.UUID;
 
 import javax.servlet.ServletContext;
+import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -55,14 +56,15 @@ public class BoardController {
 		return "redirect:/group/board.do?group_no="+board.getGroup_no();
 	}
 	
-	@RequestMapping(value="/group/board/mod.do")
-	public void groupBoardMod() {
-		service.boardMod();
-	}
+//	@RequestMapping(value="/group/board/mod.do")
+//	public void groupBoardMod() {
+//		service.boardMod();
+//	}
 	
 	@RequestMapping(value="/group/board/delete.do")
-	public void groupBoardDelete() {
+	public String groupBoardDelete(Board board) {
 		service.boardDelete();
+		return "redirect:/group/board.do?group_no="+board.getGroup_no();
 	}
 	
 	@RequestMapping(value="/group/notice.do")
@@ -109,9 +111,11 @@ public class BoardController {
 		return "redirect:/group/photo.do?group_no="+group_no;
 	}
 	
-	@RequestMapping(value="/group/photo/delete.do")
-	public void groupPhotoDelete() {
-		service.photoDelete();
+	@RequestMapping(value="/group/photo/delete.do", method=RequestMethod.GET)
+	public String groupPhotoDelete(Photo photo, HttpServletRequest request) {
+		int gno = photo.getGroup_no();
+		service.photoDelete(photo, request);
+		return "redirect:/group/photo.do?group_no="+gno;
 	}
 
 }
