@@ -2,8 +2,6 @@ package mvc.service;
 
 import java.util.List;
 
-import org.springframework.stereotype.Service;
-
 import mvc.dto.Groups;
 import mvc.dto.Meeting_reservation;
 

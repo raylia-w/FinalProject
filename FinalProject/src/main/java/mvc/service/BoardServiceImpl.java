@@ -1,9 +1,19 @@
 package mvc.service;
 
+import java.io.File;
+import java.io.IOException;
+import java.security.acl.Group;
+import java.util.Iterator;
 import java.util.List;
+import java.util.UUID;
+
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import mvc.dao.BoardDAO;
 import mvc.dto.Board;
@@ -14,6 +24,7 @@ import mvc.dto.Photo;
 @Service
 public class BoardServiceImpl implements BoardService{
 	
+	@Autowired ServletContext context;
 	@Autowired BoardDAO dao;
 	
 	@Override
@@ -72,8 +83,8 @@ public class BoardServiceImpl implements BoardService{
 	}
 
 	@Override
-	public List getPhotoList() {
-		return dao.getPhotoList();
+	public List getPhotoList(Groups group) {
+		return dao.getPhotoList(group);
 	}
 
 	@Override
@@ -82,8 +93,34 @@ public class BoardServiceImpl implements BoardService{
 	}
 
 	@Override
-	public void photoUpload() {
-		dao.photoUpload();
+	public void photoUpload(MultipartFile file, String user_nick, int group_no) {
+		
+		String uID = UUID.randomUUID().toString().split("-")[0];
+		
+		String realpath = context.getRealPath("upload");
+		System.out.println(realpath);
+		String stored = file.getOriginalFilename()+"-"+uID;
+		
+		System.out.println(realpath);
+		
+		File dest = new File(realpath, stored);
+	
+		try {
+			file.transferTo(dest);
+		} catch (IllegalStateException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		Photo photo = new Photo();
+		photo.setOriginal_name(file.getOriginalFilename());
+		photo.setStored_name(stored);
+		photo.setFile_size((int) file.getSize());
+		photo.setGroup_no(group_no);
+		photo.setUser_nick(user_nick);
+		
+		dao.photoUpload(photo);
 	}
 
 	@Override
@@ -100,6 +137,7 @@ public class BoardServiceImpl implements BoardService{
 	public void updateHit() {
 		dao.updateHit();
 	}
+
 
 
 }

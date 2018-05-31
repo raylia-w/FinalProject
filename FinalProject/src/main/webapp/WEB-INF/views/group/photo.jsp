@@ -16,27 +16,55 @@
 <script type="text/javascript">
 $(document).ready(function(){
 	
-	$("#dialogLayout").dialog({
+	$("#layerpop").dialog({
 		autoOpen:false,
 		width:500,
-		button:[{
+		buttons:[{
 			text:"확인",
 			click:function(){
+				$("#photoUpload").submit();
 				$(this).dialog("close");
 			}
 		}, {
 			text:"취소",
 			click:function(){
 				$(this).dialog("close");
+				$("#mask, .window").hide();
 			}
 		}]
 	});
+	$("mask").click(function(){
+		$(this).hide();
+		$(".window").hide;
+	});
 	
-	$("#popbutton").click(function(){
+	$("#popbutton").click(function(e){
+// 		wrapWindowByMask();
 		$('#layerpop').dialog('open');
+		e.preventDefault();
 	});
 });
+
+function wrapWindowByMask(){
+	var maskHeight = $(document).height();
+	var maskWidth = $(window).width();
+	
+	$("#mask").css({"width":maskWidth, "height":maskWidth});
+	
+	$("#mask").fadeIn(1000);
+	$("#mask").fadeTo("slow", 0.8);
+}
 </script>
+<style>
+#mask{
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:9000;
+	background-color:#000;
+	display:none;
+}
+</style>
 </head>
 <body class="theme-red ">
 <div data-page="reviews-index" class="page product_57b177c8e76f681b4a000003 reviews index">
@@ -61,22 +89,12 @@ $(document).ready(function(){
 		</div>
 	</div>
 </div>
-<div class="modal fade" id="layerpop" >
-	<div class="modal-dialog"> 
-		<div class="modal-content"> 
-			<!-- header -->
-			<div class="modal-header"> 
-				<!-- 닫기(x) 버튼 --> 
-				<button type="button" class="close" data-dismiss="modal">×</button> 
-				<!-- header title --> 
-				<h4 class="modal-title">Header</h4> </div> 
-				<!-- body --> 
-				<div class="modal-body"> Body </div> 
-				<!-- Footer --> 
-				<div class="modal-footer"> Footer 
-					<button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
-				</div> 
-			</div>
-		</div> 
-	</div>
+<div id="layerpop" title="사진 등록">
+	<form action="/group/photo/upload.do" id="photoUpload" enctype="multipart/form-data" method="post">
+		<label for="사진 선택"><input type="file" id="file" name="file" value="사진"/></label>
+		<input type="hidden" id="group_no" name="group_no" value=${group.group_no }>
+		<input type="hidden" id="user_nick" name="user_nick" value=${user_nick }>
+	</form>
+</div>
+<div id="mask"></div>
 </body>

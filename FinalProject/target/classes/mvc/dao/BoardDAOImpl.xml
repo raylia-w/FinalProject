@@ -55,7 +55,7 @@
 	<select id="getPhotoList"
 			parameterType="mvc.dto.Groups"
 			resultType="mvc.dto.Photo">
-			SELECT * FROM photo
+			SELECT * FROM photo WHERE group_no = #{group_no}
 	</select>
 	<select id="getPhotoView"
 			parameterType="mvc.dto.Photo"
@@ -64,7 +64,7 @@
 	</select>
 	<insert id="photoUpload"
 			parameterType="mvc.dto.Photo">
-			INSERT INTO photo(photo_no, stored_name, original_name, file_size, update_date, user_nick, group_no) VALUES(photo_no_seq.nextval, #{stored_name}, #{original_name}, #{file_size}, #{upload_date}, #{user_nick}, #{group_no})
+			INSERT INTO photo(photo_no, stored_name, original_name, file_size, upload_date, user_nick, group_no) VALUES(photo_no_seq.nextval, #{stored_name}, #{original_name}, #{file_size}, sysdate, #{user_nick}, #{group_no})
 	</insert>
 	<delete id="photoDelete"
 			parameterType="mvc.dto.Photo">

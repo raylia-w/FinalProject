@@ -1,6 +1,11 @@
 package mvc.service;
 
+import java.security.acl.Group;
 import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.web.multipart.MultipartFile;
 
 import mvc.dto.Board;
 import mvc.dto.Comments;
@@ -32,11 +37,11 @@ public interface BoardService {
 	
 	public void noticeDelete();
 	
-	public List getPhotoList();
+	public List getPhotoList(Groups group);
 	
 	public Photo getPhotoView();
 	
-	public void photoUpload();
+	public void photoUpload(MultipartFile file, String user_nick, int group_no);
 	
 	public void photoDelete();
 	

@@ -1,14 +1,25 @@
 package mvc.controller;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.UUID;
+
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
 import mvc.dto.Board;
 import mvc.dto.Comments;
 import mvc.dto.Groups;
+import mvc.dto.Photo;
 import mvc.service.BoardService;
 
 @Controller
@@ -80,8 +91,10 @@ public class BoardController {
 	}
 	
 	@RequestMapping(value="/group/photo.do", method=RequestMethod.GET)
-	public void groupPhoto(Groups group) {
-		service.getPhotoList();
+	public void groupPhoto(Groups group, Model model) {
+		model.addAttribute("group", group);
+		model.addAttribute("user_nick", "testnick");
+		service.getPhotoList(group);
 	}
 	
 	@RequestMapping(value="/group/photo/detail.do")
@@ -89,9 +102,10 @@ public class BoardController {
 		service.getPhotoView();
 	}
 	
-	@RequestMapping(value="/group/photo/upload.do")
-	public void groupPhotoUpload() {
-		service.photoUpload();
+	@RequestMapping(value="/group/photo/upload.do", method=RequestMethod.POST)
+	public String groupPhotoUpload(MultipartFile file, @RequestParam("user_nick")String user_nick, @RequestParam("group_no") int group_no) {
+		service.photoUpload(file, user_nick, group_no);
+		return "redirect:/group/photo.do?group_no="+group_no;
 	}
 	
 	@RequestMapping(value="/group/photo/delete.do")
