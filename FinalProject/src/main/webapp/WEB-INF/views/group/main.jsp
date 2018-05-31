@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -135,7 +136,7 @@
 										<th>작성일</th>
 								</thead>
 								<tbody>
-									<c:forEach items="${board}" var="board">
+									<c:forEach items="${boardList}" var="board">
 									<tr>
 										<td>${board.title }</td>
 										<td>${board.user_nick }</td>
@@ -159,14 +160,17 @@
 							<div class="card-content">
 								<div class="card-content-inner"></div>
 								<div class="row no-gutter photos">
-									<div class="photo col-25"><img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/34/11/591f9698532c28793338d0b4/small_20170519_193602_HDR.jpg" alt="Small 20170519 193602 hdr"></div>
-          							<div class="photo col-25"><img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/c1/ac/591f96a0532c28328c383a27/small_20170519_194822.jpg" alt="Small 20170519 194822"></div>
-          							<div class="photo col-25"><img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/6d/f0/591f96b2532c28328c383a28/small_20170519_194826.jpg" alt="Small 20170519 194826"></div>
-          							<div class="photo col-25"><img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/5b/c9/591f96b4532c28793338d0b7/small_20170519_195955.jpg" alt="Small 20170519 195955"></div>
-          							<div class="photo col-25"><img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/46/7a/591f96d9532c28793338d0b8/small_20170519_195832.jpg" alt="Small 20170519 195832"></div><div class="photo col-25"><img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/95/5d/591f96d9532c28328c383a29/small_20170519_195905.jpg" alt="Small 20170519 195905"></div>
-          							<div class="photo col-25"><img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/0a/9c/591f96ea532c28793338d0c5/small_20170519_230129.jpg" alt="Small 20170519 230129"></div>
-          							<div class="photo col-25 dummy"></div>
-          							<div class="photo col-25 dummy"></div>
+									<c:forEach items="${photoList }" var="photo" varStatus="cnt">
+									<div class="photo col-25">
+										<img src="/resources/upload/${photo.original_name }" alt="${photo.original_name }" onclick="resizeImg(this.src)">
+									</div>
+									</c:forEach>
+									<fmt:parseNumber var="i" type="number" value="${photoCount }"/>
+									<c:if test="${i lt 8 }">
+										<c:forEach begin="1" end="${8-i}">
+											<div id="photo col-25 dummy"></div>
+										</c:forEach>
+									</c:if>
           						</div>
           					</div>
           					<div class="content-block text-block">사진 더 보기</div>

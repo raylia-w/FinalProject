@@ -158,7 +158,7 @@ function deletePhoto(pno, oname, gno){
 	<div class="page-content">
 		<div class="page-content-inner">
 			<div class="content-block product-block">
-				<a href="/p/57b177c8e76f681b4a000003">
+				<a href="/group/main.do?group_no=${group.group_no }">
 					<i class="material-icons arrow_back"></i>
 					모임 상세 페이지로 돌아가기
 				</a>        
