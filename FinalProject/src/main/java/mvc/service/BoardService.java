@@ -41,13 +41,15 @@ public interface BoardService {
 	
 	public Photo getPhotoView();
 	
-	public void photoUpload(MultipartFile file, String user_nick, int group_no);
+	public void photoUpload(MultipartFile file, String user_nick, int group_no, HttpServletRequest request);
 	
 	public void photoDelete();
 	
 	public void updateRecommend();
 	
 	public void updateHit();
+
+	public int getPhotoCount(Groups group);
 		
 	
 }

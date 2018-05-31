@@ -94,7 +94,8 @@ public class BoardController {
 	public void groupPhoto(Groups group, Model model) {
 		model.addAttribute("group", group);
 		model.addAttribute("user_nick", "testnick");
-		service.getPhotoList(group);
+		model.addAttribute("list", service.getPhotoList(group));
+		model.addAttribute("count", service.getPhotoCount(group));
 	}
 	
 	@RequestMapping(value="/group/photo/detail.do")
@@ -103,8 +104,8 @@ public class BoardController {
 	}
 	
 	@RequestMapping(value="/group/photo/upload.do", method=RequestMethod.POST)
-	public String groupPhotoUpload(MultipartFile file, @RequestParam("user_nick")String user_nick, @RequestParam("group_no") int group_no) {
-		service.photoUpload(file, user_nick, group_no);
+	public String groupPhotoUpload(MultipartFile file, @RequestParam("user_nick")String user_nick, @RequestParam("group_no") int group_no, HttpServletRequest request) {
+		service.photoUpload(file, user_nick, group_no, request);
 		return "redirect:/group/photo.do?group_no="+group_no;
 	}
 	

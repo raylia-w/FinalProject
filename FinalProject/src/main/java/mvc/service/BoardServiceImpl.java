@@ -93,17 +93,20 @@ public class BoardServiceImpl implements BoardService{
 	}
 
 	@Override
-	public void photoUpload(MultipartFile file, String user_nick, int group_no) {
+	public void photoUpload(MultipartFile file, String user_nick, int group_no, HttpServletRequest request) {
 		
 		String uID = UUID.randomUUID().toString().split("-")[0];
 		
-		String realpath = context.getRealPath("upload");
-		System.out.println(realpath);
+		String realpath = request.getSession().getServletContext().getRealPath("upload");
+		
+		String root_path = request.getSession().getServletContext().getRealPath("/");
+		String attach_path = "resources/upload/";
+		
 		String stored = file.getOriginalFilename()+"-"+uID;
 		
 		System.out.println(realpath);
 		
-		File dest = new File(realpath, stored);
+		File dest = new File(root_path+attach_path, file.getOriginalFilename());
 	
 		try {
 			file.transferTo(dest);
@@ -136,6 +139,11 @@ public class BoardServiceImpl implements BoardService{
 	@Override
 	public void updateHit() {
 		dao.updateHit();
+	}
+
+	@Override
+	public int getPhotoCount(Groups group) {
+		return dao.getPhotoCount(group);
 	}
 
 

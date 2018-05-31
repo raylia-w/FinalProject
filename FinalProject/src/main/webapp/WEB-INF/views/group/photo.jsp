@@ -77,14 +77,18 @@ function wrapWindowByMask(){
 				</a>        
 			</div>
 			<button class="btn btn-default" id="popbutton">사진 등록</button><br/> 
-			<div class="content-block-title text-title">사진 9개</div>
+			<div class="content-block-title text-title">사진 ${count }개</div>
 			<div class="review-block">
-				<div class="card review-card review_591f9674532c28793338d0b3">
-					<div class="card-content">
-						<div class="card-content-inner"></div>
-						<div class="photo col-25"><img src="https://dppgjjx7k7m5m.cloudfront.net/uploads/review/photo/image/34/11/591f9698532c28793338d0b4/small_20170519_193602_HDR.jpg" alt="Small 20170519 193602 hdr"></div>
+				<c:if test="${count ne 0}">
+					<c:forEach items="${list }" var="photo">
+					<div class="card review-card review_591f9674532c28793338d0b3">
+						<div class="card-content">
+							<div class="card-content-inner"></div>
+							<div class="photo col-25"><img src="/resources/upload/${photo.original_name }"></div>
+						</div>
 					</div>
-				</div>
+					</c:forEach>
+				</c:if>
 			</div>
 		</div>
 	</div>

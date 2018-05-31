@@ -52,5 +52,7 @@ public interface BoardDAO {
 	public int commentsWrite(Comments comments);
 		
 	public void commentsDelete(Comments comments);
+
+	public int getPhotoCount(Groups group);
 	
 }
