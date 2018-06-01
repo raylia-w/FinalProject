@@ -80,6 +80,7 @@
         				</div>
         			</div>
         		</div>
+        		<button id="introModBtn" class="btn">수정하기</button>
         	</div>
         	<div class="host-block-wrapper">
         		<div class="content-block host-block">
@@ -125,6 +126,7 @@
 							<p>*심리상담이 돈 있는 사람들의 전유물이 아닌 대중들에게 공유되고 오픈되는 사회공공재가 되었으면 하는&nbsp;바램입니다.
 							<br></p></div><p></p>
 						</div>
+						<button id="noticeBtn" class="btn">공지 작성</button>
 <!-- 						<a href="#" data-readmore-toggle="rmjs-1" aria-controls="rmjs-1">공지 게시판 이동</a> -->
 					</div>
 				</div>
@@ -187,6 +189,7 @@
           	</div>
 			<!-- 여기부터 정모 -->
 			<div class="extra-block-wrapper">
+				<a href="" title="수정하기">
 				<div class="content-block extra-block">
 					<div class="list-block media-list">
 						<ul>
@@ -223,6 +226,7 @@
 						</ul>
 					</div>
 				</div>
+				</a>
 			</div>
 			<div class="menu-block-wrapper">
 				<div class="content-block-title">포함내용</div>
@@ -251,10 +255,11 @@
 							<!-- 모임별 정모 관련 안내, 모임마다 내용 다르지만 첫번째 내용은 동일할 것 -->
 						<div class="list-block-label">
 							하나. 신청은 당일 2시간 전까지 가능합니다.<br>
-							둘. 매니저의  연락처는 모임 하루 전 오후 7시에 문자와 이메일로 공유됩니다.<br>
+							둘. 매니저의 연락처는 모임 하루 전 오후 7시에 문자와 이메일로 공유됩니다.<br>
 						</div>
 					</div>
 				</div>
+				<button id="meetingBtn" class="btn">정모 등록</button>
 			</div>
 		</div>
 	</div>

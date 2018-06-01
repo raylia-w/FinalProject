@@ -12,7 +12,14 @@
 
 <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=VFVi3YlO7oS6xNkx1n1R"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript">
 
+function boardDelete(bno){
+// 	console.log(bno);
+	location.href="/group/board/delete.do?board_no="+bno;
+}
+
+</script>
 </head>
 <body class="theme-red ">
 <div data-page="comments-index" class="page product_57b177c8e76f681b4a000003 comments index">
@@ -36,7 +43,7 @@
         		<div class="card-header">
         			<div class="title">${board.title }</div>
         			<div class="name">${board.user_nick }</div><!-- 작성자 닉네임 -->
-        			<div class="date">${board.written_date }</div><!-- 작성일 -->
+        			<div class="date">${board.written_date }<button class="btn" onclick="boardDelete(${board.board_no})">삭제</button></div><!-- 작성일 -->
         		</div>
         		<div class="card-content">
         			<div class="card-content-inner">

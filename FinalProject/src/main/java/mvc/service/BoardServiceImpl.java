@@ -53,8 +53,8 @@ public class BoardServiceImpl implements BoardService{
 	}
 
 	@Override
-	public void boardDelete() {
-		dao.boardDelete();
+	public void boardDelete(Board board) {
+		dao.boardDelete(board);
 	}
 
 	@Override

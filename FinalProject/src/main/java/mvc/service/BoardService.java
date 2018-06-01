@@ -25,7 +25,7 @@ public interface BoardService {
 	
 	public void boardMod();
 	
-	public void boardDelete();
+	public void boardDelete(Board board);
 	
 	public List getNoticeList();
 	

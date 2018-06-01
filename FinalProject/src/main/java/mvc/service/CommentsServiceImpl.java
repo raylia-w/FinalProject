@@ -25,7 +25,6 @@ public class CommentsServiceImpl implements CommentsService{
 
 	@Override
 	public void commentsDelete(Comments comments) {
-		System.out.println(comments.getComments_no());
 		dao.commentsDelete(comments);
 	}
 

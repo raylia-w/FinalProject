@@ -61,10 +61,12 @@ public class BoardController {
 //		service.boardMod();
 //	}
 	
-	@RequestMapping(value="/group/board/delete.do")
+	@RequestMapping(value="/group/board/delete.do", method=RequestMethod.GET)
 	public String groupBoardDelete(Board board) {
-		service.boardDelete();
-		return "redirect:/group/board.do?group_no="+board.getGroup_no();
+		int bno = board.getBoard_no();
+		int gno = board.getGroup_no();
+		service.boardDelete(board);
+		return "redirect:/group/board.do?group_no=3";
 	}
 	
 	@RequestMapping(value="/group/notice.do")

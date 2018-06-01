@@ -44,9 +44,16 @@ public class GroupController {
 		
 	}
 	
-	@RequestMapping(value="/group/manager.do")
-	public void groupManager() {
-		
+	@RequestMapping(value="/group/manager.do", method=RequestMethod.GET)
+	public String groupManager(Model model, Groups group) {
+		model.addAttribute("group", groupService.getGroupInfo(group));
+		model.addAttribute("meeting", meetingService.getMeetingList(group));
+		model.addAttribute("boardList", boardService.getBoardList(group));
+		model.addAttribute("boardCount", boardService.getBoardCount(group));
+		model.addAttribute("photoList", boardService.getPhotoList(group));
+		model.addAttribute("photoCount", boardService.getPhotoCount(group));
+
+		return "group/manager/managerMain";
 	}
 	
 	@RequestMapping(value="/group/registration.do")
@@ -70,8 +77,8 @@ public class GroupController {
 	}
 	
 	@RequestMapping(value="/group/meeting.do")
-	public void groupMeeting() {
-		
+	public String groupMeeting() {
+		return "group/manager/meetingRegistration";
 	}
 	
 }

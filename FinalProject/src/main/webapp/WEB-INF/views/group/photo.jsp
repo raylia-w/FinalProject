@@ -9,6 +9,8 @@
 <!-- <link rel="stylesheet" media="all" href="https://dppgjjx7k7m5m.cloudfront.net/assets/web-da2841c18158e75bf236109ae20fd2d57300975a87478d63ddca64ff63492bb9.css"> -->
 <link rel="stylesheet" media="all" href="https://dppgjjx7k7m5m.cloudfront.net/assets/desktop-d760397406f1545e4592b2ea79bac5508fda97a4bd63562b92061d02bd0f6711.css">
 <script type="text/javascript" src="/resources/bootstrap/js/bootstrap.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css">
 
 <link rel="stylesheet" href="/resources/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="/resources/css/jquery-ui.css" />
