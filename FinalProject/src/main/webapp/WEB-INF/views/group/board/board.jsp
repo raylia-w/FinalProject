@@ -82,6 +82,6 @@
 		</c:forEach>
 	</div>
 </div>
-
+<%-- <jsp:include page="../util/paging.jsp"></jsp:include> --%>
 </body>
 </html>

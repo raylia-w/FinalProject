@@ -21,7 +21,7 @@ function commentList${cnt.index }(){
 				if(value.board_no==bno){
 	                a += '<div class="commentArea" style="border-bottom:1px solid darkgray; margin-bottom: 15px;">';
 	                a += '작성자 : '+value.user_nick;
-	                a += '<a onclick="commentDelete('+value.comments_no+');"> 삭제 </a> </div>';
+	                a += '<a onclick="commentDelete${cnt.index }('+value.comments_no+');"> 삭제 </a> </div>';
 	                a += '<div class="commentContent'+value.comments_no+'"> <p> 내용 : '+value.comments +'</p>';
 	                a += '</div></div>';
 				}
@@ -64,12 +64,13 @@ function commentInsert${cnt.index }(insertData){
  
  
 //댓글 삭제 
-function commentDelete(cno){
+function commentDelete${cnt.index }(cno){
+	console.log(cno);
     $.ajax({
-        url : '/comment/delete/'+cno,
-        type : 'post',
+        url : '/comment/delete.do?comments_no='+cno,
+        type : 'get',
         success : function(data){
-            if(data == 1) commentList(bno); //댓글 삭제후 목록 출력 
+            commentList${cnt.index }(); //댓글 삭제후 목록 출력 
         }
     });
 }

@@ -32,7 +32,7 @@ public class CommentsController {
 		return service.commentsWrite(comments);
 	}
 	
-	@RequestMapping(value="/comment/delete/{cno}")
+	@RequestMapping(value="/comment/delete.do", method=RequestMethod.GET)
 	@ResponseBody
 	private void commentDelete(Comments comments) {
 		service.commentsDelete(comments);
