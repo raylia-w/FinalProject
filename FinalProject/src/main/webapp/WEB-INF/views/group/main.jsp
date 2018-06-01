@@ -25,7 +25,7 @@
 <script src="https://dppgjjx7k7m5m.cloudfront.net/assets/main-76d3720d8b56eadcc8cf64fb74197c46099fde4352a18a5f25edc0c806c1a237.js" crossorigin="anonymous"></script>
 <script src="https://dppgjjx7k7m5m.cloudfront.net/assets/web-9b4e26f38626985de32bb998ccfaca8e754a6117f6ec13079cd174715392de22.js" crossorigin="anonymous"></script>
 
-<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=VFVi3YlO7oS6xNkx1n1R"></script>
+<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=YiJfocqY2V0PLgrqvSkF"></script>
 
 <script>!function(e,o,n){window.HSCW=o,window.HS=n,n.beacon=n.beacon||{};var t=n.beacon;t.userConfig={},t.readyQueue=[],t.config=function(e){this.userConfig=e},t.ready=function(e){this.readyQueue.push(e)},o.config={docs:{enabled:!0,baseUrl:"//zipbob.helpscoutdocs.com/"},contact:{enabled:!0,formId:"d9595e48-dbf6-11e6-8789-0a5fecc78a4d"}};var r=e.getElementsByTagName("script")[0],c=e.createElement("script");c.type="text/javascript",c.async=!0,c.src="https://djtflbt20bdde.cloudfront.net/",r.parentNode.insertBefore(c,r)}(document,window.HSCW||{},window.HS||{});</script>
 
@@ -47,7 +47,7 @@
 						<div class="content-block-inner">
 							<div class="description-block">
 								<div class="title">
-								${group.intro }
+								${group.group_id }
       							</div>
       						<div class="description">
 								${group.intro }
@@ -70,7 +70,7 @@
         						
 	        					<div class="col-25">
 	        						<i class="material-icons border_color"></i><br>
-	          						<span>게시글 ${count }</span>개
+	          						<span>게시글 ${boardCount }</span>개
 	        					</div>
         					</div>       					
         				</div>
@@ -125,7 +125,7 @@
 				</div>
 			</div>
 			<div class="review-block-wrapper">
-				<div class="content-block-title review-block-title">게시글</div>
+				<div class="content-block-title review-block-title">최근 게시글</div>
 					<div class="content-block review-block">
 						<div class="content-block-inner">
 							<table class="table table-striped table-hover">
@@ -136,7 +136,7 @@
 										<th>작성일</th>
 								</thead>
 								<tbody>
-									<c:forEach items="${boardList}" var="board">
+									<c:forEach items="${boardList}" var="board" begin="1" end="3" varStatus="cnt">
 									<tr>
 										<td>${board.title }</td>
 										<td>${board.user_nick }</td>
@@ -160,7 +160,7 @@
 							<div class="card-content">
 								<div class="card-content-inner"></div>
 								<div class="row no-gutter photos">
-									<c:forEach items="${photoList }" var="photo" varStatus="cnt">
+									<c:forEach items="${photoList }" var="photo" begin="1" end="8" varStatus="cnt">
 									<div class="photo col-25">
 										<img src="/resources/upload/${photo.original_name }" alt="${photo.original_name }" onclick="resizeImg(this.src)">
 									</div>
@@ -178,7 +178,6 @@
           			</div>
           		</div>
           	</div>
-          	
 			<!-- 여기부터 정모 -->
 			<div class="extra-block-wrapper">
 				<div class="content-block extra-block">

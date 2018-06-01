@@ -15,10 +15,10 @@
 	<form action="/group/board/write.do" method="post" id="form">
 		<label><h1>제목</h1><input type="text" id="title" name="title"/></label><br><br>
 		<label><h1>내용</h1><textarea id="content" name="content" rows="30" cols="100"></textarea></label><br><br>
-		<input type="text" id="user_nick" name="user_nick" value="${nick }">
-		<input type="text" id="group_no" name="group_no" value="${group }">
+		<input type="hidden" id="user_nick" name="user_nick" value="${nick }">
+		<input type="hidden" id="group_no" name="group_no" value="${group }">
 		<input type="button" onclick="submitContents()" value="작성 완료">
-		<input type="button" id="cancel" value="취소">
+		<input type="button" onclick="cancel()" value="취소">
 	</form>
 <script type="text/javascript">
 	var oEditors = [];
@@ -35,8 +35,12 @@
 		oEditors.getById["content"].exec("UPDATE_CONTENTS_FIELD", []);
 	try{
 		$("#form").submit();
-	}catch(e){}
-}
+	}catch(e){}	
+	}
+	
+	function cancel(){
+		location.href="/group/board.do?group_no="+${group};
+	}
 </script>
 </body>
 </html>

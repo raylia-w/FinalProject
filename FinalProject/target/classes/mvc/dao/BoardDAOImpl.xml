@@ -6,12 +6,12 @@
 	<select id="getBoardCount"
 			parameterType="mvc.dto.Groups"
 			resultType="int">
-			SELECT COUNT(*) FROM board WHERE group_no = #{group_no}
+			SELECT COUNT(*) FROM board WHERE group_no = #{group_no} 
 	</select>
 	<select id="getBoardList"
 			parameterType="mvc.dto.Groups"
 			resultType="mvc.dto.Board">
-			SELECT * FROM board WHERE group_no = #{group_no}
+			SELECT * FROM board WHERE group_no = #{group_no} ORDER BY board_no DESC
 	</select>
 	<select id="getBoardView"
 			parameterType="mvc.dto.Board"
@@ -33,7 +33,7 @@
 	<select id="getNoticeList"
 			parameterType="mvc.dto.Groups"
 			resultType="mvc.dto.Board">
-			SELECT * FROM board WHERE group_no = #{groups_no}
+			SELECT * FROM board WHERE group_no = #{groups_no} DESC
 	</select>
 	<select id="getNoticeView"
 			parameterType="mvc.dto.Board"
@@ -60,7 +60,7 @@
 	<select id="getPhotoList"
 			parameterType="mvc.dto.Groups"
 			resultType="mvc.dto.Photo">
-			SELECT * FROM photo WHERE group_no = #{group_no}
+			SELECT * FROM photo WHERE group_no = #{group_no} ORDER BY photo_no DESC
 	</select>
 	<select id="getPhotoView"
 			parameterType="mvc.dto.Photo"
@@ -85,7 +85,7 @@
 	</update>
 	<select id="commentList"
 			resultType="mvc.dto.Comments">
-			SELECT * FROM comments ORDER BY comments_no
+			SELECT * FROM comments ORDER BY comments_no DESC
 	</select>
 	<insert id="commentsWrite"
 			parameterType="mvc.dto.Comments">

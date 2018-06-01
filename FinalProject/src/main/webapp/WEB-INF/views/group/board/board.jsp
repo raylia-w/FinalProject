@@ -59,10 +59,10 @@
         								<div class="item-input-wrapper string required comment_body">
         									<div class="item-input item-input-field">
         										<input class="string required" placeholder="댓글을 통해서 궁금증과 설레임을 같이 나눠 보아요." type="text" name="comments" id="comments${cnt.index }">
-        										<input type="text" name="user_nick" id="user_nick${cnt.index }" value="${nick }${cnt.index }">
+        										<input type="hidden" name="user_nick" id="user_nick${cnt.index }" value="${nick }">
         										<input type="hidden" name="board_no" id="board_no${cnt.index }" value="${board.board_no }">
         									</div>
-        									<input type="button" id="submitBtn${cnt.index }" name="submitBtn${cnt.index }" value="등록">
+        									<input type="button" id="submitBtn${cnt.index }" value="등록">
         								</div>
         							</div>
         						</div>

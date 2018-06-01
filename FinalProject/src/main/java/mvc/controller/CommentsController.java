@@ -22,7 +22,6 @@ public class CommentsController {
 	@RequestMapping(value="/comment/list.do", produces="application/json", method=RequestMethod.GET)
 	@ResponseBody
 	private List commentList(Board board, Model model) {
-		System.out.println(board.getBoard_no());
 		return service.getCommentList();
 	}
 	
