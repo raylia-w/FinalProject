@@ -6,7 +6,12 @@
 	<select id="getMeetingList"
 			parameterType="mvc.dto.Groups"
 			resultType="mvc.dto.Meeting_reservation">
-			SELECT * FROM meeting_reservation WHERE group_no = #{group_no} ORDER BY meeting_no
+			SELECT * FROM meeting_reservation WHERE group_no = #{group_no} ORDER BY meeting_no DESC
+	</select>
+	<select id="getCurrentMeeting"
+			parameterType="mvc.dto.Groups"
+			resultType="mvc.dto.Meeting_reservation">
+			SELECT * FROM (SELECT * FROM meeting_reservation WHERE group_no = #{group_no} ORDER BY meeting_no DESC) WHERE ROWNUM=1
 	</select>
 	<select id="getMeetingInfo"
 			parameterType="mvc.dto.Meeting_reservation"
@@ -15,7 +20,7 @@
 	</select>
 	<insert id="insertMeeting"
 			parameterType="mvc.dto.Meeting_reservation">
-			INSERT INTO meeting_reservation(meeting_no, date_start, date_end, reservation_location, personnel, group_no, status) VALUES(meeting_no_seq.nextval, #{date_start}, #{date_end}, #{reservation_location}, #{personnel}, #{group_no}, #{status})
+			INSERT INTO meeting_reservation(meeting_no, date_start, date_end, reservation_location, personnel, group_no, status, guest, res_day, fee) VALUES(meeting_no_seq.nextval, #{date_start}, #{date_end}, #{reservation_location}, #{personnel}, #{group_no}, #{status}, 0, #{res_day}, #{fee})
 	</insert>
 	<update id="updateMeeting"
 			parameterType="mvc.dto.Meeting_reservation">

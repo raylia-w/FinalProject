@@ -39,4 +39,9 @@ public class MeetingServiceImpl implements MeetingService{
 		dao.deleteMeeting();
 	}
 
+	@Override
+	public Meeting_reservation getCurrentMeeting(Groups group) {
+		return dao.getCurrentMeeting(group);
+	}
+
 }

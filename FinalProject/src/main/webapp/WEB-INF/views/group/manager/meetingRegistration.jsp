@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -24,15 +24,9 @@ $(document).ready(function(){
 	});
 	$("#btnOk").click(function(){
 		if($("#terms1").is(":checked") && $("#terms2").is(":checked")){
-// 			var person = $("#rPerson").val(); 
-// 			var price = $("#s_price").val();
-// 			var disrate = ($("#discount").val() * 0.1).toFixed(1);
-// 			var discount = person * price * disrate;
-// 			var amount = person * price - discount;
-// 			$("#selectInfo").val(amount);
 			$("#reservation").submit();
 		} else {
-			alert("¾à°ü µ¿ÀÇ¸¦ Ã¼Å©ÇØÁÖ¼¼¿ä");
+			alert("ì•½ê´€ ë™ì˜ë¥¼ ì²´í¬í•´ì£¼ì„¸ìš”");
 		}
 	});
 	
@@ -44,24 +38,24 @@ $(document).ready(function(){
 <div id="r_contents" >
 	<form action="/group/meeting/registration.do" method="post" id="reservation">
 		<div>
-			<label for="res_day">³¯Â¥</label>
+			<label for="res_day">ë‚ ì§œ</label>
 			<input id="res_day" name="res_day" type="date" class="form-control" />
 		</div><br>			
 		<div id="rLoc">
-			<label for="locSelect">Àå¼Ò</label><br>
-			<input type="button" class="btn" id="locSelect" value="Á¦ÈŞ¾÷Ã¼ Ã£±â">
-			<input type="button" class="btn"  value="Á÷Á¢ ÀÔ·ÂÇÏ±â"><br><br>
+			<label for="locSelect">ì¥ì†Œ</label><br>
+			<input type="button" class="btn" id="locSelect" value="ì œíœ´ì—…ì²´ ì°¾ê¸°">
+			<input type="button" class="btn"  value="ì§ì ‘ ì…ë ¥í•˜ê¸°"><br><br>
 		</div>
 		<div class="form-group">
 			<div class="col-sm-6">
-				<input type="text" onclick="sample4_execDaumPostcode()" class="form-control" id="addr" placeholder="ÁÖ¼Ò¸¦ °Ë»öÇØÁÖ¼¼¿ä"><br> 
-				<input type="text" class="form-control" id="addrDetail" placeholder="»ó¼¼ ÁÖ¼Ò¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä"><br>
+				<input type="text" onclick="sample4_execDaumPostcode()" class="form-control" id="addr" name="addr" placeholder="ì£¼ì†Œë¥¼ ê²€ìƒ‰í•´ì£¼ì„¸ìš”"><br> 
+				<input type="text" class="form-control" id="addrDetail" name="addrDetail" placeholder="ìƒì„¸ ì£¼ì†Œë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”"><br>
 				<span id="guide" style="color: #999"></span><br>
 			</div>
 		</div>
 		<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 		<script>
-	    //º» ¿¹Á¦¿¡¼­´Â µµ·Î¸í ÁÖ¼Ò Ç¥±â ¹æ½Ä¿¡ ´ëÇÑ ¹ı·É¿¡ µû¶ó, ³»·Á¿À´Â µ¥ÀÌÅÍ¸¦ Á¶ÇÕÇÏ¿© ¿Ã¹Ù¸¥ ÁÖ¼Ò¸¦ ±¸¼ºÇÏ´Â ¹æ¹ıÀ» ¼³¸íÇÕ´Ï´Ù.
+	    //ë³¸ ì˜ˆì œì—ì„œëŠ” ë„ë¡œëª… ì£¼ì†Œ í‘œê¸° ë°©ì‹ì— ëŒ€í•œ ë²•ë ¹ì— ë”°ë¼, ë‚´ë ¤ì˜¤ëŠ” ë°ì´í„°ë¥¼ ì¡°í•©í•˜ì—¬ ì˜¬ë°”ë¥¸ ì£¼ì†Œë¥¼ êµ¬ì„±í•˜ëŠ” ë°©ë²•ì„ ì„¤ëª…í•©ë‹ˆë‹¤.
 	    function sample4_execDaumPostcode() {
 	 	   new daum.Postcode({
 	 		   oncomplete : function(data) {
@@ -73,7 +67,7 @@ $(document).ready(function(){
 		</script>
 		<br><br><br><br><br>
 		<div id="rTime">
-		<label for="timeSelect">½Ã°£</label>
+		<label for="timeSelect">ì‹œê°„</label>
 			<select id="timeSelect" name="date_start" size="1" class="form-control" style="width:170px;">
 				<option value="900">9:00</option><option value="930">9:30</option><option value="1000">10:00</option><option value="1030">10:30</option><option value="1100">11:00</option>
 				<option value="1130">11:30</option><option value="1200">12:00</option><option value="1230">12:30</option><option value="1300">13:00</option><option value="1330">13:30</option>
@@ -91,19 +85,20 @@ $(document).ready(function(){
 			<br><br>
 			<div style="background-image: url(/img/line-horizontal.svg); width:620px; height:10px;" class="clear"></div>
 		</div>
-		<div id="rAmount"><label for="rAcount">Âü°¡ºñ</label><input type="text" id="amount" name="amount" class="form-control" style="width:170px;"/><br></div>
-		<div id="rPersonnel"><label for="rPerson">ÀÎ¿ø</label><input type="text" id="personnel" name="personnel" class="form-control" style="width:170px;"/><br>
+		<div id="rAmount"><label for="rAcount">ì°¸ê°€ë¹„</label><input type="text" id="fee" name="fee" class="form-control" style="width:170px;"/><br></div>
+		<div id="rPersonnel"><label for="rPerson">ì¸ì›</label><input type="text" id="personnel" name="personnel" class="form-control" style="width:170px;"/><br>
 		<div style="background-image: url(/img/line-horizontal.svg); width:620px; height:10px;" class="clear"></div><br></div>
 	
 		<div style="background-image: url(/img/line-horizontal.svg); width:620px; height:10px;" class="clear"></div><br></div>
 	
-		<div id="rTerms"><label>¾à°ü µ¿ÀÇ</label><br>
-			<div><label><a href="/reservation/terms.do?terms=terms1" target="_blank">¾à°ü1</a></label><input type="checkbox" id="terms1" name="terms1" class="right" /></div><br><div class="clear"></div>
-			<div><label><a href="/reservation/terms.do?terms=terms2" target="_blank">¾à°ü2</a></label><input type="checkbox" id="terms2" name="terms2" class="right" /></div>
+		<div id="rTerms"><label>ì•½ê´€ ë™ì˜</label><br>
+			<div><label><a href="/reservation/terms.do?terms=terms1" target="_blank">ì•½ê´€1</a></label><input type="checkbox" id="terms1" name="terms1" class="right" /></div><br><div class="clear"></div>
+			<div><label><a href="/reservation/terms.do?terms=terms2" target="_blank">ì•½ê´€2</a></label><input type="checkbox" id="terms2" name="terms2" class="right" /></div>
 		</div><br>
 	
 		<div style="background-image: url(/img/line-horizontal.svg); width:620px; height:10px;" class="clear"></div><br>
-		<div><input type="button" id="btnOk" class="btn btn-primary" value="Á¤¸ğ µî·Ï" />&nbsp;&nbsp;&nbsp;<input type="button" id="btnCancel" class="btn btn-default" onClick="location.href='/restaurantsinfo.do?restaurant=${shop.s_id_no}';" value="Ãë¼Ò" /></div><br>
+		<div><input type="button" id="btnOk" class="btn btn-primary" value="ì •ëª¨ ë“±ë¡" />&nbsp;&nbsp;&nbsp;
+		<input type="button" id="btnCancel" class="btn btn-default" onClick="location.href='/group/main.do?group_no=${group.group_no}';" value="ì·¨ì†Œ" /></div><br>
 		<input type="hidden" id="group_no" name="group_no" value="${group.group_no }">
 	</form>
 </div>

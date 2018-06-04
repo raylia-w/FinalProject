@@ -26,4 +26,8 @@ public class Meeting_reservation {
 	
 	private String res_day;
 	
+	private int guest;
+	
+	private int fee;
+	
 }

@@ -10,6 +10,8 @@ public interface MeetingService {
 
 	public List getMeetingList(Groups group);
 	
+	public Meeting_reservation getCurrentMeeting(Groups group);
+	
 	public Meeting_reservation getMeetingInfo(Meeting_reservation meeting);
 	
 	public void insertMeeting(Meeting_reservation meeting);

@@ -35,6 +35,7 @@ public class GroupController {
 		model.addAttribute("boardCount", boardService.getBoardCount(group));
 		model.addAttribute("photoList", boardService.getPhotoList(group));
 		model.addAttribute("photoCount", boardService.getPhotoCount(group));
+		model.addAttribute("meeting", meetingService.getCurrentMeeting(group));
 
 		return "group/main";
 	}
