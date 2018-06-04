@@ -224,36 +224,29 @@
 					</div>
 				</div>
 			</div>
-			<div class="menu-block-wrapper">
-				<div class="content-block-title">포함내용</div>
-					<div class="content-block menu-block">
-						<div class="content-block-inner">
-							<p>정모 참여 비용에는 간단한 먹거리와 사이트 수수료가 포함되어 있습니다.</p>
-						</div>
-					</div>
-				</div>
-			</div>
 			<!-- 정모 목록 -->
 			<div class="tablet-40">
 				<div class="variant-block-wrapper">
 					<div class="content-block-title variant-block-title">날짜</div>
 					<div class="content-block">
 						<div class="list-block media-list variant-block">
-							<ul>
-								<li class="variant-item">
-									<div class="item-link item-content">
-										<div class="item-inner">
-											<div class="item-text">현재 참여 가능한 일정이 없습니다.</div>
-										</div>
-									</div>
-								</li>
-							</ul>
+						
 							<!-- 모임별 정모 관련 안내, 모임마다 내용 다르지만 첫번째 내용은 동일할 것 -->
-						<div class="list-block-label">
-							하나. 신청은 당일 2시간 전까지 가능합니다.<br>
-							둘. 매니저의  연락처는 모임 하루 전 오후 7시에 문자와 이메일로 공유됩니다.<br>
+							<div class="list-block-label">
+								하나. 신청은 당일 2시간 전까지 가능합니다.<br>
+								둘. 매니저의  연락처는 모임 하루 전 오후 7시에 문자와 이메일로 공유됩니다.<br>
+							</div>
 						</div>
 					</div>
+					<div class="menu-block-wrapper">
+						<div class="content-block-title">포함내용</div>
+						<div class="content-block menu-block">
+							<div class="content-block-inner">
+								<p>정모 참여 비용에는 간단한 먹거리와 사이트 수수료가 포함되어 있습니다.</p>
+							</div>
+						</div>
+					</div>
+					<a href="/group/meeting/registration.do?group_no=${group.group_no }">새 정모 등록</a>
 				</div>
 			</div>
 		</div>

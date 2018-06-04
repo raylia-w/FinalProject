@@ -1,4 +1,4 @@
-function ($) {
+function($) {
 	/* "YYYY-MM[-DD]" => Date */
 	function strToDate(str) {
 		try {

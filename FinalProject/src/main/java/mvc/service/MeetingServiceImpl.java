@@ -25,8 +25,8 @@ public class MeetingServiceImpl implements MeetingService{
 	}
 
 	@Override
-	public void insertMeeting() {
-		dao.insertMeeting();
+	public void insertMeeting(Meeting_reservation meeting) {
+		dao.insertMeeting(meeting);
 	}
 
 	@Override

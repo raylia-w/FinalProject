@@ -76,9 +76,6 @@ public class GroupController {
 		groupService.deleteGroup();
 	}
 	
-	@RequestMapping(value="/group/meeting.do")
-	public String groupMeeting() {
-		return "group/manager/meetingRegistration";
-	}
+	
 	
 }

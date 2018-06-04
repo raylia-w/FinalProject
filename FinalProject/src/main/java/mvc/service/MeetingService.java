@@ -12,7 +12,7 @@ public interface MeetingService {
 	
 	public Meeting_reservation getMeetingInfo(Meeting_reservation meeting);
 	
-	public void insertMeeting();
+	public void insertMeeting(Meeting_reservation meeting);
 	
 	public void updateMeeting();
 	
