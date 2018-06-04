@@ -9,7 +9,9 @@
 <script type="text/javascript" src="calendar.js"></script>    
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
+<link rel="stylesheet" href="/resources/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="/resources/css/jquery-ui.css" />
+<script type="text/javascript" src="/resources/js/jquery-ui.js"></script>
 <style>
 .jquery-calender {
 	width: 620px;
@@ -19,11 +21,37 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
+	$("#layerpop").dialog({
+		autoOpen:false,
+		width:500,
+		buttons:[{
+			text:"확인",
+			click:function(){
+				window.open("/pay.do", "결제", "width=800, height=700, toolbar=no, menubar=no, scrollbars=no, resizable=no");
+				$("#reservation").submit();
+				$(this).dialog("close");
+			}
+		}, {
+			text:"취소",
+			click:function(){
+				$(this).dialog("close");
+				$("#mask, .window").hide();
+			}
+		}]
+	});
+	$("mask").click(function(){
+		$(this).hide();
+		$(".window").hide;
+	});
+	
 	$("#locSelect").click(function(){
 		location.href="/group/meeting/location.do";
 	});
 	$("#btnOk").click(function(){
 		if($("#terms1").is(":checked") && $("#terms2").is(":checked")){
+			wrapWindowByMask();
+			$('#layerpop').dialog('open');
+			e.preventDefault();
 			$("#reservation").submit();
 		} else {
 			alert("약관 동의를 체크해주세요");
@@ -31,6 +59,14 @@ $(document).ready(function(){
 	});
 	
 });
+function wrapWindowByMask(){
+	var maskHeight = $(document).height();
+	var maskWidth = $(window).width();
+	
+	$("#mask").css({"width":maskWidth, "height":maskWidth});
+	
+	$("#mask").fadeTo("slow", 0.8);
+}
 </script>
 
 </head>
@@ -103,6 +139,10 @@ $(document).ready(function(){
 	</form>
 </div>
 <div class="clear"></div>
+<div id="mask"></div>
+<div id="layerpop" title="정모 등록">
+	정모를 등록하기 위해서 등록 예약금을 결제해야 합니다.
+</div>
 
 </body>
 </html>
