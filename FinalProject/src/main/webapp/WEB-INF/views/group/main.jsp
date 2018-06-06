@@ -70,7 +70,8 @@
         						</div>
         						<div class="col-25">
         							<i class="material-icons face"></i><br><!-- 변경 필요 없음 -->
-        							<span>참가자 19 / 정원 ${group.personnel }</span>
+        							<span>참가자 19</span><br>
+        							<span>정원 ${group.personnel }</span>
         						</div>
         						
 	        					<div class="col-25">
