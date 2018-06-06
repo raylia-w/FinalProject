@@ -69,29 +69,34 @@ public class BoardController {
 		return "redirect:/group/board.do?group_no=3";
 	}
 	
-	@RequestMapping(value="/group/notice.do")
-	public void groupNotice() {
-		service.getNoticeList();
+	@RequestMapping(value="/group/notice.do", method=RequestMethod.GET)
+	public String groupNotice(Groups group, Model model) {
+		model.addAttribute("list", service.getNoticeList(group));
+		model.addAttribute("count", service.getNoticeCount(group));
+		return "group/board/notice";
 	}
 	
 	@RequestMapping(value="/group/notice/detail.do")
-	public void groupNoticeDetail() {
-		service.getNoticeView();
+	public void groupNoticeDetail(Board board) {
+		service.getNoticeView(board);
 	}
 	
-	@RequestMapping(value="/group/notice/write.do")
-	public void groupNoticeWrite() {
-		service.noticeWrite();
+	@RequestMapping(value="/group/notice/write.do", method=RequestMethod.GET)
+	public String groupNoticeWrite(Board board, Model model) {
+		model.addAttribute("group", 3);
+		model.addAttribute("nick", "니익네에임");
+		return "group/board/noticeWrite";
 	}
 	
-	@RequestMapping(value="/group/notice/mod.do")
-	public void groupNoticeMod() {
-		service.noticeMod();
+	@RequestMapping(value="/group/notice/write.do", method=RequestMethod.POST)
+	public String groupNoticeWriteProc(Board board) {
+		service.noticeWrite(board);
+		return "redirect:/group/notice.do?group_no="+board.getGroup_no();
 	}
 	
 	@RequestMapping(value="/group/notice/delete.do")
-	public void groupNoticeDelete() {
-		service.noticeDelete();
+	public void groupNoticeDelete(Board board) {
+		service.noticeDelete(board);
 	}
 	
 	@RequestMapping(value="/group/photo.do", method=RequestMethod.GET)

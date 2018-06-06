@@ -23,4 +23,6 @@ public class Board {
 	private int recommend;
 
 	private int group_no;
+	
+	private String part;
 }

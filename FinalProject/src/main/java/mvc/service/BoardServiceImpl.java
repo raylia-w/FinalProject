@@ -56,20 +56,25 @@ public class BoardServiceImpl implements BoardService{
 	public void boardDelete(Board board) {
 		dao.boardDelete(board);
 	}
-
+	
 	@Override
-	public List getNoticeList() {
-		return dao.getNoticeList();
+	public int getNoticeCount(Groups group) {
+		return dao.getNoticeCount(group);
 	}
 
 	@Override
-	public Board getNoticeView() {
-		return dao.getNoticeView();
+	public List getNoticeList(Groups group) {
+		return dao.getNoticeList(group);
 	}
 
 	@Override
-	public void noticeWrite() {
-		dao.noticeWrite();
+	public Board getNoticeView(Groups group) {
+		return dao.getNoticeView(group);
+	}
+
+	@Override
+	public void noticeWrite(Board board) {
+		dao.noticeWrite(board);
 	}
 
 	@Override
@@ -78,8 +83,8 @@ public class BoardServiceImpl implements BoardService{
 	}
 
 	@Override
-	public void noticeDelete() {
-		dao.noticeDelete();
+	public void noticeDelete(Board board) {
+		dao.noticeDelete(board);
 	}
 
 	@Override

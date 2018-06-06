@@ -1,6 +1,5 @@
 package mvc.dao;
 
-import java.security.acl.Group;
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
@@ -25,15 +24,17 @@ public interface BoardDAO {
 	
 	public void boardDelete(Board board);
 	
-	public List getNoticeList();
+	public int getNoticeCount(Groups group);
 	
-	public Board getNoticeView();
+	public List getNoticeList(Groups group);
 	
-	public void noticeWrite();
+	public Board getNoticeView(Groups group);
+	
+	public void noticeWrite(Board board);
 	
 	public void noticeMod();
 	
-	public void noticeDelete();
+	public void noticeDelete(Board board);
 	
 	public List getPhotoList(Groups group);
 	

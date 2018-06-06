@@ -21,7 +21,7 @@
 	<select id="getBoardList"
 			parameterType="mvc.dto.Groups"
 			resultType="mvc.dto.Board">
-			SELECT * FROM board WHERE group_no = #{group_no} ORDER BY board_no DESC
+			SELECT * FROM board WHERE group_no = #{group_no} AND part='일반' ORDER BY board_no DESC
 	</select>
 	<select id="getBoardView"
 			parameterType="mvc.dto.Board"
@@ -30,7 +30,7 @@
 	</select>
 	<insert id="boardWrite"
 			parameterType="mvc.dto.Board">
-			INSERT INTO board(board_no, title, content, user_nick, written_date, hit, recommend, group_no) VALUES(board_no_seq.nextval, #{title}, #{content}, #{user_nick}, sysdate, 0, 0, #{group_no})	
+			INSERT INTO board(board_no, title, content, user_nick, written_date, hit, recommend, group_no, part) VALUES(board_no_seq.nextval, #{title}, #{content}, #{user_nick}, sysdate, 0, 0, #{group_no}, '일반')	
 	</insert>
 	<update id="boardMod"
 			parameterType="mvc.dto.Board">
@@ -43,16 +43,21 @@
 	<select id="getNoticeList"
 			parameterType="mvc.dto.Groups"
 			resultType="mvc.dto.Board">
-			SELECT * FROM board WHERE group_no = #{groups_no} DESC
+			SELECT * FROM board WHERE group_no = #{group_no} AND part='공지' ORDER BY board_no DESC
+	</select>
+	<select id="getNoticeCount"
+			parameterType="mvc.dto.Groups"
+			resultType="int">
+			SELECT COUNT(*) FROM board WHERE group_no=#{group_no} AND part='공지'
 	</select>
 	<select id="getNoticeView"
-			parameterType="mvc.dto.Board"
+			parameterType="mvc.dto.Groups"
 			resultType="mvc.dto.Board">
-			SELECT * FROM board WHERE board_no = #{board_no}
+			SELECT * FROM (SELECT * FROM board WHERE group_no=#{group_no} AND part='공지' ORDER BY board_no DESC) WHERE ROWNUM=1
 	</select>
 	<insert id="noticeWrite"
 			parameterType="mvc.dto.Board">
-			INSERT INTO board(board_no, title, content, user_nick, written_date, hit, recommend, group_no) VALUES(board_no_seq.nextval, #{title}, #{content}, #{user_nick}, sysdate, 0, 0, #{group_no})	
+			INSERT INTO board(board_no, title, content, user_nick, written_date, hit, recommend, group_no, part) VALUES(board_no_seq.nextval, #{title}, #{content}, #{user_nick}, sysdate, 0, 0, #{group_no}, '공지')	
 	</insert>
 	<update id="noticeMod"
 			parameterType="mvc.dto.Board">

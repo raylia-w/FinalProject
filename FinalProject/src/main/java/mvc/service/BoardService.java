@@ -27,15 +27,17 @@ public interface BoardService {
 	
 	public void boardDelete(Board board);
 	
-	public List getNoticeList();
+	public int getNoticeCount(Groups group);
 	
-	public Board getNoticeView();
+	public List getNoticeList(Groups group);
 	
-	public void noticeWrite();
+	public Board getNoticeView(Groups group);
+	
+	public void noticeWrite(Board board);
 	
 	public void noticeMod();
 	
-	public void noticeDelete();
+	public void noticeDelete(Board board);
 	
 	public List getPhotoList(Groups group);
 	

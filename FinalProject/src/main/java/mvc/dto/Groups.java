@@ -24,4 +24,8 @@ public class Groups {
 	
 	private String intro;
 	
+	private String main_cat;
+	
+	private String small_cat;
+	
 }

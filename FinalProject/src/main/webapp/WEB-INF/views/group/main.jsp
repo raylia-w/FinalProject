@@ -65,7 +65,8 @@
 							<div class="row">
 								<div class="col-25">
 									<i class="material-icons filter_list"></i><br><!-- 모임 카테고리 아이콘 이미지 http://bootstrapk.com/components/ 참조해서 카테고리 별로 적당하게 삽입할 것-->
-          							<span>${group.theme }</span>
+          							<span>${group.main_cat }</span><br>
+          							<span>${group.small_cat }</span>
         						</div>
         						<div class="col-25">
         							<i class="material-icons face"></i><br><!-- 변경 필요 없음 -->
@@ -103,29 +104,10 @@
 					<div class="content-block-inner plain-invitation-detail">
 						<div class="readmore-plain-invitation-detail" data-readmore="" aria-expanded="false" id="rmjs-1" style="max-height: none; height: 400px;">
 							<p></p><div>&nbsp;
-							<br>안녕하세요. 비온 뒤 숲속지기 심리상담사&nbsp;정경진입니다.<p></p>
-							<p>'심리상담은 정신력이 약하거나 문제가 많은 사람이나 받지'라는 생각은 그야말로 편견입니다. 심리상담은 자신의 인생을 당당하게, 주인으로 살기위해 이제는 더 이상 미룰 수 없는 '나를 찾기 위한&nbsp;여행'입니다. </p>
-							<p>다음의 내용을 고민하는 분이라면 오셔서 건강한 고민을 나누고&nbsp;홀가분해지세요. 
-							<br> 
-							<br>-부모와의 애증관계, 미워할 수도 사랑할 수도 없어&nbsp;괴로워요.
-							<br>-연인과의 번번한 실패, 이제는 건강한 사랑을 하고&nbsp;싶어요.
-							<br>-일과 사랑과 일상과 인생! 조화롭게 살 수&nbsp;있을까요?
-							<br>-어디가나 소외감이 느껴져요. 지긋지긋한 외로움&nbsp;어찌해야할까요?
-							<br>-직장생활, 아흐! 괴로워요. 어떻게&nbsp;다녀야할까요?
-							<br>-매사에 자신이 없고 불안해요. 자존감이 높아질 수&nbsp;있을까요?
-							<br>-아무것도 하고 싶은 게 없어요. 이제 그만 무기력에서 벗어나고&nbsp;싶어요. 
-							<br>-그냥 우울해요. 화도 나고. 나도 행복해질 수&nbsp;있을까요?</p>
-							<p>만능 처방전, 마음의 호랑이 연고는 어디에도 없습니다. 하지만, 혼자 끙끙 매고 있는 것보다 함께 나누다 보면 어느 새&nbsp;홀가분해집니다. 
-							<br>뻔한 처세술이나 냉소적인 조언이 아닌, 심리전문가의 따뜻하고 전문적인 상담을 경험하시면, '아~ 이제라도 와서 다행이다.'하실&nbsp;것입니다. </p>
-							<p>('홍대다락방에서 하는 심리상담'이 약수역 다산성곽마을 '비 온 뒤 숲속'으로 바뀌었습니다, 문의사항은 문자주세요.&nbsp;010-7771-3770)</p>
-							<p>-연구소와 제&nbsp;소개는 </p>
-							<p>-https://forest24.modoo.at&nbsp;-http://blog.naver.com/kyung3770&nbsp;</p>
-							<p>로 들어오시면 볼 수&nbsp;있습니다.
-							<br>&nbsp;</p>
-							<p>*심리상담이 돈 있는 사람들의 전유물이 아닌 대중들에게 공유되고 오픈되는 사회공공재가 되었으면 하는&nbsp;바램입니다.
+							${notice.content }
 							<br></p></div><p></p>
 						</div>
-<!-- 						<a href="#" data-readmore-toggle="rmjs-1" aria-controls="rmjs-1">공지 게시판 이동</a> -->
+						<a href="/group/notice.do?group_no=${group.group_no }" data-readmore-toggle="rmjs-1" aria-controls="rmjs-1">공지 게시판 이동</a>
 					</div>
 				</div>
 			</div>
