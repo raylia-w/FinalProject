@@ -237,7 +237,8 @@
 							</div>
 						</div>
 					</div>
-					<a href="/group/meeting/registration.do?group_no=${group.group_no }">새 정모 등록</a>
+					<p><a href="/group/meeting/registration.do?group_no=${group.group_no }">새 정모 등록</a></p>
+					<p><a href="/group/meeting/list.do?group_no=${group.group_no }">정모 목록</a></p>
 				</div>
 			</div>
 		</div>

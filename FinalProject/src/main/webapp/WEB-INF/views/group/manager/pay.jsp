@@ -49,8 +49,6 @@ $(document).ready(function(){
 	var shop = request.getParameter("s_name");
 	var decoded = decodeURI(shop, "UTF-8");
 	var res_id = request.getParameter("res_id");
-	console.log(shop);
-	console.log(decoded);
 	var IMP = window.IMP; // 생략가능
 	IMP.init('imp45480754'); // 'iamport' 대신 부여받은 "가맹점 식별코드"를 사용
 	IMP.request_pay({
@@ -81,8 +79,8 @@ $(document).ready(function(){
 	    		//[2] 서버에서 REST API로 결제정보확인 및 서비스루틴이 정상적인 경우
 	    		if ( everythings_fine ) {
 	    			var msg = '결제가 완료되었습니다.';
-	    			msg += '\n고유ID : ' + rsp.imp_uid;
-	    			msg += '\n상점 거래ID : ' + rsp.merchant_uid;
+// 	    			msg += '\n고유ID : ' + rsp.imp_uid;
+// 	    			msg += '\n상점 거래ID : ' + rsp.merchant_uid;
 	    			msg += '\결제 금액 : ' + rsp.paid_amount;
 	    			msg += '카드 승인번호 : ' + rsp.apply_num;
 	    			alert(msg);
@@ -90,6 +88,8 @@ $(document).ready(function(){
 	    		} else {
 	    			//[3] 아직 제대로 결제가 되지 않았습니다.
 	    			//[4] 결제된 금액이 요청한 금액과 달라 결제를 자동취소처리하였습니다.
+	    			alert("결제 오류로 자동 취소처리되었습니다.");
+	    			history.go(-2);
 	    		}
 	    	});
 	    	
@@ -98,7 +98,7 @@ $(document).ready(function(){
 	        msg += '에러내용 : ' + rsp.error_msg;
 	        alert(msg);
 	        self.close();
-	     	window.opener.history.go(-1);
+	     	history.go(-2);
 	    }
 	    closeTimer();
 	});

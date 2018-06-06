@@ -1,5 +1,8 @@
 package mvc.dto;
 
+import java.math.BigDecimal;
+import java.sql.Date;
+
 import org.springframework.stereotype.Component;
 
 import lombok.Data;
@@ -14,7 +17,7 @@ public class Payment {
 	
 	private String merchant_uid;
 	
-	private int amount;
+	private BigDecimal amount;
 	
 	private String pay_method;
 	
@@ -26,7 +29,7 @@ public class Payment {
 	
 	private String buyer_tel;
 	
-	private String paid_at;
+	private Date paid_at;
 	
 	private String status;
 	
@@ -36,6 +39,6 @@ public class Payment {
 	
 	private int meeting_no;
 	
-	private int u_no;
+	private String u_id;
 	
 }

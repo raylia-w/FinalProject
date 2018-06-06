@@ -20,6 +20,11 @@ public class MeetingServiceImpl implements MeetingService{
 	}
 	
 	@Override
+	public List getMeetingGuest(Meeting_reservation meeting) {
+		return dao.getMeetingGuest(meeting);
+	}
+	
+	@Override
 	public Meeting_reservation getMeetingInfo(Meeting_reservation meeting) {
 		return dao.getMeetingInfo(meeting);
 	}
@@ -35,8 +40,8 @@ public class MeetingServiceImpl implements MeetingService{
 	}
 
 	@Override
-	public void deleteMeeting() {
-		dao.deleteMeeting();
+	public void deleteMeeting(Meeting_reservation meeting) {
+		dao.deleteMeeting(meeting);
 	}
 
 	@Override

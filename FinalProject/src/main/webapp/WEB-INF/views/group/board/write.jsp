@@ -17,8 +17,9 @@
 		<label><h1>내용</h1><textarea id="content" name="content" rows="30" cols="100"></textarea></label><br><br>
 		<input type="hidden" id="user_nick" name="user_nick" value="${nick }">
 		<input type="hidden" id="group_no" name="group_no" value="${group }">
-		<input type="button" onclick="submitContents()" value="작성 완료">
-		<input type="button" onclick="cancel()" value="취소">
+		<input type="file" id="file" name="file"><br><br>
+		<input type="button" class="btn-primary" onclick="submitContents()" value="작성 완료">
+		<input type="button" class="btn" onclick="cancel()" value="취소">
 	</form>
 <script type="text/javascript">
 	var oEditors = [];

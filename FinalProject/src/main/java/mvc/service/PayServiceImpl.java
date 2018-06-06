@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import mvc.dao.PaymentDAO;
+import mvc.dto.Payment;
 
 @Service
 public class PayServiceImpl implements PayService{
@@ -18,8 +19,8 @@ public class PayServiceImpl implements PayService{
 	}
 
 	@Override
-	public void insertPay() {
-		dao.insertPay();
+	public void insertPay(Payment payment) {
+		dao.insertPay(payment);
 	}
 
 	@Override
