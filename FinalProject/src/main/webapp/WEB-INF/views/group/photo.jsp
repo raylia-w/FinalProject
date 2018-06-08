@@ -178,7 +178,9 @@ function deletePhoto(pno, oname, gno){
 								<img src="/resources/upload/${photo.original_name }" alt="${photo.original_name }" onclick="resizeImg(this.src)">
 							</div>
 							<figcaption>${photo.user_nick } / ${photo.upload_date }</figcaption>
-							<button class="btn btn-xs" onclick="deletePhoto('${photo.photo_no}', '${photo.original_name }', '${photo.group_no }')">삭제</button>
+							<c:if test="${nick eq photo.user_nick }">
+								<button class="btn btn-xs" onclick="deletePhoto('${photo.photo_no}', '${photo.original_name }', '${photo.group_no }')">삭제</button>
+							</c:if>
 							</figure>
 						</div>
 					</div>
