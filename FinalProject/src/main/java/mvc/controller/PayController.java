@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -12,6 +13,7 @@ import com.siot.IamportRestHttpClientJava.IamportClient;
 import com.siot.IamportRestHttpClientJava.request.CancelData;
 import com.siot.IamportRestHttpClientJava.response.IamportResponse;
 
+import mvc.dto.Groups;
 import mvc.dto.Payment;
 import mvc.service.PayService;
 
@@ -21,7 +23,8 @@ public class PayController {
 	@Autowired PayService payService;
 
 	@RequestMapping(value="/pay.do", method=RequestMethod.GET)
-	public String payAPI() {
+	public String payAPI(Groups group, Model model) {
+		model.addAttribute("group_no", group.getGroup_no());
 		return "group/manager/pay";
 	}
 	

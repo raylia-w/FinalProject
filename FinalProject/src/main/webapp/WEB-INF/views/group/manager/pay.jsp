@@ -7,12 +7,9 @@
 <script type="text/javascript" src="https://service.iamport.kr/js/iamport.payment-1.1.5.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script type="text/javascript">
-function closeTimer(){
-	setTimeout('closed()', 2000);
-}
-function closed(){
-	self.close();
- 	window.opener.location.replace("");
+
+function close(){
+ 	location.replace("/group/meeting/list.do?group_no=${group_no}");
 }
 function urldecode (str) {  
     return decodeURIComponent((str + '').replace(/\+/g, '%20'));  // 공백 문자인 + 를 처리하기 위해 +('%20') 을 공백으로 치환
@@ -47,23 +44,23 @@ $(document).ready(function(){
 	var email = request.getParameter("email");
 	var amount = request.getParameter("amount");
 	var shop = request.getParameter("s_name");
-	var decoded = decodeURI(shop, "UTF-8");
 	var res_id = request.getParameter("res_id");
 	var meeting_no = request.getParameter("meeting_no");
-	console.log(meeting_no);
+	var group_no = request.getParameter("group_no");
 	var IMP = window.IMP; // 생략가능
 	IMP.init('imp45480754'); // 'iamport' 대신 부여받은 "가맹점 식별코드"를 사용
 	IMP.request_pay({
 	    pg : 'inicis', // version 1.1.0부터 지원.
 	    pay_method : 'card',
 	    merchant_uid : 'merchant_' + new Date().getTime(),
-	    name : decoded,
+	    name : '해피투게더',
 	    amount : amount,
 	    buyer_email : email,
 	    buyer_name : name,
 	    buyer_tel : tel,
 	    buyer_addr : addr,
 	    meeting_no : meeting_no,
+	    group_no : group_no,
 	    m_redirect_url : '/pay.do'
 	}, function(rsp) {
 	    if ( rsp.success ) {
@@ -97,9 +94,9 @@ $(document).ready(function(){
 	        var msg = '결제에 실패하였습니다.';
 	        msg += '에러내용 : ' + rsp.error_msg;
 	        alert(msg);
-	        self.close();
+// 	        self.close();
 	    }
-	    closeTimer();
+	    close();
 	});
 	
 });

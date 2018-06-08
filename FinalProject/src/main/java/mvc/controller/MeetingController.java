@@ -50,7 +50,7 @@ public class MeetingController {
 		Groups group = new Groups();
 		group.setGroup_no(meeting.getGroup_no());
 		Meeting_reservation mno = meetingService.getCurrentMeeting(group);
-		return "redirect:/pay.do?id="+uId+"&price="+amount+"&s_name="+reservation_location+"&res_id="+res_id+"&amount="+amount+"&meeting_no="+mno.getMeeting_no();
+		return "redirect:/pay.do?id="+uId+"&price="+amount+"&s_name="+reservation_location+"&res_id="+res_id+"&amount="+amount+"&meeting_no="+mno.getMeeting_no()+"&group_no="+meeting.getGroup_no();
 	}
 	
 	@RequestMapping(value="/group/meeting/detail.do")
