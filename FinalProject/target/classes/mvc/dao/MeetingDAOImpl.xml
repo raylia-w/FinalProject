@@ -8,11 +8,11 @@
 			resultType="mvc.dto.Meeting_reservation">
 			SELECT * FROM meeting_reservation WHERE group_no = #{group_no} ORDER BY meeting_no DESC
 	</select>
-<!-- 	<select id="getMeetingGuest" -->
-<!-- 			parameterType="mvc.dto.Meeting_reservation" -->
-<!-- 			resultType="mvc.dto.Users"> -->
-<!-- 			SELECT * FROM meeting_guest WHERE meeting_no=#{meeting_no} ORDER BY user_id -->
-<!-- 	</select> -->
+	<select id="getMeetingGuest"
+			parameterType="mvc.dto.Meeting_reservation"
+			resultType="mvc.dto.Member">
+			SELECT * FROM meeting_guest WHERE meeting_no=#{meeting_no} ORDER BY u_id
+	</select>
 	<select id="getCurrentMeeting"
 			parameterType="mvc.dto.Groups"
 			resultType="mvc.dto.Meeting_reservation">

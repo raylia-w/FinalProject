@@ -28,7 +28,6 @@
 <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=YiJfocqY2V0PLgrqvSkF"></script>
 <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=YiJfocqY2V0PLgrqvSkF&submodules=geocoder"></script>
 
-<script>!function(e,o,n){window.HSCW=o,window.HS=n,n.beacon=n.beacon||{};var t=n.beacon;t.userConfig={},t.readyQueue=[],t.config=function(e){this.userConfig=e},t.ready=function(e){this.readyQueue.push(e)},o.config={docs:{enabled:!0,baseUrl:"//zipbob.helpscoutdocs.com/"},contact:{enabled:!0,formId:"d9595e48-dbf6-11e6-8789-0a5fecc78a4d"}};var r=e.getElementsByTagName("script")[0],c=e.createElement("script");c.type="text/javascript",c.async=!0,c.src="https://djtflbt20bdde.cloudfront.net/",r.parentNode.insertBefore(c,r)}(document,window.HSCW||{},window.HS||{});</script>
 <style>
 	a:link{color:black;text-decoration:none;}
 	a:visited{color:black;text-decoration:none;}
@@ -57,6 +56,14 @@
       						<div class="description">
 								${group.intro }
 							</div>
+							<c:choose>
+								<c:when test="${isMember <1}">
+									<button class="btn-primary" style="float:right;" onclick="location.href='/group/registration.do?group_no=${group.group_no}&u_id=${u_id}'">가입하기</button>
+								</c:when>
+								<c:when test="${isMember >0}">
+									<button class="btn-primary" style="float:right;" onclick="location.href='/group/secession.do?group_no=${group.group_no}&u_id=${u_id}'">탈퇴하기</button>
+								</c:when>
+							</c:choose>
 						</div>
 					</div>
 				</div>
@@ -221,7 +228,6 @@
 							</div>
 						</div>
 					</div>
-					<p><a href="/group/meeting/registration.do?group_no=${group.group_no }">새 정모 등록</a></p>
 					<p><a href="/group/meeting/list.do?group_no=${group.group_no }">정모 목록</a></p>
 				</div>
 			</div>

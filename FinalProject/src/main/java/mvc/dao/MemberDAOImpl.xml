@@ -11,14 +11,19 @@
 	<select id="getMemberInfo"
 			parameterType="mvc.dto.Member"
 			resultType="mvc.dto.Member">
-			SELECT * FROM member WHERE group_no = #{group_no} AND u_no = #{u_no}
+			SELECT * FROM member WHERE group_no = #{group_no} AND u_id = #{u_id}
+	</select>
+	<select id="isMember"
+			parameterType="mvc.dto.Member"
+			resultType="int">
+			SELECT COUNT(*) FROM member WHERE group_no = #{group_no} AND u_id = #{u_id}
 	</select>
 	<insert id="memberRegistration"
 			parameterType="mvc.dto.Member">
-			INSERT INTO member(group_no, u_no) VALUES(#{group_no}, #{u_no})
+			INSERT INTO member(group_no, u_id) VALUES(#{group_no}, #{u_id})
 	</insert>
 	<delete id="memberSecession"
 			parameterType="mvc.dto.Member">
-			DELETE FROM member WHERE group_no = #{group_no} AND u_no = #{u_no}
+			DELETE FROM member WHERE group_no = #{group_no} AND u_id = #{u_id}
 	</delete>
 </mapper>

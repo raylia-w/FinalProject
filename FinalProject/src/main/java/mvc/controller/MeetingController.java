@@ -118,6 +118,6 @@ public class MeetingController {
 		model.addAttribute("msg", msg);
 		model.addAttribute("url", url);
 		
-		return "group/manager/redirect";
+		return "group/redirect";
 	}
 }

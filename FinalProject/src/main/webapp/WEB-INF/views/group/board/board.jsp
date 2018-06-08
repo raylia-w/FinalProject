@@ -15,7 +15,6 @@
 <script type="text/javascript">
 
 function boardDelete(bno){
-// 	console.log(bno);
 	location.href="/group/board/delete.do?board_no="+bno;
 }
 
@@ -43,7 +42,11 @@ function boardDelete(bno){
         		<div class="card-header">
         			<div class="title">${board.title }</div>
         			<div class="name">${board.user_nick }</div><!-- 작성자 닉네임 -->
-        			<div class="date">${board.written_date }<button class="btn" onclick="boardDelete(${board.board_no})">삭제</button></div><!-- 작성일 -->
+        			<div class="date">${board.written_date }
+        			<c:if test="${nick eq board.user_nick }">
+        				<div class="delete"><button class="btn" onclick="boardDelete(${board.board_no})">삭제</button></div>
+        			</c:if>
+        			</div>
         		</div>
         		<div class="card-content">
         			<div class="card-content-inner">

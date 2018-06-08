@@ -31,7 +31,7 @@ public class BoardController {
 	@RequestMapping(value="/group/board.do")
 	public String groupBoard(Groups group, Board board, Model model) {
 		
-		model.addAttribute("nick", "닉네이이임");
+		model.addAttribute("nick", "니익네에임");
 		model.addAttribute("list", service.getBoardList(group));
 		model.addAttribute("count", service.getBoardCount(group));
 		

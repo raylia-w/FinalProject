@@ -21,7 +21,9 @@ function commentList${cnt.index }(){
 				if(value.board_no==bno){
 	                a += '<div class="commentArea" style="border-bottom:1px solid darkgray; margin-bottom: 15px;">';
 	                a += '작성자 : '+value.user_nick;
-	                a += '<a onclick="commentDelete${cnt.index }('+value.comments_no+');"> 삭제 </a> </div>';
+	                if(value.user_nick=='${nick}'){
+	                	a += '<a onclick="commentDelete${cnt.index }('+value.comments_no+');"> 삭제 </a> </div>';
+	                }
 	                a += '<div class="commentContent'+value.comments_no+'"> <p> 내용 : '+value.comments +'</p>';
 	                a += '</div></div>';
 				}
@@ -48,24 +50,10 @@ function commentInsert${cnt.index }(insertData){
         }
     });
 }
- 
-//댓글 수정 - 댓글 내용 출력을 input 폼으로 변경 
-// function commentUpdate(cno, content){
-//     var a ='';
-    
-//     a += '<div class="input-group">';
-//     a += '<input type="text" class="form-control" name="content_'+cno+'" value="'+content+'"/>';
-//     a += '<span class="input-group-btn"><button class="btn btn-default" type="button" onclick="commentUpdateProc('+cno+');">수정</button> </span>';
-//     a += '</div>';
-    
-//     $('.commentContent'+cno).html(a);
-    
-// }
- 
- 
+
 //댓글 삭제 
 function commentDelete${cnt.index }(cno){
-	console.log(cno);
+	
     $.ajax({
         url : '/comment/delete.do?comments_no='+cno,
         type : 'get',

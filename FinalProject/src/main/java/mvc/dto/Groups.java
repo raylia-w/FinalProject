@@ -15,9 +15,7 @@ public class Groups {
 	private String location;
 	
 	private String manager_id;
-	
-	private String theme;
-	
+		
 	private int personnel;
 	
 	private String chat_id;

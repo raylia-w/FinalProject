@@ -10,6 +10,6 @@ public class Member {
 	
 	private int group_no;
 	
-	private int u_no;
+	private String u_id;
 	
 }

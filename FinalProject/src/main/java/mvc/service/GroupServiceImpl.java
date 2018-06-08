@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import mvc.dao.GroupDAO;
 import mvc.dao.MemberDAO;
 import mvc.dto.Groups;
+import mvc.dto.Member;
 
 @Service
 public class GroupServiceImpl implements GroupService{
@@ -25,15 +26,24 @@ public class GroupServiceImpl implements GroupService{
 	public Groups getGroupInfo(Groups group) {
 		return groupDao.getGroupInfo(group);
 	}
+	
+	@Override
+	public List getMemberList(Groups group) {
+		return memberDao.getMemberList(group);
+	}
+	@Override
+	public int isMember(Member member) {
+		return memberDao.isMember(member);
+	}
 
 	@Override
-	public void memberSecession() {
-		memberDao.memberSecession();
+	public void memberSecession(Member member) {
+		memberDao.memberSecession(member);
 	}
 	
 	@Override
-	public void memberRegistration() {
-		memberDao.memberRegistration();
+	public void memberRegistration(Member member) {
+		memberDao.memberRegistration(member);
 	}
 
 	@Override
