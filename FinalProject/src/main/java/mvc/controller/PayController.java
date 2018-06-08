@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.siot.IamportRestHttpClientJava.IamportClient;
+import com.siot.IamportRestHttpClientJava.request.CancelData;
 import com.siot.IamportRestHttpClientJava.response.IamportResponse;
 
 import mvc.dto.Payment;
@@ -34,7 +35,7 @@ public class PayController {
 			
 		String uid = request.getParameter("imp_uid");
 		String res_id = request.getParameter("res_id");
-		String s_name = request.getParameter("s_name");
+		int meeting_no = Integer.parseInt(request.getParameter("meeting_no"));
 		
 		try {
 			payment = client.paymentByImpUid(uid);
@@ -53,15 +54,16 @@ public class PayController {
 		p.setPg(payment.getResponse().getPgProvider());
 		p.setPaid_at(payment.getResponse().getPaidAt());
 		p.setStatus("결제완료");
-		p.setBuyer_name(s_name);
+		p.setU_id("id1");
 		p.setRes_id(res_id);
+		p.setMeeting_no(meeting_no);
 		payService.insertPay(p);
 	}
 	
-	@RequestMapping(value="/pay/refund.do")
-	public void refund() {
-		payService.refundPay();
-	}
+//	@RequestMapping(value="/pay/refund.do")
+//	public void refund(Payment payment) {
+//		payService.refundPay(payment);
+//	}
 	
 	@RequestMapping(value="/pay/complete.do")
 	public void payComplete() {

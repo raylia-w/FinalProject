@@ -26,6 +26,7 @@
 <script src="https://dppgjjx7k7m5m.cloudfront.net/assets/web-9b4e26f38626985de32bb998ccfaca8e754a6117f6ec13079cd174715392de22.js" crossorigin="anonymous"></script>
 
 <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=YiJfocqY2V0PLgrqvSkF"></script>
+<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=YiJfocqY2V0PLgrqvSkF&submodules=geocoder"></script>
 
 <script>!function(e,o,n){window.HSCW=o,window.HS=n,n.beacon=n.beacon||{};var t=n.beacon;t.userConfig={},t.readyQueue=[],t.config=function(e){this.userConfig=e},t.ready=function(e){this.readyQueue.push(e)},o.config={docs:{enabled:!0,baseUrl:"//zipbob.helpscoutdocs.com/"},contact:{enabled:!0,formId:"d9595e48-dbf6-11e6-8789-0a5fecc78a4d"}};var r=e.getElementsByTagName("script")[0],c=e.createElement("script");c.type="text/javascript",c.async=!0,c.src="https://djtflbt20bdde.cloudfront.net/",r.parentNode.insertBefore(c,r)}(document,window.HSCW||{},window.HS||{});</script>
 <style>
@@ -237,29 +238,48 @@
 		</div>
 
 <script>
-	// map
-	var coordinate = JSON.parse('{"lat":37.555605,"lng":127.0072893}');
-    var oPoint = new naver.maps.LatLng(coordinate.lat, coordinate.lng);
 
-    var map = new naver.maps.Map($('.product_55e77efee76f6870ab005461 #product-map')[0], {
-      center: oPoint,
-      scrollWheel: false,
-      draggable: true,
-      zoom: 11,
-      minZoom: 5,
-      maxZoom: 14,
-      zoomControl: true,
-      zoomControlOptions: {
-        position: naver.maps.Position.TOP_RIGHT
-        }
-    });
+	// map
+	var coordinate = initGeocoder();
+
+    var map = new naver.maps.Map("product-map", {
+    	 scrollWheel: false,
+         draggable: true,
+         zoom: 11,
+         minZoom: 5,
+         maxZoom: 14,
+         zoomControl: true,
+         zoomControlOptions: {
+           position: naver.maps.Position.TOP_RIGHT
+         }
+	});
+    
     var circle = new naver.maps.Circle({
-      map: map,
-      center: oPoint,
-      radius: 150,
-      fillColor: '#2196f3',
-      fillOpacity: 0.3,
-    });
+        map: map,
+        center: map.getCenter(),
+        radius: 150,
+        fillColor: '#2196f3',
+        fillOpacity: 0.3,
+      });
+    	
+	function searchAddressToCoordinate(address) {
+	    naver.maps.Service.geocode({
+	        address: address
+	    }, function(status, response) {
+	        if (status === naver.maps.Service.Status.ERROR) {
+	            return alert('Something Wrong!');
+	        }
+	        var item = response.result.items[0],
+	            addrType = item.isRoadAddress ? '[도로명 주소]' : '[지번 주소]',
+	            point = new naver.maps.Point(item.point.x, item.point.y);
+	        	
+	        	map.setCenter(point);
+	    });
+	}
+	function initGeocoder() {
+	    searchAddressToCoordinate('${group.location}');
+	}
+
 </script>
 
 

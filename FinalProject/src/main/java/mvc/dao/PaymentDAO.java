@@ -17,6 +17,8 @@ public interface PaymentDAO {
 	
 	public void completePay();
 	
-	public void refundPay();
+	public void refundPay(Payment payment);
+
+	public Payment getPayInfo(int meeting_no);
 	
 }

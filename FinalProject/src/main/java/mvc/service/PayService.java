@@ -2,6 +2,7 @@ package mvc.service;
 
 import java.util.List;
 
+import mvc.dto.Meeting_reservation;
 import mvc.dto.Payment;
 
 
@@ -15,6 +16,6 @@ public interface PayService {
 	
 	public void completePay();
 	
-	public void refundPay();
+	public void refundPay(Meeting_reservation meeting);
 	
 }

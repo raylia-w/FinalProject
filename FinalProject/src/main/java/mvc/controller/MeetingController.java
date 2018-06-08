@@ -47,7 +47,10 @@ public class MeetingController {
 		meetingService.insertMeeting(meeting);
 		String res_id = uId+meeting.getDate_start();
 		int amount = (int) (meeting.getFee()*meeting.getPersonnel()*0.1);
-		return "redirect:/pay.do?id="+uId+"&price="+amount+"&s_name="+reservation_location+"&res_id="+res_id+"&amount="+amount;
+		Groups group = new Groups();
+		group.setGroup_no(meeting.getGroup_no());
+		Meeting_reservation mno = meetingService.getCurrentMeeting(group);
+		return "redirect:/pay.do?id="+uId+"&price="+amount+"&s_name="+reservation_location+"&res_id="+res_id+"&amount="+amount+"&meeting_no="+mno.getMeeting_no();
 	}
 	
 	@RequestMapping(value="/group/meeting/detail.do")
@@ -103,12 +106,12 @@ public class MeetingController {
 		}
 					
 		int compare = currentDate.compareTo( memDelStartDate ); // 날짜비교
-
 		if(compare>0) {
 			msg="예약일자가 이미 지난 경우에는 취소가 불가합니다.";
 			msg+="특수한 사정(재해, 질병, 예약한 제휴업체의 문제)의 경우로 취소하시는 경우에는 문의 후 운영진 판단하에 취소 및 환불 처리해드립니다.";
 		}else {
 			meetingService.deleteMeeting(meeting);
+			payService.refundPay(meeting);
 			msg="취소가 완료되었습니다.";
 		}
 		

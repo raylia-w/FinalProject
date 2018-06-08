@@ -77,8 +77,8 @@ public class BoardController {
 	}
 	
 	@RequestMapping(value="/group/notice/detail.do")
-	public void groupNoticeDetail(Board board) {
-		service.getNoticeView(board);
+	public void groupNoticeDetail(Groups group) {
+		service.getNoticeView(group);
 	}
 	
 	@RequestMapping(value="/group/notice/write.do", method=RequestMethod.GET)

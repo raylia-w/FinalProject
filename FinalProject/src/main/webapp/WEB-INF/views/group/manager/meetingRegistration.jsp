@@ -18,7 +18,6 @@
 <link rel="stylesheet" href="/resources/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="/resources/css/jquery-ui.css" />
 <script type="text/javascript" src="/resources/js/jquery-ui.js"></script>
-<script type="text/javascript" src="/resources/js/jquery-ui.js"></script>
 <style>
 .jquery-calender {
 	width: 620px;
@@ -121,6 +120,10 @@ $(document).ready(function(){
 					<input type="button" id="btnCancel" class="btn btn-default" onClick="location.href='/group/main.do?group_no=${group.group_no}';" value="취소" /></div><br>
 					<input type="hidden" id="group_no" name="group_no" value="${group.group_no }">
 					<input type="hidden" id="uId" name="uId" class="right" value="${id }" /><br>
+					<input type="hidden" id="name" name="name" value="name1">
+					<input type="hidden" id="addr" name="addr" value="서울시 강남구 역삼동">
+					<input type="hidden" id="tel" name="tel" value="000-0000-0000">
+					<input type="hiddem" id="email" name="email" value="email1@zzz.com">
 					<div><input type="hidden" id="uName" name="uName" class="right" value="${uName }" /><br></div><div class="clear"></div>
 					<div><input type="hidden" id="uTel" name="uTel" class="right" value="${uPNo }" /><br></div><div class="clear"></div>
 				</form>
@@ -130,10 +133,6 @@ $(document).ready(function(){
 </div>
 
 <div class="clear"></div>
-<!-- <div id="mask"></div> -->
-<!-- <div id="layerpop" title="정모 등록"> -->
-<!-- 	정모를 등록하기 위해서 등록 예약금을 결제해야 합니다. -->
-<!-- </div> -->
 
 </body>
 </html>
