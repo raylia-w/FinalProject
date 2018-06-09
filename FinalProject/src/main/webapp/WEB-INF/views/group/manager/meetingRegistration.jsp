@@ -23,11 +23,15 @@
 	width: 620px;
 	height:320px;
 }
+
 </style>
 
 <script type="text/javascript">
 $(document).ready(function(){
 
+	$("#addr").css("display", "none");
+	$("#addrDetail").css("display", "none");
+	
 	$("#btnOk").click(function(){
 		if($("#terms1").is(":checked") && $("#terms2").is(":checked")){
 			alert("정모를 등록하기 위해서 등록 예약금을 결제해야 합니다.");
@@ -38,6 +42,11 @@ $(document).ready(function(){
 	});
 	$("#locSelect").click(function(){
 		window.open("/group/meeting/locList.do", "제휴업체 목록");
+		$("#addrDetail").css("display", "inline-block");
+	});
+	$("#directSelect").click(function(){
+		$("#addr").css("display", "inline-block");
+		$("#addrDetail").css("display", "inline-block");
 	});
 	
 });
@@ -56,20 +65,17 @@ $(document).ready(function(){
 			</div>
 			<div id="r_contents" >
 				<form action="/group/meeting/registration.do" method="post" id="reservation">
-					<div>
-						<label for="res_day">날짜</label>
-						<input id="res_day" name="res_day" type="date" class="form-control" />
-					</div><br>			
 					<div id="rLoc">
 						<label for="locSelect">장소</label><br>
 						<input type="button" class="btn" id="locSelect" value="제휴업체 찾기">
-						<input type="button" class="btn"  value="직접 입력하기"><br><br>
+						<input type="button" class="btn" id="directSelect" value="직접 입력하기"><br><br>
 					</div>
+					
 					<div class="form-group">
 						<div class="col-sm-6">
 							<input type="text" onclick="sample4_execDaumPostcode()" class="form-control" id="addr" name="addr" placeholder="주소를 검색해주세요"><br> 
 							<input type="text" class="form-control" id="addrDetail" name="addrDetail" placeholder="상세 주소를 입력해주세요"><br>
-							<span id="guide" style="color: #999"></span><br>
+<!-- 							<span id="guide" style="color: #999"></span><br> -->
 						</div>
 					</div>
 					<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
@@ -84,7 +90,11 @@ $(document).ready(function(){
 						}).open();
 					}
 					</script>
-					<br><br><br><br><br>
+					<br><br><br><br><Br>
+					<div>
+						<label for="res_day">날짜</label>
+						<input id="res_day" name="res_day" type="date" class="form-control" />
+					</div><br>			
 					<div id="rTime">
 					<label for="timeSelect">시간</label>
 						<select id="startTimeSelect" name="date_start" size="1" class="form-control" style="width:170px;">

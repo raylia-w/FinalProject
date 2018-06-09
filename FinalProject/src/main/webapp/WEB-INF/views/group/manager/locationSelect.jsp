@@ -14,7 +14,7 @@
 $(document).ready(function(){
 	$("#myCarousel").carousel("cycle");
 });
-function addr(addr, people){
+function addr(addr, people, money){
 	opener.document.getElementById("addrDetail").value = addr;
 	opener.document.getElementById("personnel").value = people;
 	window.close();
