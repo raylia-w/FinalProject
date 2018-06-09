@@ -52,30 +52,6 @@
 			</div>
 		</div>
 		<!--슬라이드1-->
-
-		<!--슬라이드2-->
-		<div class="item"> 
-			<img src="http://www.blueb.co.kr/SRC2/_image/w02.jpg" style="width:100%" data-src="" alt="Second slide">
-			<div class="container">
-				<div class="carousel-caption">
-					<h1>Slide 2</h1>
-					<p>텍스트 2</p>
-				</div>
-			</div>
-		</div>
-		<!--슬라이드2-->
-		
-		<!--슬라이드3-->
-		<div class="item"> 
-			<img src="http://www.blueb.co.kr/SRC2/_image/w03.jpg" style="width:100%" data-src="" alt="Third slide">
-			<div class="container">
-				<div class="carousel-caption">
-					<h1>Slide 3</h1>
-					<p>텍스트 3</p>
-				</div>
-			</div>
-		</div>
-		<!--슬라이드3-->
 	</div>
 	
 	<!--이전, 다음 버튼-->
