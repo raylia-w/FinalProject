@@ -71,7 +71,8 @@ public class MeetingController {
 	}
 	
 	@RequestMapping(value="/group/meeting/locList.do")
-	public String meetingLocationList() {
+	public String meetingLocationList(Model model) {
+		model.addAttribute("list", meetingService.getPlaceList());
 		return "group/manager/locationSelect";
 	}
 	

@@ -22,4 +22,6 @@ public interface MeetingService {
 	
 	public void deleteMeeting(Meeting_reservation meeting);
 	
+	public List getPlaceList();
+	
 }

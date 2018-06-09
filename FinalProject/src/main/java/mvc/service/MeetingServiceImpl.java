@@ -48,5 +48,10 @@ public class MeetingServiceImpl implements MeetingService{
 	public Meeting_reservation getCurrentMeeting(Groups group) {
 		return dao.getCurrentMeeting(group);
 	}
+	
+	@Override
+	public List getPlaceList() {
+		return dao.getPlaceList();
+	}
 
 }

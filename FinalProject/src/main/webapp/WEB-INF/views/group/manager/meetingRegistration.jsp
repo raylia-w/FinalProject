@@ -28,9 +28,6 @@
 <script type="text/javascript">
 $(document).ready(function(){
 
-	$("#locSelect").click(function(){
-		location.href="/group/meeting/location.do";
-	});
 	$("#btnOk").click(function(){
 		if($("#terms1").is(":checked") && $("#terms2").is(":checked")){
 			alert("정모를 등록하기 위해서 등록 예약금을 결제해야 합니다.");
@@ -38,6 +35,9 @@ $(document).ready(function(){
 		} else {
 			alert("약관 동의를 체크해주세요");
 		}
+	});
+	$("#locSelect").click(function(){
+		window.open("/group/meeting/locList.do", "제휴업체 목록");
 	});
 	
 });

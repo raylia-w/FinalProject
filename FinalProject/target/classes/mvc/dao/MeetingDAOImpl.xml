@@ -23,6 +23,10 @@
 			resultType="mvc.dto.Meeting_reservation">
 			SELECT * FROM meeting_reservation WHERE meeting_no = #{meeting_no}
 	</select>
+	<select id="getPlaceList"
+			resultType="mvc.dto.Place">
+			SELECT * FROM place
+	</select>
 	<insert id="insertMeeting"
 			parameterType="mvc.dto.Meeting_reservation">
 			INSERT INTO meeting_reservation(meeting_no, date_start, date_end, reservation_location, personnel, group_no, status, guest, res_day, fee) VALUES(meeting_no_seq.nextval, #{date_start}, #{date_end}, #{reservation_location}, #{personnel}, #{group_no}, #{status}, 0, #{res_day}, #{fee})
