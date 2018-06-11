@@ -10,6 +10,6 @@ public class Meeting_guest {
 	
 	private int meeting_no;
 	
-	private String u_id;
+	private String user_id;
 
 }

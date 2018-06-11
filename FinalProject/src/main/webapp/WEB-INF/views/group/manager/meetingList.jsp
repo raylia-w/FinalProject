@@ -23,7 +23,7 @@ $(document).ready(function(){
 });
 
 function list(meeting_no){
-	window.open("/group/meeting/guestList.do?meeting_no="+meeting_no, "참가 멤버 목록");
+	window.open("/group/meeting/guestList.do?meeting_no="+meeting_no, "참가 멤버 목록", "scrollbars=yes, toolbar=no, location=yes, resizable=no, status=no, menubar=no, width=500, height=400");
 }
 
 function join(meeting_no, u_id){
@@ -33,7 +33,7 @@ function join(meeting_no, u_id){
 		type:"post",
 		data:{
 			meeting_no:meeting_no,
-			u_id:u_id
+			user_id:u_id
 		},
 		success:function(data){
 			alert(data);
@@ -73,12 +73,12 @@ function join(meeting_no, u_id){
 						<td>${i.res_day }</td>
 						<td>${i.reservation_location }</td>
 						<td>${i.fee }</td>
-						<td><a href="#" onclick="list('${i.meeting_no }')" id="btn">${i.guest }</a></td>	
+						<td><a href="" onclick="list('${i.meeting_no }')" id="btn">${i.guest }</a></td>	
 						<c:if test="${group.manager_id eq uid }">	
 						<td><a href="/group/meeting/cancel.do?meeting_no=${i.meeting_no }&res_day=${i.res_day}&group_no=${i.group_no}">취소</a></td>
 						</c:if>
 						<c:if test="${group.manager_id ne uid }">
-						<td><a href="#" onclick="join('${i.meeting_no}', '${uid }')">참가</a></td>
+						<td><a href="" onclick="join('${i.meeting_no}', '${uid }')">참가</a></td>
 						</c:if>
 					</tr>
 					</c:forEach>

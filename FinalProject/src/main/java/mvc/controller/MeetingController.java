@@ -95,8 +95,9 @@ public class MeetingController {
 	}
 	
 	@RequestMapping(value="/group/meeting/guestList.do")
-	public void meetingGuest(Meeting_reservation meeting, Model model) {
-		model.addAttribute("member", meetingService.getMeetingGuest(meeting));
+	public String meetingGuest(Meeting_reservation meeting, Model model) {
+		model.addAttribute("list", meetingService.getMeetingGuest(meeting));
+		return "group/guestList";
 	}
 	
 	@RequestMapping(value="/group/meeting/locList.do")

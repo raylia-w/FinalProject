@@ -16,7 +16,7 @@
 	<select id="isGuest"
 			parameterType="mvc.dto.Meeting_guest"
 			resultType="int">
-			SELECT COUNT(*) FROM meeting_guest WHERE meeting_no=#{meeting_no} AND user_id=#{u_id}
+			SELECT COUNT(*) FROM meeting_guest WHERE meeting_no=#{meeting_no} AND user_id=#{user_id}
 	</select>
 	<insert id="insertMeetingGuest"
 			parameterType="mvc.dto.Meeting_guest">
