@@ -26,14 +26,14 @@ function list(meeting_no){
 	window.open("/group/meeting/guestList.do?meeting_no="+meeting_no, "참가 멤버 목록", "scrollbars=yes, toolbar=no, location=yes, resizable=no, status=no, menubar=no, width=500, height=400");
 }
 
-function join(meeting_no, u_id){
-	console.log(meeting_no, u_id);
+function join(meeting_no, user_id){
+	console.log(meeting_no, user_id);
 	$.ajax({
 		url:"/group/meeting/join.do",
 		type:"post",
 		data:{
 			meeting_no:meeting_no,
-			user_id:u_id
+			user_id:user_id
 		},
 		success:function(data){
 			alert(data);

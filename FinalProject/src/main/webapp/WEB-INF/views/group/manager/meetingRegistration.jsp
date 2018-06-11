@@ -167,7 +167,6 @@ $(document).ready(function(){
 					<input type="hidden" id="group_no" name="group_no" value="${group.group_no }">
 					<input type="hidden" id="uId" name="uId" class="right" value="${id }" /><br>
 					<input type="hidden" id="name" name="name" value="name1">
-					<input type="hidden" id="addr" name="addr" value="서울시 강남구 역삼동">
 					<input type="hidden" id="tel" name="tel" value="000-0000-0000">
 					<input type="hidden" id="email" name="email" value="email1@zzz.com">
 					<div><input type="hidden" id="uName" name="uName" class="right" value="${uName }" /><br></div><div class="clear"></div>

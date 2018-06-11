@@ -20,7 +20,7 @@
 	</select>
 	<insert id="insertMeetingGuest"
 			parameterType="mvc.dto.Meeting_guest">
-			INSERT INTO meeting_guest VALUES (#{meeting_no}, #{u_id})
+			INSERT INTO meeting_guest VALUES (#{meeting_no}, #{user_id})
 	</insert>
 	<select id="getCurrentMeeting"
 			parameterType="mvc.dto.Groups"
