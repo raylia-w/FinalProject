@@ -40,13 +40,15 @@ public class PayServiceImpl implements PayService{
 	}
 
 	@Override
-	public void refundPay(Meeting_reservation meeting) {
+	public String refundPay(Meeting_reservation meeting) {
 		final long serialVersionUID = 1L;
 		CancelData cancelData;
 		IamportClient client = new IamportClient("4404294394442286", "xYCKnNoMdrbroGKlbcOnuE2XeuQhdoLKnouLbTxpkJQJpA5AMTYhy0eMv54ItPtRdXCpRaPbTFVjf0U2");
 		IamportResponse<com.siot.IamportRestHttpClientJava.response.Payment> cancelPayment = new IamportResponse<com.siot.IamportRestHttpClientJava.response.Payment>();
 		
 		Payment payment = dao.getPayInfo(meeting.getMeeting_no());
+		System.out.println(meeting.getMeeting_no());
+		System.out.println(payment.toString());
 		
 		String uid=payment.getU_id();
 		
@@ -63,10 +65,10 @@ public class PayServiceImpl implements PayService{
 		if(msg!=null) {
 			massege=msg;
 		}else {
-			
 			dao.refundPay(payment);
 			massege="환불처리가 완료되었습니다";
 		}
+		return massege;
 	}
 
 }

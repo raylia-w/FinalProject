@@ -31,6 +31,8 @@ $(document).ready(function(){
 
 	$("#addr").css("display", "none");
 	$("#addrDetail").css("display", "none");
+	$("#time2").css("display", "none");
+	$("#endTimeSelect").css("display", "none");
 	
 	$("#btnOk").click(function(){
 		if($("#terms1").is(":checked") && $("#terms2").is(":checked")){
@@ -42,6 +44,7 @@ $(document).ready(function(){
 	});
 	$("#locSelect").click(function(){
 		window.open("/group/meeting/locList.do", "제휴업체 목록");
+		$("#addr").css("display", "none");
 		$("#addrDetail").css("display", "inline-block");
 	});
 	$("#directSelect").click(function(){
@@ -49,6 +52,38 @@ $(document).ready(function(){
 		$("#addrDetail").css("display", "inline-block");
 	});
 	
+	var html1=[];
+	var value1="";
+	
+	for(var i=0;i<24;i++){
+		if(i<10){
+			value1="0"+i;
+		}else{
+			value1=i;
+		}
+		html1[i] = "<option value="+value1+">"+value1+"</option>";
+	}
+	$("#startTimeSelect").append(html1.join(''));
+	
+	$("#startTimeSelect").change(function(){
+		var html2=[];
+		var value2="";
+		var start = $("#startTimeSelect").val();
+		console.log(start);
+		for(var i=start;i<25;i++){
+			if(i<10){
+				value2="0"+i;
+			}else{
+				value2=i;
+			}
+			html2[i] = "<option value="+value2+">"+value2+"</option>";
+		}
+		$("#endTimeSelect").append(html2.join(''));
+		
+		$("#time2").css("display", "inline-block");
+		$("#endTimeSelect").css("display", "inline-block");
+	});
+
 });
 </script>
 
@@ -58,7 +93,7 @@ $(document).ready(function(){
 	<div class="page-content">
 		<div class="page-content-inner">
 			<div class="content-block product-block">
-				<a href="/group/main.do?group_no=${group.group_no }">
+				<a href="/group/manager.do?group_no=${group.group_no }">
 					<i class="material-icons arrow_back"></i>
 					모임 상세 페이지로 돌아가기
 				</a>        
@@ -96,20 +131,21 @@ $(document).ready(function(){
 						<input id="res_day" name="res_day" type="date" class="form-control" />
 					</div><br>			
 					<div id="rTime">
-					<label for="timeSelect">시간</label>
-						<select id="startTimeSelect" name="date_start" size="1" class="form-control" style="width:170px;">
-							<option value="900">9:00</option><option value="930">9:30</option><option value="1000">10:00</option><option value="1030">10:30</option><option value="1100">11:00</option>
-							<option value="1130">11:30</option><option value="1200">12:00</option><option value="1230">12:30</option><option value="1300">13:00</option><option value="1330">13:30</option>
-							<option value="1400">14:00</option><option value="1430">14:30</option><option value="1500">15:00</option><option value="1530">15:30</option><option value="1600">16:00</option>
-							<option value="1630">16:30</option><option value="1700">17:00</option><option value="1730">17:30</option><option value="1800">18:00</option><option value="1830">18:30</option>
-							<option value="1900">19:00</option><option value="1930">19:30</option><option value="2000">20:00</option><option value="2030">20:30</option><option value="2100">21:00</option>
+						<label id="time1">시작 시간</label>
+						<select id="startTimeSelect" name="rstart" size="1" class="form-control" style="width:170px;">
+<!-- 							<option value="0">0</option><option value="1">1</option><option value="2">10:00</option><option value="1030">10:30</option><option value="1100">11:00</option> -->
+<!-- 							<option value="1130">11:30</option><option value="1200">12:00</option><option value="1230">12:30</option><option value="1300">13:00</option><option value="1330">13:30</option> -->
+<!-- 							<option value="1400">14:00</option><option value="1430">14:30</option><option value="1500">15:00</option><option value="1530">15:30</option><option value="1600">16:00</option> -->
+<!-- 							<option value="1630">16:30</option><option value="1700">17:00</option><option value="1730">17:30</option><option value="1800">18:00</option><option value="1830">18:30</option> -->
+<!-- 							<option value="1900">19:00</option><option value="1930">19:30</option><option value="2000">20:00</option><option value="2030">20:30</option><option value="2100">21:00</option> -->
 						</select>
-						<select id="endTimeSelect" name="date_end" size="1" class="form-control" style="width:170px;">
-							<option value="900">9:00</option><option value="930">9:30</option><option value="1000">10:00</option><option value="1030">10:30</option><option value="1100">11:00</option>
-							<option value="1130">11:30</option><option value="1200">12:00</option><option value="1230">12:30</option><option value="1300">13:00</option><option value="1330">13:30</option>
-							<option value="1400">14:00</option><option value="1430">14:30</option><option value="1500">15:00</option><option value="1530">15:30</option><option value="1600">16:00</option>
-							<option value="1630">16:30</option><option value="1700">17:00</option><option value="1730">17:30</option><option value="1800">18:00</option><option value="1830">18:30</option>
-							<option value="1900">19:00</option><option value="1930">19:30</option><option value="2000">20:00</option><option value="2030">20:30</option><option value="2100">21:00</option>
+						<label id="time2">종료 시간</label><br>
+						<select id="endTimeSelect" name="rend" size="1" class="form-control" style="width:170px;">
+<!-- 							<option value="900">9:00</option><option value="930">9:30</option><option value="1000">10:00</option><option value="1030">10:30</option><option value="1100">11:00</option> -->
+<!-- 							<option value="1130">11:30</option><option value="1200">12:00</option><option value="1230">12:30</option><option value="1300">13:00</option><option value="1330">13:30</option> -->
+<!-- 							<option value="1400">14:00</option><option value="1430">14:30</option><option value="1500">15:00</option><option value="1530">15:30</option><option value="1600">16:00</option> -->
+<!-- 							<option value="1630">16:30</option><option value="1700">17:00</option><option value="1730">17:30</option><option value="1800">18:00</option><option value="1830">18:30</option> -->
+<!-- 							<option value="1900">19:00</option><option value="1930">19:30</option><option value="2000">20:00</option><option value="2030">20:30</option><option value="2100">21:00</option> -->
 						</select>
 						<br><br>
 						<div style="background-image: url(/img/line-horizontal.svg); width:620px; height:10px;" class="clear"></div>
@@ -133,9 +169,10 @@ $(document).ready(function(){
 					<input type="hidden" id="name" name="name" value="name1">
 					<input type="hidden" id="addr" name="addr" value="서울시 강남구 역삼동">
 					<input type="hidden" id="tel" name="tel" value="000-0000-0000">
-					<input type="hiddem" id="email" name="email" value="email1@zzz.com">
+					<input type="hidden" id="email" name="email" value="email1@zzz.com">
 					<div><input type="hidden" id="uName" name="uName" class="right" value="${uName }" /><br></div><div class="clear"></div>
 					<div><input type="hidden" id="uTel" name="uTel" class="right" value="${uPNo }" /><br></div><div class="clear"></div>
+					<div><input type="hidden" id="pla_no" name="pla_no" value="0" /></div>
 				</form>
 			</div>
 		</div>

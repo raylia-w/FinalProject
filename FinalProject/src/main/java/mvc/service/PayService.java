@@ -16,6 +16,6 @@ public interface PayService {
 	
 	public void completePay();
 	
-	public void refundPay(Meeting_reservation meeting);
+	public String refundPay(Meeting_reservation meeting);
 	
 }

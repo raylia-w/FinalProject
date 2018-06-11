@@ -101,16 +101,12 @@ public class BoardServiceImpl implements BoardService{
 	public void photoUpload(MultipartFile file, String user_nick, int group_no, HttpServletRequest request) {
 		
 		String uID = UUID.randomUUID().toString().split("-")[0];
-		
-		String realpath = request.getSession().getServletContext().getRealPath("upload");
-		
+				
 		String root_path = request.getSession().getServletContext().getRealPath("/");
 		String attach_path = "resources/upload/";
 		
 		String stored = file.getOriginalFilename()+"-"+uID;
-		
-		System.out.println(realpath);
-		
+				
 		File dest = new File(root_path+attach_path, file.getOriginalFilename());
 	
 		try {

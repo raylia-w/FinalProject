@@ -20,42 +20,25 @@
 <script type="text/javascript">
 $(document).ready(function(){
 	
-	$("#layerpop").dialog({
-		autoOpen:false,
-		width:500,
-		buttons:[{
-			text:"확인",
-			click:function(){
-				$("#photoUpload").submit();
-				$(this).dialog("close");
-			}
-		}, {
-			text:"취소",
-			click:function(){
-				$(this).dialog("close");
-				$("#mask, .window").hide();
-			}
-		}]
-	});
-	$("mask").click(function(){
-		$(this).hide();
-		$(".window").hide;
-	});
-	
-	$("#btn").click(function(e){
-		wrapWindowByMask();
-		$('#layerpop').dialog('open');
-		e.preventDefault();
-	});
 });
 
-function wrapWindowByMask(){
-	var maskHeight = $(document).height();
-	var maskWidth = $(window).width();
-	
-	$("#mask").css({"width":maskWidth, "height":maskWidth});
-	
-	$("#mask").fadeTo("slow", 0.8);
+function list(meeting_no){
+	window.open("/group/meeting/guestList.do?meeting_no="+meeting_no, "참가 멤버 목록");
+}
+
+function join(meeting_no, u_id){
+	console.log(meeting_no, u_id);
+	$.ajax({
+		url:"/group/meeting/join.do",
+		type:"post",
+		data:{
+			meeting_no:meeting_no,
+			u_id:u_id
+		},
+		success:function(data){
+			alert(data);
+		}
+	});
 }
 </script>
 </head>
@@ -65,7 +48,12 @@ function wrapWindowByMask(){
 	<div class="page-content">
 		<div class="page-content-inner">
 			<div class="content-block product-block">
-				<a href="/group/main.do?group_no=${group_no }">
+				<c:if test="${group.manager_id eq uid }">
+				<a href="/group/manager.do?group_no=${group.group_no }">
+				</c:if>
+				<c:if test="${group.manager_id ne uid }">
+				<a href="/group/main.do?group_no=${group.group_no }">
+				</c:if>
 					<i class="material-icons arrow_back"></i>
 					모임 상세 페이지로 돌아가기
 				</a>        
@@ -85,22 +73,19 @@ function wrapWindowByMask(){
 						<td>${i.res_day }</td>
 						<td>${i.reservation_location }</td>
 						<td>${i.fee }</td>
-						<td><a href="/group/meeting/guestList.do?meeting_no=${i.meeting_no }" id="btn">${i.guest }</a></td>		
+						<td><a href="#" onclick="list('${i.meeting_no }')" id="btn">${i.guest }</a></td>	
+						<c:if test="${group.manager_id eq uid }">	
 						<td><a href="/group/meeting/cancel.do?meeting_no=${i.meeting_no }&res_day=${i.res_day}&group_no=${i.group_no}">취소</a></td>
+						</c:if>
+						<c:if test="${group.manager_id ne uid }">
+						<td><a href="#" onclick="join('${i.meeting_no}', '${uid }')">참가</a></td>
+						</c:if>
 					</tr>
 					</c:forEach>
 				</tbody>
 			</table>
 		</div>
 	</div>
-</div>
-
-<div id="mask"></div>
-<div id="layerpop" title="참가자 정보">
-	<table class="table table-striped table-hover">
-		<c:forEach items="${member }" var="j">
-		</c:forEach>
-	</table>
 </div>
 </body>
 </html>

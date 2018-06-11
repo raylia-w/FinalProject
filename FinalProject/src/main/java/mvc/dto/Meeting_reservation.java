@@ -1,7 +1,5 @@
 package mvc.dto;
 
-import java.util.Date;
-
 import org.springframework.stereotype.Component;
 
 import lombok.Data;
@@ -12,9 +10,9 @@ public class Meeting_reservation {
 	
 	private int meeting_no;
 	
-	private int date_start;
+	private int rstart;
 	
-	private int date_end;
+	private int rend;
 	
 	private String reservation_location;
 	

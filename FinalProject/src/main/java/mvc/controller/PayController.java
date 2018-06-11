@@ -14,6 +14,7 @@ import com.siot.IamportRestHttpClientJava.request.CancelData;
 import com.siot.IamportRestHttpClientJava.response.IamportResponse;
 
 import mvc.dto.Groups;
+import mvc.dto.Meeting_reservation;
 import mvc.dto.Payment;
 import mvc.service.PayService;
 
@@ -63,10 +64,10 @@ public class PayController {
 		payService.insertPay(p);
 	}
 	
-//	@RequestMapping(value="/pay/refund.do")
-//	public void refund(Payment payment) {
-//		payService.refundPay(payment);
-//	}
+	@RequestMapping(value="/pay/refund.do")
+	public void refund(Meeting_reservation meeting) {
+		payService.refundPay(meeting);
+	}
 	
 	@RequestMapping(value="/pay/complete.do")
 	public void payComplete() {
