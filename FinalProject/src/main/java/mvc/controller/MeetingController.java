@@ -69,9 +69,8 @@ public class MeetingController {
 		meetingService.getMeetingInfo(meeting);
 	}
 	
-	@RequestMapping(value="/group/meeting/join.do", method=RequestMethod.POST)
-	@ResponseBody
-	public String meetingJoin(Meeting_guest guest) {
+	@RequestMapping(value="/group/meeting/join.do", method=RequestMethod.POST, produces = "application/text; charset=utf8")
+	public @ResponseBody String meetingJoin(Meeting_guest guest, Model model) {
 		String msg = null;
 		if(meetingService.isGuest(guest)<1) {
 			meetingService.insertMeetingGuest(guest);
