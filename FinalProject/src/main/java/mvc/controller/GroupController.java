@@ -27,6 +27,7 @@ public class GroupController {
 		groupService.getGroupList();
 	}
 	
+	//로그인 체크 필요
 	@RequestMapping(value="/group/main.do", method=RequestMethod.GET)
 	public String groupMain(Groups group, Model model) {
 		
@@ -52,6 +53,7 @@ public class GroupController {
 		
 	}
 	
+	//로그인 체크 필요
 	@RequestMapping(value="/group/manager.do", method=RequestMethod.GET)
 	public String groupManager(Model model, Groups group) {
 		

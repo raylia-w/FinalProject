@@ -28,6 +28,7 @@ public class BoardController {
 	
 	@Autowired BoardService service;
 	
+	//로그인 체크 필요
 	@RequestMapping(value="/group/board.do")
 	public String groupBoard(Groups group, Board board, Model model) {
 		

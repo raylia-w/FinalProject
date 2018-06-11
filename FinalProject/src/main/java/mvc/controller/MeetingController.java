@@ -30,6 +30,8 @@ public class MeetingController {
 	@Autowired MeetingService meetingService;
 	@Autowired PayService payService;
 	
+	
+	//로그인 체크 필요
 	@RequestMapping(value="/group/meeting/registration.do", method=RequestMethod.GET)
 	public String groupMeeting(Groups group, Model model) {
 		model.addAttribute("group", group);
