@@ -29,6 +29,8 @@ public interface MeetingService {
 	
 	public void deleteMeeting(Meeting_reservation meeting);
 	
+	public void deleteUserble(Meeting_reservation meeting);
+	
 	public List getPlaceList();
 
 	public void insertMeetingGuest(Meeting_guest guest);

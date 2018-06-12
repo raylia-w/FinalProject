@@ -72,4 +72,9 @@ public class MeetingServiceImpl implements MeetingService{
 		dao.insertMeetingGuest(guest);
 	}
 
+	@Override
+	public void deleteUserble(Meeting_reservation meeting) {
+		dao.deleteUserble(meeting);
+	}
+
 }

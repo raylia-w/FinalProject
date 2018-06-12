@@ -85,6 +85,48 @@ $(document).ready(function(){
 	});
 
 });
+function reset(){
+	$("#startTimeSelect").find("option").remove();
+	$("#endTimeSelect").find("option").remove();
+}
+function timeselect(start, end){
+	
+	reset();
+	
+	var html3=[];
+	var value3="";
+	
+	
+	for(var i=start;i<end;i++){
+		if(i<10){
+			value3="0"+i;
+		}else{
+			value3=i;
+		}
+		html3[i] = "<option value="+value3+">"+value3+"</option>";
+	}
+	$("#startTimeSelect").append(html3.join(''));
+	
+	$("#startTimeSelect").change(function(){
+		var html4=[];
+		var value4="";
+		var start1 = $("#startTimeSelect").val();
+		var end = $("#end").val();
+		console.log(start);
+		for(var i=start1;i<end;i++){
+			if(i<10){
+				value4="0"+i;
+			}else{
+				value4=i;
+			}
+			html4[i] = "<option value="+value4+">"+value4+"</option>";
+		}
+		$("#endTimeSelect").append(html4.join(''));
+		
+		$("#time2").css("display", "inline-block");
+		$("#endTimeSelect").css("display", "inline-block");
+	});
+}
 </script>
 
 </head>
@@ -103,6 +145,8 @@ $(document).ready(function(){
 					<div id="rLoc">
 						<label for="locSelect">장소</label><br>
 						<input type="button" class="btn" id="locSelect" value="제휴업체 찾기">
+						<input type="hidden" id="start">
+						<input type="hidden" id="end">
 						<input type="button" class="btn" id="directSelect" value="직접 입력하기"><br><br>
 					</div>
 					

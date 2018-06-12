@@ -14,11 +14,12 @@
 $(document).ready(function(){
 	$("#myCarousel").carousel("cycle");
 });
-function addr(addr, people, money, pla_no){
+function addr(addr, people, money, pla_no, start, end){
 	opener.document.getElementById("addrDetail").value = addr;
 	opener.document.getElementById("personnel").value = people;
 	opener.document.getElementById("fee").value = money / 10;
 	opener.document.getElementById("pla_no").value = pla_no;
+	opener.timeselect(start, end);
 	window.close();
 }
 </script>
@@ -43,8 +44,9 @@ function addr(addr, people, money, pla_no){
 					<h1>${i.pla_name }</h1>
 					<h4>정원 : ${i.pla_people }</h4>
 					<h4>금액 : ${i.pla_money }</h4>
+					<h4>휴일 : ${i.pla_statue }</h4>
 					<h4>${i.pla_address }</h4>
-					<button id="btnOk" class="btn" onclick="addr('${i.pla_address}', '${i.pla_people }', '${i.pla_money }', '${i.pla_no }')">선택</button>		
+					<button id="btnOk" class="btn" onclick="addr('${i.pla_address}', '${i.pla_people }', '${i.pla_money }', '${i.pla_no }', '${i.pla_start }', '${i.pla_end }')">선택</button>		
 				</div>
 			</div>		
 		</div>

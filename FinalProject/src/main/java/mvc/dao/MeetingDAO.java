@@ -32,5 +32,7 @@ public interface MeetingDAO {
 	
 	public void deleteMeeting(Meeting_reservation meeting);
 	
+	public void deleteUserble(Meeting_reservation meeting);
+	
 	public void insertMeetingGuest(Meeting_guest guest);
 }

@@ -52,4 +52,8 @@
 			parameterType="mvc.dto.Meeting_reservation">
 			DELETE FROM meeting_reservation WHERE meeting_no = #{meeting_no}
 	</delete>
+	<delete id="deleteUserble"
+			parameterType="mvc.dto.Meeting_reservation">
+			DELETE FROM com_userble WHERE meeting_no = #{meeting_no}
+	</delete>
 </mapper>
