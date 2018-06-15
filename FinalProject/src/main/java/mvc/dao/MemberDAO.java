@@ -2,13 +2,10 @@ package mvc.dao;
 
 import java.util.List;
 
-import org.springframework.stereotype.Repository;
-
 import mvc.dto.Groups;
 import mvc.dto.Member;
 
-@Repository
-public interface MemberDAO {
+public interface MemberDao {
 
 	public List getMemberList(Groups group);
 	

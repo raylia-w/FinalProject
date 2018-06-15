@@ -1,36 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-	
-	<!-- Root Context: defines shared resources visible to all other web components -->
-	<!-- mybatis 설정 -->	
-	<!-- dataSource 설정 : DB 접속 정보 -->
+<beans xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans">
+<!-- Root Context: defines shared resources visible to all other web components -->
 
-	<bean id="dataSourceSpied" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
-		<property name="url" value="jdbc:oracle:thin:@localhost:1521:orcl"/>
-		<property name="username" value="Final"/>
-		<property name="password" value="1234"/>
-	</bean>
-	<bean id="dataSource" class="net.sf.log4jdbc.Log4jdbcProxyDataSource"> 
-		<constructor-arg ref="dataSourceSpied"/>
-			<property name="logFormatter">
-				<bean class="net.sf.log4jdbc.tools.Log4JdbcCustomFormatter">
-					<property name="loggingType" value="MULTI_LINE"/>
-					<property name="sqlPrefix" value="SQL:::"/>
-				</bean>
-			</property>
-	</bean>
-	
-	<!-- SqlSessionFactory 설정 : MyBatis 수행 객체 -->
-	<bean id="SqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="dataSource" ref="dataSource"/>
-		<property name="configLocation" value="classpath:mybatis-config.xml"/>
-		<property name="mapperLocations" value="classpath:/mvc/dao/*DAOImpl.xml"/>
-	</bean>
-	<!-- DAO 등록 : MyBatis 인터페이스 -->
-	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="mvc.dao" />
-	</bean>
+<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" id="dataSourceSpied">
+<property value="oracle.jdbc.driver.OracleDriver" name="driverClassName"/>
+<property value="jdbc:oracle:thin:@localhost:1521:orcl" name="url"/>
+<property value="final" name="username"/>
+<property value="1234" name="password"/>
+</bean>
+
+<!-- jdbc logger -->
+<bean class="net.sf.log4jdbc.Log4jdbcProxyDataSource" id="dataSource">
+<constructor-arg ref="dataSourceSpied"/>
+<property name="logFormatter">
+<bean class="net.sf.log4jdbc.tools.Log4JdbcCustomFormatter">
+<property value="MULTI_LINE" name="loggingType"/>
+<property value="SQL:::" name="sqlPrefix"/>
+</bean>
+</property>
+</bean>
+
+<bean class="org.mybatis.spring.SqlSessionFactoryBean" id="SqlSessionFactory">
+<property name="dataSource" ref="dataSource"/>
+<property value="classpath:mybatis-config.xml" name="configLocation"/>
+<property value="classpath:/mvc/**/dao/*DaoImpl.xml" name="mapperLocations"/>
+</bean>
+
+
+<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+<property value="mvc.dao" name="basePackage"/>
+</bean>
 </beans>

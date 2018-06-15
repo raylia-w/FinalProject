@@ -15,7 +15,7 @@
 	<form action="/group/notice/write.do" method="post" id="form">
 		<label><h1>제목</h1><input type="text" id="title" name="title"/></label><br><br>
 		<label><h1>내용</h1><textarea id="content" name="content" rows="30" cols="100"></textarea></label><br><br>
-		<input type="hidden" id="user_nick" name="user_nick" value="${nick }">
+		<input type="hidden" id="user_id" name="user_id" value="${user_id }">
 		<input type="hidden" id="group_no" name="group_no" value="${group }">
 		<input type="file" id="file" name="file"><br><br>
 		<input type="button" class="btn-primary" onclick="submitContents()" value="작성 완료">

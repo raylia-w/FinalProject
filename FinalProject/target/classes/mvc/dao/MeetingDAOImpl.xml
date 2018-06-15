@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="mvc.dao.MeetingDAO">
+<mapper namespace="mvc.dao.MeetingDao">
 	<select id="getMeetingList"
 			parameterType="mvc.dto.Groups"
 			resultType="mvc.dto.Meeting_reservation">
@@ -16,11 +16,11 @@
 	<select id="isGuest"
 			parameterType="mvc.dto.Meeting_guest"
 			resultType="int">
-			SELECT COUNT(*) FROM meeting_guest WHERE meeting_no=#{meeting_no} AND user_id=#{user_id}
+			SELECT COUNT(*) FROM meeting_guest WHERE meeting_no=#{meeting_no} AND user_id=#{u_id}
 	</select>
 	<insert id="insertMeetingGuest"
 			parameterType="mvc.dto.Meeting_guest">
-			INSERT INTO meeting_guest VALUES (#{meeting_no}, #{user_id})
+			INSERT INTO meeting_guest VALUES (#{meeting_no}, #{u_id})
 	</insert>
 	<select id="getCurrentMeeting"
 			parameterType="mvc.dto.Groups"
@@ -54,6 +54,6 @@
 	</delete>
 	<delete id="deleteUserble"
 			parameterType="mvc.dto.Meeting_reservation">
-			DELETE FROM com_userble WHERE meeting_no = #{meeting_no}
+			DELETE FROM com_userble WHERE meeting_no=#{meeting_no}
 	</delete>
 </mapper>

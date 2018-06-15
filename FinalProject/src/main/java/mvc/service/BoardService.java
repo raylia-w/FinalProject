@@ -1,6 +1,5 @@
 package mvc.service;
 
-import java.security.acl.Group;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -8,7 +7,6 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.web.multipart.MultipartFile;
 
 import mvc.dto.Board;
-import mvc.dto.Comments;
 import mvc.dto.Groups;
 import mvc.dto.Photo;
 

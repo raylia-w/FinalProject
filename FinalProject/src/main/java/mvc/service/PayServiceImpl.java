@@ -9,14 +9,14 @@ import com.siot.IamportRestHttpClientJava.IamportClient;
 import com.siot.IamportRestHttpClientJava.request.CancelData;
 import com.siot.IamportRestHttpClientJava.response.IamportResponse;
 
-import mvc.dao.PaymentDAO;
+import mvc.dao.PaymentDao;
 import mvc.dto.Meeting_reservation;
 import mvc.dto.Payment;
 
 @Service
 public class PayServiceImpl implements PayService{
 	
-	@Autowired PaymentDAO dao;
+	@Autowired PaymentDao dao;
 
 	@Override
 	public List getPayList() {
@@ -44,7 +44,7 @@ public class PayServiceImpl implements PayService{
 		final long serialVersionUID = 1L;
 		CancelData cancelData;
 		IamportClient client = new IamportClient("4404294394442286", "xYCKnNoMdrbroGKlbcOnuE2XeuQhdoLKnouLbTxpkJQJpA5AMTYhy0eMv54ItPtRdXCpRaPbTFVjf0U2");
-		IamportResponse<com.siot.IamportRestHttpClientJava.response.Payment> cancelPayment = new IamportResponse<com.siot.IamportRestHttpClientJava.response.Payment>();
+		IamportResponse<com.siot.IamportRestHttpClientJava.response.Payment> cancelPayment = new IamportResponse<>();
 		
 		Payment payment = dao.getPayInfo(meeting.getMeeting_no());
 		System.out.println(meeting.getMeeting_no());
@@ -62,12 +62,10 @@ public class PayServiceImpl implements PayService{
 		String massege = null;
 		String msg = cancelPayment.getMessage();
 		
-		if(msg!=null) {
-			massege=msg;
-		}else {
-			dao.refundPay(payment);
-			massege="환불처리가 완료되었습니다";
-		}
+
+		dao.refundPay(payment);
+		massege="환불처리가 완료되었습니다";
+	
 		return massege;
 	}
 

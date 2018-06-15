@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 
 import lombok.Data;
 
-@Data
+@Data 
 @Component
 public class Photo {
 	
@@ -18,7 +18,7 @@ public class Photo {
 	
 	private String upload_date;
 	
-	private String user_nick;
+	private String user_id;
 	
 	private int group_no;
 	

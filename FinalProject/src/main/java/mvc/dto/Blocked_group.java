@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import lombok.Data;
 
 @Data
-@Component
+@Component 
 public class Blocked_group {
 	
 	private int group_no;

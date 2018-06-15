@@ -1,7 +1,10 @@
 package mvc.controller;
 
 import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
+import org.apache.http.HttpRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -27,14 +30,18 @@ public class GroupController {
 		groupService.getGroupList();
 	}
 	
-	//로그인 체크 필요
 	@RequestMapping(value="/group/main.do", method=RequestMethod.GET)
-	public String groupMain(Groups group, Model model) {
+	public String groupMain(Groups group, HttpSession session, Model model) {
+		String uid=null;
+		uid = (String) session.getAttribute("userid");
 		
-		Member member = new Member();
-		member.setGroup_no(group.getGroup_no());
-		member.setU_id("id1");
-		model.addAttribute("u_id", "id1");
+		if(uid!=null) {
+			Member member = new Member();
+			member.setGroup_no(group.getGroup_no());
+			member.setU_id(uid);
+			model.addAttribute("isMember", groupService.isMember(member));
+		}
+		
 		model.addAttribute("group", groupService.getGroupInfo(group));
 		model.addAttribute("meeting", meetingService.getCurrentMeeting(group));
 		model.addAttribute("boardList", boardService.getBoardList(group));
@@ -43,8 +50,8 @@ public class GroupController {
 		model.addAttribute("photoCount", boardService.getPhotoCount(group));
 		model.addAttribute("meeting", meetingService.getCurrentMeeting(group));
 		model.addAttribute("notice", boardService.getNoticeView(group));
-		model.addAttribute("isMember", groupService.isMember(member));
-	
+		
+		
 		return "group/main";
 	}
 	
@@ -53,7 +60,6 @@ public class GroupController {
 		
 	}
 	
-	//로그인 체크 필요
 	@RequestMapping(value="/group/manager.do", method=RequestMethod.GET)
 	public String groupManager(Model model, Groups group) {
 		
@@ -74,9 +80,9 @@ public class GroupController {
 	}
 	
 	@RequestMapping(value="/group/registration.do", method=RequestMethod.GET)
-	public String groupRegistration(Member member, Model model) {
+	public String groupRegistration(Member member, HttpSession session, Model model) {
 		int gno=member.getGroup_no();
-
+		member.setU_id((String) session.getAttribute("userid"));
 		String msg=null;
 		String url="/group/main.do?group_no="+gno;
 		if(groupService.isMember(member)>0) {
@@ -92,32 +98,28 @@ public class GroupController {
 	
 	@RequestMapping(value="/group/secession.do", method=RequestMethod.GET)
 	public String groupSecession(Member member, Model model) {
-	
 		int gno=member.getGroup_no();
 		String msg=null;
 		String url="/group/main.do?group_no="+gno;
 		
-		if(groupService.isMember(member)<1) {
+		if(groupService.isMember(member)!=1) {
 			msg="아직 가입하지 않은 모임입니다.";
 		}else {
 			groupService.memberSecession(member);
 			msg="탈퇴가 완료되었습니다.";
 		}
 		model.addAttribute("msg", msg);
-		model.addAttribute("url", url);
+//		model.addAttribute("url", "history.go(-1)");
 		return "group/redirect";	
 	}
-	
-	@RequestMapping(value="/group/create.do")
-	public void groupCreate() {
-		groupService.createGroup();
+
+	@RequestMapping(value="/group/error.do")
+	public String error(HttpServletRequest request, Model model) {
+		Object gno = request.getAttribute("group_no");
+		System.out.println("gno	: "+gno);
+		model.addAttribute("msg", "권한이 없습니다.");
+//		model.addAttribute("url", "history.go(-1)");
+		return "group/redirect";
 	}
-	
-	@RequestMapping(value="/group/delete.do")
-	public void groupDelete() {
-		groupService.deleteGroup();
-	}
-	
-	
 	
 }

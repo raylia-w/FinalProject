@@ -2,15 +2,12 @@ package mvc.dao;
 
 import java.util.List;
 
-import org.springframework.stereotype.Repository;
-
 import mvc.dto.Com_userble;
 import mvc.dto.Groups;
 import mvc.dto.Meeting_guest;
 import mvc.dto.Meeting_reservation;
 
-@Repository
-public interface MeetingDAO {
+public interface MeetingDao {
 	
 	public List getMeetingList(Groups group);
 	

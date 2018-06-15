@@ -44,7 +44,6 @@ function addr(addr, people, money, pla_no, start, end){
 					<h1>${i.pla_name }</h1>
 					<h4>정원 : ${i.pla_people }</h4>
 					<h4>금액 : ${i.pla_money }</h4>
-					<h4>휴일 : ${i.pla_statue }</h4>
 					<h4>${i.pla_address }</h4>
 					<button id="btnOk" class="btn" onclick="addr('${i.pla_address}', '${i.pla_people }', '${i.pla_money }', '${i.pla_no }', '${i.pla_start }', '${i.pla_end }')">선택</button>		
 				</div>

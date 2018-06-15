@@ -5,18 +5,17 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import mvc.dao.GroupDAO;
-import mvc.dao.MemberDAO;
+import mvc.dao.GroupDao;
+import mvc.dao.MemberDao;
 import mvc.dto.Groups;
 import mvc.dto.Member;
 
 @Service
 public class GroupServiceImpl implements GroupService{
 
-	@Autowired GroupDAO groupDao;
-	@Autowired MemberDAO memberDao;
+	@Autowired GroupDao groupDao;
+	@Autowired MemberDao memberDao;
 	
-
 	@Override
 	public List getGroupList() {
 		return groupDao.getGroupList();

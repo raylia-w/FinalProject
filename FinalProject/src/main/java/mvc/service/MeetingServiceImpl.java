@@ -5,17 +5,16 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import mvc.dao.MeetingDAO;
+import mvc.dao.MeetingDao;
 import mvc.dto.Com_userble;
 import mvc.dto.Groups;
 import mvc.dto.Meeting_guest;
 import mvc.dto.Meeting_reservation;
-import mvc.dto.Member;
 
 @Service
 public class MeetingServiceImpl implements MeetingService{
 
-	@Autowired MeetingDAO dao;
+	@Autowired MeetingDao dao;
 	
 	@Override
 	public List getMeetingList(Groups group) {
@@ -66,15 +65,15 @@ public class MeetingServiceImpl implements MeetingService{
 	public void insertUserble(Com_userble userble) {
 		dao.insertUserble(userble);
 	}
+	
+	@Override
+	public void deleteUserble(Meeting_reservation meeting) {
+		dao.deleteUserble(meeting);
+	}
 
 	@Override
 	public void insertMeetingGuest(Meeting_guest guest) {
 		dao.insertMeetingGuest(guest);
-	}
-
-	@Override
-	public void deleteUserble(Meeting_reservation meeting) {
-		dao.deleteUserble(meeting);
 	}
 
 }

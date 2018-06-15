@@ -6,7 +6,6 @@ import mvc.dto.Com_userble;
 import mvc.dto.Groups;
 import mvc.dto.Meeting_guest;
 import mvc.dto.Meeting_reservation;
-import mvc.dto.Member;
 
 
 public interface MeetingService {

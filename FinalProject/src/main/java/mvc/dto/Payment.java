@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 import lombok.Data;
 
-@Data
+@Data 
 @Component
 public class Payment {
 	

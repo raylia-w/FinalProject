@@ -5,13 +5,13 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import mvc.dao.BoardDAO;
+import mvc.dao.BoardDao;
 import mvc.dto.Comments;
 
 @Service
 public class CommentsServiceImpl implements CommentsService{
 	
-	@Autowired BoardDAO dao;
+	@Autowired BoardDao dao;
 	
 	@Override
 	public List getCommentList() {

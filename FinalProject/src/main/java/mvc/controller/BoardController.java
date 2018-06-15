@@ -1,13 +1,7 @@
 package mvc.controller;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.UUID;
-
-import javax.servlet.ServletContext;
-import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import mvc.dto.Board;
-import mvc.dto.Comments;
 import mvc.dto.Groups;
 import mvc.dto.Photo;
 import mvc.service.BoardService;
@@ -28,11 +21,10 @@ public class BoardController {
 	
 	@Autowired BoardService service;
 	
-	//로그인 체크 필요
 	@RequestMapping(value="/group/board.do")
-	public String groupBoard(Groups group, Board board, Model model) {
-		
-		model.addAttribute("nick", "니익네에임");
+	public String groupBoard(Groups group, HttpSession session,Board board, Model model) {
+		model.addAttribute("user_id", session.getAttribute("userid"));
+		model.addAttribute("group_no", group.getGroup_no());
 		model.addAttribute("list", service.getBoardList(group));
 		model.addAttribute("count", service.getBoardCount(group));
 		
@@ -45,9 +37,9 @@ public class BoardController {
 	}
 	
 	@RequestMapping(value="/group/board/write.do", method=RequestMethod.GET)
-	public String groupBoardWrite(Model model) {
-		model.addAttribute("group", 3);
-		model.addAttribute("nick", "니익네에임");
+	public String groupBoardWrite(Groups group, HttpSession session, Model model) {
+		model.addAttribute("group", group.getGroup_no());
+		model.addAttribute("user_id", session.getAttribute("userid"));
 		return "group/board/write";
 	}
 	
@@ -67,11 +59,12 @@ public class BoardController {
 		int bno = board.getBoard_no();
 		int gno = board.getGroup_no();
 		service.boardDelete(board);
-		return "redirect:/group/board.do?group_no=3";
+		return "redirect:/group/board.do?group_no="+gno;
 	}
 	
 	@RequestMapping(value="/group/notice.do", method=RequestMethod.GET)
 	public String groupNotice(Groups group, Model model) {
+		model.addAttribute("group_no", group.getGroup_no());
 		model.addAttribute("list", service.getNoticeList(group));
 		model.addAttribute("count", service.getNoticeCount(group));
 		return "group/board/notice";
@@ -83,9 +76,9 @@ public class BoardController {
 	}
 	
 	@RequestMapping(value="/group/notice/write.do", method=RequestMethod.GET)
-	public String groupNoticeWrite(Board board, Model model) {
+	public String groupNoticeWrite(Board board, HttpSession session, Model model) {
 		model.addAttribute("group", 3);
-		model.addAttribute("nick", "니익네에임");
+		model.addAttribute("user_id", session.getAttribute("userid"));
 		return "group/board/noticeWrite";
 	}
 	
@@ -101,9 +94,9 @@ public class BoardController {
 	}
 	
 	@RequestMapping(value="/group/photo.do", method=RequestMethod.GET)
-	public void groupPhoto(Groups group, Model model) {
+	public void groupPhoto(Groups group, HttpSession session, Model model) {
 		model.addAttribute("group", group);
-		model.addAttribute("user_nick", "testnick");
+		model.addAttribute("user_id", session.getAttribute("userid"));
 		model.addAttribute("list", service.getPhotoList(group));
 		model.addAttribute("count", service.getPhotoCount(group));
 	}
@@ -113,9 +106,16 @@ public class BoardController {
 		service.getPhotoView();
 	}
 	
+	@RequestMapping(value="/group/photoUpload.do")
+	public String uploadPopUp(Groups group, HttpSession session, Model model) {
+		model.addAttribute("group_no", group.getGroup_no());
+		model.addAttribute("user_id", session.getAttribute("userid"));
+		return "group/manager/exception/photoUpload";
+	}
+	
 	@RequestMapping(value="/group/photo/upload.do", method=RequestMethod.POST)
-	public String groupPhotoUpload(MultipartFile file, @RequestParam("user_nick")String user_nick, @RequestParam("group_no") int group_no, HttpServletRequest request) {
-		service.photoUpload(file, user_nick, group_no, request);
+	public String groupPhotoUpload(MultipartFile file, @RequestParam("user_id")String user_id, @RequestParam("group_no") int group_no, HttpServletRequest request) {
+		service.photoUpload(file, user_id, group_no, request);
 		return "redirect:/group/photo.do?group_no="+group_no;
 	}
 	

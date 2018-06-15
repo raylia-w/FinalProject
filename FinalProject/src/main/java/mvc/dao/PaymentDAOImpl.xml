@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="mvc.dao.PaymentDAO">
+<mapper namespace="mvc.dao.PaymentDao">
 	<insert id="insertPay"
 			parameterType="mvc.dto.Payment">
 			INSERT INTO payment(payment_no, imp_uid, merchant_uid, amount, pay_method, pg, apply_num, buyer_name, buyer_tel, paid_at, status, res_id, company_name, meeting_no, u_id) VALUES (payment_no_seq.nextval, #{imp_uid}, #{merchant_uid}, #{amount}, #{pay_method}, #{pg}, #{apply_num}, #{buyer_name}, #{buyer_tel}, #{paid_at}, #{status}, #{res_id}, '해피투게더', #{meeting_no}, #{u_id})
@@ -12,4 +12,8 @@
 			resultType="mvc.dto.Payment">
 			SELECT * FROM payment WHERE meeting_no=#{meeting_no}
 	</select>
+	<delete id="refundPay"
+			parameterType="mvc.dto.Payment">
+			DELETE FROM payment WHERE payment_no = #{payment_no}
+	</delete>
 </mapper>

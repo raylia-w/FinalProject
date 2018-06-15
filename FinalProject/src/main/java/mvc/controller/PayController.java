@@ -66,6 +66,7 @@ public class PayController {
 	
 	@RequestMapping(value="/pay/refund.do")
 	public void refund(Meeting_reservation meeting) {
+		
 		payService.refundPay(meeting);
 	}
 	

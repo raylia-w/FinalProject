@@ -20,8 +20,8 @@ function commentList${cnt.index }(){
             $.each(data, function(key, value){ 
 				if(value.board_no==bno){
 	                a += '<div class="commentArea" style="border-bottom:1px solid darkgray; margin-bottom: 15px;">';
-	                a += '작성자 : '+value.user_nick;
-	                if(value.user_nick=='${nick}'){
+	                a += '작성자 : '+value.user_id;
+	                if(value.user_id=='${user_id}'){
 	                	a += '<a onclick="commentDelete${cnt.index }('+value.comments_no+');"> 삭제 </a> </div>';
 	                }
 	                a += '<div class="commentContent'+value.comments_no+'"> <p> 내용 : '+value.comments +'</p>';

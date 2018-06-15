@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="mvc.dao.GroupDAO">
+<mapper namespace="mvc.dao.GroupDao">
 	<select id="getGroupList"
 			resultType="mvc.dto.Groups">
 			SELECT * FROM groups ORDER BY group_no
@@ -12,4 +12,7 @@
 			resultType="mvc.dto.Groups">
 			SELECT * FROM groups WHERE group_no=#{group_no}
 	</select>
+	
+	<select id="createGroup"></select>
+	<select id="deleteGroup"></select>
 </mapper>

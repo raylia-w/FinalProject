@@ -5,6 +5,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -30,8 +32,6 @@ public class MeetingController {
 	@Autowired MeetingService meetingService;
 	@Autowired PayService payService;
 	
-	
-	//로그인 체크 필요
 	@RequestMapping(value="/group/meeting/registration.do", method=RequestMethod.GET)
 	public String groupMeeting(Groups group, Model model) {
 		model.addAttribute("group", group);
@@ -73,13 +73,13 @@ public class MeetingController {
 	
 	@RequestMapping(value="/group/meeting/join.do", method=RequestMethod.POST, produces = "application/text; charset=utf8")
 	public @ResponseBody String meetingJoin(Meeting_guest guest, Model model) {
-		String msg;
+		String msg = null;
 		if(meetingService.isGuest(guest)<1) {
 			meetingService.insertMeetingGuest(guest);
 			Meeting_reservation meeting = new Meeting_reservation();
 			meeting.setMeeting_no(guest.getMeeting_no());
 			meetingService.updateMeeting(meeting);
-			msg="신청이 완료되었습니다";
+			msg = "신청이 완료되었습니다";
 		}else {
 			msg="이미 신청된 모임입니다";
 		}
@@ -87,23 +87,23 @@ public class MeetingController {
 	}
 	
 	@RequestMapping(value="/group/meeting/list.do")
-	public String meetingList(Groups group, Model model) {
+	public String meetingList(Groups group, HttpSession session, Model model) {
 		model.addAttribute("group", groupService.getGroupInfo(group));
 		model.addAttribute("list", meetingService.getMeetingList(group));
-		model.addAttribute("uid", "manager");
+		model.addAttribute("userid", session.getAttribute("userid"));
 		return "group/manager/meetingList";
 	}
 	
 	@RequestMapping(value="/group/meeting/guestList.do")
 	public String meetingGuest(Meeting_reservation meeting, Model model) {
-		model.addAttribute("list", meetingService.getMeetingGuest(meeting));
+		model.addAttribute("member", meetingService.getMeetingGuest(meeting));
 		return "group/guestList";
 	}
 	
-	@RequestMapping(value="/group/meeting/locList.do")
+	@RequestMapping(value="/group/meeting/location/list.do")
 	public String meetingLocationList(Model model) {
 		model.addAttribute("list", meetingService.getPlaceList());
-		return "group/manager/locationSelect";
+		return "group/manager/location/locationSelect";
 	}
 	
 
@@ -138,8 +138,8 @@ public class MeetingController {
 			msg+="특수한 사정(재해, 질병, 예약한 제휴업체의 문제)의 경우로 취소하시는 경우에는 문의 후 운영진 판단하에 취소 및 환불 처리해드립니다.";
 		}else {
 			msg = payService.refundPay(meeting);
-			meetingService.deleteUserble(meeting);
 			meetingService.deleteMeeting(meeting);
+			meetingService.deleteUserble(meeting);
 			
 		}
 		

@@ -2,15 +2,12 @@ package mvc.dao;
 
 import java.util.List;
 
-import org.springframework.stereotype.Repository;
-
 import mvc.dto.Board;
 import mvc.dto.Comments;
 import mvc.dto.Groups;
 import mvc.dto.Photo;
 
-@Repository
-public interface BoardDAO {
+public interface BoardDao {
 	
 	public int getBoardCount(Groups group);
 	

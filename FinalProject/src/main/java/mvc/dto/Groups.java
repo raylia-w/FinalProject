@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 
 import lombok.Data;
 
-@Data
+@Data 
 @Component
 public class Groups {
 
@@ -13,6 +13,8 @@ public class Groups {
 	private String group_id;
 	
 	private String location;
+	
+	private String location_cat;
 	
 	private String manager_id;
 		
@@ -25,5 +27,7 @@ public class Groups {
 	private String main_cat;
 	
 	private String small_cat;
+	
+	private String keyword;
 	
 }

@@ -1,11 +1,11 @@
 package mvc.dto;
 
 import org.springframework.stereotype.Component;
-
 import lombok.Data;
 
-@Data
+@Data 
 @Component
+
 public class Board {
 
 	private int board_no;
@@ -14,7 +14,7 @@ public class Board {
 	
 	private String content;
 	
-	private String user_nick;
+	private String user_id;
 
 	private String written_date;
 

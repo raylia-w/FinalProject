@@ -9,9 +9,10 @@
 <body>
 <script type="text/javascript"> 
 var msg = '${msg}'; 
-var url = '${url}'; 
+// var url = '${url}'; 
 alert(msg); 
-document.location.href = url; 
+// document.location.href = url; 
+history.go(-1);
 </script>
 </body>
 </html>
